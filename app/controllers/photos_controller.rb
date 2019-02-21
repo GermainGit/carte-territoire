@@ -15,8 +15,7 @@ class PhotosController < ApplicationController
   # GET /photos/new
   def new
     @photo = Photo.new
-    @photo.user_id = current_user.id
-    @photo.save
+
   end
 
   # GET /photos/1/edit
@@ -27,10 +26,12 @@ class PhotosController < ApplicationController
   # POST /photos.json
   def create
     @photo = Photo.new(photo_params)
+    @photo.user_id = current_user.id
+    @photo.save
 
     respond_to do |format|
       if @photo.save
-        format.html { redirect_to @photo, notice: 'Photo was successfully created.' }
+        format.html { redirect_to @photo, notice: 'Votre photo à été crée avec succès.' }
         format.json { render :show, status: :created, location: @photo }
       else
         format.html { render :new }
@@ -44,7 +45,7 @@ class PhotosController < ApplicationController
   def update
     respond_to do |format|
       if @photo.update(photo_params)
-        format.html { redirect_to @photo, notice: 'Photo was successfully updated.' }
+        format.html { redirect_to @photo, notice: 'Votre photo à été modifié avec succès.' }
         format.json { render :show, status: :ok, location: @photo }
       else
         format.html { render :edit }
