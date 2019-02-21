@@ -15,6 +15,8 @@ class PhotosController < ApplicationController
   # GET /photos/new
   def new
     @photo = Photo.new
+    @photo.user_id = current_user.id
+    @photo.save
   end
 
   # GET /photos/1/edit
