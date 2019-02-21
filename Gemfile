@@ -11,6 +11,7 @@ gem 'rails', '~> 5.1.6', '>= 5.1.6.1'
 # Use postgresql as the database for Active Record
 gem 'devise'
 gem 'cloudinary'
+gem 'carrierwave'
 
 gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
