@@ -341,3 +341,74 @@ Processing by PhotosController#index as HTML
 Completed 200 OK in 539ms (Views: 511.4ms | ActiveRecord: 2.3ms)
 
 
+Started GET "/" for 127.0.0.1 at 2019-02-21 17:25:43 +0100
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  Rendered photos/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 226ms (Views: 207.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-21 17:34:03 +0100
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  Rendered photos/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 32ms (Views: 30.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-21 17:34:33 +0100
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  Rendered photos/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 44ms (Views: 41.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2019-02-21 17:34:35 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering /home/mmibdx/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/gems/devise-4.6.1/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered /home/mmibdx/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/gems/devise-4.6.1/app/views/devise/shared/_error_messages.html.erb (0.9ms)
+  Rendered /home/mmibdx/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/gems/devise-4.6.1/app/views/devise/shared/_links.html.erb (1.4ms)
+  Rendered /home/mmibdx/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/gems/devise-4.6.1/app/views/devise/registrations/new.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 83ms (Views: 63.9ms | ActiveRecord: 4.4ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-02-21 17:34:43 +0100
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uqgmjAKcsefOuxpJfVqT1ugCocvSCmmWVpAxRZnqt1pTvB3N6xcpfa42y24/2s5piu/TLOJ8ersAQIzh5MYhDw==", "user"=>{"email"=>"admin@admin.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (27.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (29.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "admin@admin.com"], ["LIMIT", 1]]
+  [1m[35mSQL (86.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "admin@admin.com"], ["encrypted_password", "$2a$11$vQ5ZdQTw5wvvDrIttJ7I6.SMFW28JfHfbO/iOslkcPt/DTLMfBuQG"], ["created_at", "2019-02-21 16:34:43.533421"], ["updated_at", "2019-02-21 16:34:43.533421"]]
+  [1m[35m (65.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 457ms (ActiveRecord: 208.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-21 17:34:43 +0100
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.5ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  Rendered photos/index.html.erb within layouts/application (5.4ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 45ms (Views: 40.2ms | ActiveRecord: 1.3ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2019-02-21 17:34:46 +0100
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"HuPPbHNUHh20+9fn483wXX4Rj80liQtBLewBhgbEawsKu5TMHNSb6bmZth5L+LNggHwLTBrdYYeN2hf/YvE+yA=="}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 30ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-21 17:34:46 +0100
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  Rendered photos/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 33ms (Views: 31.1ms | ActiveRecord: 0.4ms)
+
+
