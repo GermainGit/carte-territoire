@@ -4,4 +4,7 @@ class User < ApplicationRecord
   has_many :photo
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+  def to_s
+    "#{id}"
+end
 end

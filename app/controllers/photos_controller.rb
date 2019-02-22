@@ -14,20 +14,29 @@ class PhotosController < ApplicationController
 
   # GET /photos/new
   def new
-    @photo = Photo.new
+    if user_signed_in?
+      @photo = Photo.new
+    else
+     redirect_to new_user_session_path
+    end
 
   end
 
   # GET /photos/1/edit
   def edit
+    if current_user.id == @photo.user_id
+    else redirect_to new_user_session_path
+    end
   end
 
   # POST /photos
   # POST /photos.json
   def create
-    @photo = Photo.new(photo_params)
-    @photo.user_id = current_user.id
-    @photo.save
+    if user_signed_in?
+      @photo = Photo.new(photo_params)
+      @photo.user_id = current_user.id
+      @photo.save
+    end
 
     respond_to do |format|
       if @photo.save
@@ -43,6 +52,7 @@ class PhotosController < ApplicationController
   # PATCH/PUT /photos/1
   # PATCH/PUT /photos/1.json
   def update
+    if current_user.id == @photo.user_id
     respond_to do |format|
       if @photo.update(photo_params)
         format.html { redirect_to @photo, notice: 'Votre photo à été modifié avec succès.' }
@@ -51,6 +61,8 @@ class PhotosController < ApplicationController
         format.html { render :edit }
         format.json { render json: @photo.errors, status: :unprocessable_entity }
       end
+    end
+    else redirect_to new_user_session_path
     end
   end
 

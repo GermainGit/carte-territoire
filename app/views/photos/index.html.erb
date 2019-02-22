@@ -25,7 +25,9 @@
         <td><%= photo.date %></td>
         <td><%= photo.user %></td>
         <td><%= link_to 'Show', photo %></td>
-        <td><%= link_to 'Edit', edit_photo_path(photo) %></td>
+        <% if user_signed_in? && current_user.id == photo.id  %>
+          <td><%= link_to 'Edit', edit_photo_path(photo) %></td>
+        <% end %>
         <td><%= link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
