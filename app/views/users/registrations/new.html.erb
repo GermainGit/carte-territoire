@@ -1,11 +1,27 @@
-<h2>Sign up</h2>
+<h2>Inscription</h2>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
   <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  </div>
+  <div>
+    <p>
+      Voulez vous que votre adresse soit publique ?
+      <%= f.input :public, as: :boolean, checked_value: true, unchecked_value: false, label: "" %>
+    </p>
+  </div>
+
+  <div class="field">
+    <%= f.label :prenom %><br />
+    <%= f.text_field :prenom, autocomplete: "prenom" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :nom %><br />
+    <%= f.text_field :nom, autocomplete: "nom" %>
   </div>
 
   <div class="field">

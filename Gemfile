@@ -12,6 +12,7 @@ gem 'rails', '~> 5.1.6', '>= 5.1.6.1'
 gem 'devise'
 gem 'cloudinary'
 gem 'carrierwave'
+gem 'simple_form'
 
 gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
