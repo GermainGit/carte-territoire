@@ -3,9 +3,20 @@ class PhotosController < ApplicationController
 
   # GET /photos
   # GET /photos.json
+
   def index
     @photos = Photo.all
   end
+
+
+  # def store
+  #   # upload image to cloudinary
+  #   @value = Cloudinary::Uploader.upload(params[:image])
+
+  #   # create a new post object and save to db
+  #   @photo = Photo.new({:link => @value['secure_url'], :caption => params[:caption]})
+
+  #  end
 
   # GET /photos/1
   # GET /photos/1.json
@@ -84,6 +95,6 @@ class PhotosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def photo_params
-      params.require(:photo).permit(:title, :content, :long, :lat, :date, :user_id)
+      params.require(:photo).permit(:title, :content, :long, :lat, :date, :user_id, :file)
     end
 end

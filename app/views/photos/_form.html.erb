@@ -36,6 +36,12 @@
     <%= form.date_select :date, id: :photo_date %>
   </div>
 
+  <div class="field">
+    <%= form.label :file %>
+    <%= form.file_field :file %>
+    <%= form.hidden_field :file_cache %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>

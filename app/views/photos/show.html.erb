@@ -30,5 +30,10 @@
   <%= @photo.user %>
 </p>
 
+<p>coucou
+  <img src="<%= @photo.file %>" alt="">
+
+</p>
+
 <%= link_to 'Modifier', edit_photo_path(@photo) %> |
 <%= link_to 'Retour', photos_path %>
