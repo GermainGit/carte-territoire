@@ -1,19 +1,19 @@
 ---
 development:
-  cloud_name: carte-territoire
-  api_key: '168578886933586'
-  api_secret: "-E0yCu2AqzVoO_5ypt1um_G6xK0"
+  cloud_name: les-associes
+  api_key: '731264298985222'
+  api_secret: 7klXclMY3SzWychpiBm9F8iiiZ8
   enhance_image_tag: true
   static_file_support: false
 production:
-  cloud_name: carte-territoire
-  api_key: '168578886933586'
-  api_secret: "-E0yCu2AqzVoO_5ypt1um_G6xK0"
+  cloud_name: les-associes
+  api_key: '731264298985222'
+  api_secret: 7klXclMY3SzWychpiBm9F8iiiZ8
   enhance_image_tag: true
   static_file_support: true
 test:
-  cloud_name: carte-territoire
-  api_key: '168578886933586'
-  api_secret: "-E0yCu2AqzVoO_5ypt1um_G6xK0"
+  cloud_name: les-associes
+  api_key: '731264298985222'
+  api_secret: 7klXclMY3SzWychpiBm9F8iiiZ8
   enhance_image_tag: true
   static_file_support: false
