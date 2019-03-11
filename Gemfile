@@ -13,6 +13,7 @@ gem 'devise'
 gem 'cloudinary'
 gem 'carrierwave'
 gem 'simple_form'
+gem 'bootstrap'
 
 gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
