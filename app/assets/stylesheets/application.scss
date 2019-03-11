@@ -15,12 +15,10 @@
  *= require leaflet
  */
 
-<<<<<<< HEAD:app/assets/stylesheets/application.scss
-@import "map.scss"
-=======
-@import 'bootstrap', 'footer', 'navbar';
+@import 'bootstrap', 'footer', 'navbar', 'map';
+
 
 .title_inscription{
   text-transform: uppercase;
 }
->>>>>>> 69167a3629c4787ca1e7b29d6aae9a51779fd38d:app/assets/stylesheets/application.scss
+
