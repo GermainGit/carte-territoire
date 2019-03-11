@@ -34,6 +34,7 @@
   <img src="<%= @photo.file %>" alt="">
 
 </p>
-
+<% if user_signed_in? && @photo.id == current_user.id %>
 <%= link_to 'Modifier', edit_photo_path(@photo) %> |
+<% end %>
 <%= link_to 'Retour', photos_path %>
