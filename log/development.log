@@ -3036,6 +3036,7 @@ Processing by PhotosController#index as HTML
 Completed 200 OK in 33ms (Views: 26.7ms | ActiveRecord: 5.2ms)
 
 
+<<<<<<< HEAD
 Started GET "/" for 127.0.0.1 at 2019-03-11 14:43:40 +0100
   
 PG::ConnectionBad (could not connect to server: No such file or directory
@@ -4382,5 +4383,14 @@ Processing by PhotosController#index as HTML
   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
   Rendered photos/index.html.erb within layouts/application (11.7ms)
 Completed 200 OK in 66ms (Views: 63.0ms | ActiveRecord: 1.8ms)
+=======
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-03-11 15:20:20 +0100
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendering /home/mmibdx/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/gems/devise-4.6.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/mmibdx/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/gems/devise-4.6.1/app/views/devise/shared/_links.html.erb (2.8ms)
+  Rendered /home/mmibdx/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/gems/devise-4.6.1/app/views/devise/sessions/new.html.erb within layouts/application (33.9ms)
+Completed 200 OK in 5589ms (Views: 5537.4ms | ActiveRecord: 4.5ms)
+>>>>>>> 69167a3629c4787ca1e7b29d6aae9a51779fd38d
 
 
