@@ -51,7 +51,7 @@ class PhotosController < ApplicationController
 
     respond_to do |format|
       if @photo.save
-        format.html { redirect_to @photo, notice: 'Votre photo à été crée avec succès.' }
+        format.html { redirect_to @photo, notice: 'Votre photo a été créée avec succès.' }
         format.json { render :show, status: :created, location: @photo }
       else
         format.html { render :new }
@@ -66,7 +66,7 @@ class PhotosController < ApplicationController
     if current_user.id == @photo.user_id
     respond_to do |format|
       if @photo.update(photo_params)
-        format.html { redirect_to @photo, notice: 'Votre photo à été modifié avec succès.' }
+        format.html { redirect_to @photo, notice: 'Votre photo a été modifiée avec succès.' }
         format.json { render :show, status: :ok, location: @photo }
       else
         format.html { render :edit }
@@ -82,7 +82,7 @@ class PhotosController < ApplicationController
   def destroy
     @photo.destroy
     respond_to do |format|
-      format.html { redirect_to photos_url, notice: 'Photo was successfully destroyed.' }
+      format.html { redirect_to photos_url, notice: 'Votre photo a bien été supprimée.' }
       format.json { head :no_content }
     end
   end

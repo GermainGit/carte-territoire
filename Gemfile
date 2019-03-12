@@ -16,6 +16,7 @@ gem 'simple_form'
 gem 'openstreetmap'
 gem 'leaflet-rails'
 gem 'bootstrap'
+gem 'devise-i18n'
 
 
 gem 'pg', '>= 0.18', '< 2.0'
