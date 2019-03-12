@@ -16,7 +16,10 @@
  */
 
 @import 'bootstrap', 'footer', 'navbar', 'map';
-
+@font-face {
+  font-family: "Lato";
+  src: url(/assets/Lato.ttf) format("truetype");
+}
 
 .title_inscription{
   text-transform: uppercase;
