@@ -10,7 +10,7 @@
 /test/version_tmp/
 /tmp/
 
-secret.sh
+cloudinary.yml
 # Used by dotenv library to load environment variables.
 # .env
 
