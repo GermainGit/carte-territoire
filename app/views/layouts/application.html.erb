@@ -11,31 +11,6 @@
   </head>
 
 
-
-<header>
-
-    <nav class="navbar navbar-expand-md">
-      <%= link_to image_tag("logo.png", alt: "logo"), root_path, class: 'navbar-brand' %>
-
-      <%unless user_signed_in?%>
-      <div class="collapse navbar-collapse" id="navbarCollapse"">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-          <%= link_to "Inscription",new_user_registration_path, class: "nav-link" %></%>
-       </li>
-        <li class="nav-item">
-          <%= link_to "Connexion",new_user_session_path, class: "nav-link" %></%>
-        </li>
-
-      </div>
-      <%end%>
-      <% if user_signed_in?%>
-      <div class="droite d-flex">
-        <div class="connec">
-          <%= link_to destroy_user_session_path, method: :delete do %>
-          <%= content_tag :div, "Déconnexion", :class => "btn btn-outline-danger" %>
-          <% end %>
-
   <body>
     <header>
       <nav class="navbar navbar-expand-md">
