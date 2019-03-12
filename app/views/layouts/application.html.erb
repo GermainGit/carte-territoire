@@ -39,7 +39,7 @@
             </li>
                <% if user_signed_in?%>
                   <li class="nav-item">
-               <%= link_to "Déconnexion",new_user_session_path, class: "nav-link m-2 account menu-item" %>
+               <%= link_to "Déconnexion",destroy_user_session_path, method: :delete, class: "nav-link m-2 account menu-item" %>
             </li>
              <% else %>
              <li class="nav-item">
