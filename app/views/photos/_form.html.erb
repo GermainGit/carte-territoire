@@ -41,8 +41,58 @@
     <%= form.file_field :file %>
     <%= form.hidden_field :file_cache %>
   </div>
+  <div id="coucou">
 
+  </div>
   <div class="actions">
     <%= form.submit %>
   </div>
+
+  <div id="mapid"></div>
 <% end %>
+<script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+   integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+   crossorigin=""></script>
+
+<script>
+
+  var map = new L.Map('mapid').setView([44.84561111, -0.58027778], 6);
+
+ L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors',
+    maxZoom: 18,
+    minZoom: 10
+ }).addTo(map);
+ map.attributionControl.setPrefix(''); // Don't show the 'Powered by Leaflet' text.
+
+var southWest = L.latLng(42.58155760646617, -0.90),
+northEast = L.latLng(46.99346179538875, -0.02);
+var bounds = L.latLngBounds(southWest, northEast);
+
+map.setMaxBounds(bounds);
+map.on('drag', function(){
+  map.panInsideBounds(bounds, { animate: true});
+});
+
+
+ var marker = {};
+
+ function addMarker(e){
+
+  if(marker != undefined){
+    map.removeLayer(marker);
+  }
+
+
+  marker = new L.marker(e.latlng).addTo(map);
+    document.getElementById('photo_long').value = e.latlng.lng;
+    document.getElementById('photo_lat').value = e.latlng.lat;
+}
+
+ map.on('click', addMarker);
+
+
+
+
+
+</script>

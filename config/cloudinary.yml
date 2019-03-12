@@ -1,19 +1,19 @@
 ---
 development:
   cloud_name: les-associes
-  api_key: '731264298985222'
-  api_secret: 7klXclMY3SzWychpiBm9F8iiiZ8
+  api_key: <%= ENV["cloud_key"] %>
+  api_secret: <%= ENV["cloud_private"] %>
   enhance_image_tag: true
   static_file_support: false
 production:
   cloud_name: les-associes
-  api_key: '731264298985222'
-  api_secret: 7klXclMY3SzWychpiBm9F8iiiZ8
+  api_key: <%= ENV["cloud_key"] %>
+  api_secret: <%= ENV["cloud_private"] %>
   enhance_image_tag: true
   static_file_support: true
 test:
   cloud_name: les-associes
-  api_key: '731264298985222'
-  api_secret: 7klXclMY3SzWychpiBm9F8iiiZ8
+  api_key: <%= ENV["cloud_key"] %>
+  api_secret: <%= ENV["cloud_private"] %>
   enhance_image_tag: true
   static_file_support: false

@@ -16,5 +16,8 @@
  */
 
 @import 'bootstrap', 'footer', 'navbar', 'map', 'users';
-
+@font-face {
+  font-family: "Lato";
+  src: url(/assets/Lato.ttf) format("truetype");
+}
 
