@@ -1,45 +1,53 @@
-<h2>Inscription</h2>
+<style> .navbar-expand-md { display: none } </style>
 
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+<div class="background_img">
+<%= image_tag("NoFACES.jpg", :alt => "background") %>
+</div>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
-  <div>
-    <p>
-      Voulez vous que votre adresse soit publique ?
-      <%= f.input :public, as: :boolean, checked_value: true, unchecked_value: false, label: "" %>
-    </p>
+  <div class="backnav">
+  <a href=""></a>
+  <%= link_to image_tag("left-arrow.png", alt: "retour"),photos_path, width: 64, height: 64 %>
   </div>
 
-  <div class="field">
-    <%= f.label :prenom %><br />
-    <%= f.text_field :prenom, autocomplete: "prenom" %>
-  </div>
+<div class="full-page">
+  <div class="blockform">
+    <h2>TU VEUX CONTRIBUER?</h2>
 
-  <div class="field">
-    <%= f.label :nom %><br />
-    <%= f.text_field :nom, autocomplete: "nom" %>
-  </div>
+          <div class="form">
+          <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+            <%= render "devise/shared/error_messages", resource: resource %>
+             <div class="field">
+              <%= f.text_field :prenom, placeholder: "Prénom", autofocus: true, autocomplete:"prenom", size: 40 %>
+            </div>
+            <br>
+            <div class="field">
+              <%= f.text_field :nom, placeholder: "Nom",autocomplete: "nom", size: 40 %>
+            </div>
+            <br>
+            <div class="field">
+              <%= f.email_field :email, placeholder: "Mail",autocomplete: "email", size: 40 %>
+            </div>
+            <p class="checkbox_text">Pouvoir me contacter ?</p>
+            <div class="checkbox">
+                <%= f.input :public, as: :boolean, checked_value: false, unchecked_value: true, label: "" %>&nbsp&nbsp
+                <p class="yes">NON</p>
+            </div>
+            <div class="field">
+              <% if @minimum_password_length %>
+              <% end %><br />
+              <%= f.password_field :password, placeholder: "Mot de passe (6 caractère min)", autocomplete: "new-password", size: 40 %>
+            </div>
+            <div class="field">
+              <%= f.password_field :password_confirmation, placeholder: "Confirmer mdp",autocomplete: "new-password", size: 40 %>
+            </div>
+          </div>
 
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-  </div>
+            <div class="actions">
+              <%= f.submit "En route !", :class => 'signupbutton' %>
+          </div>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+            <br>
+          <% end %>
   </div>
+</div>
 
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
-
-<%= render "users/shared/links" %>

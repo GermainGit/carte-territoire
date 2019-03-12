@@ -1,0 +1,85 @@
+.title_inscription{
+  text-transform: uppercase;
+}
+
+.backnav{
+	margin-left: 100px;
+	margin-top: 80px;
+	position: absolute;
+	z-index: 9;
+	display: flex;
+}
+
+.notice-signup{
+	font-family: 'Lato', bold, sans-serif;
+	font-size: 15px;
+}
+
+.form h2 {
+	text-align: center;
+	font-family: 'Lato', bold, sans-serif;
+	font-size: 25px;
+	padding-top: 8px;
+}
+
+.background_img{
+	position: absolute;
+	width:100%;
+	height:100vh;
+	overflow: hidden;
+	z-index: 1;
+}
+.background_img img{
+	display: block;
+	width: 100%;
+}
+
+.checkbox_text{
+	text-align: left;
+	padding-top: 2px;
+	font-family: 'Lato', bold, sans-serif;
+	font-size: 22px;
+}
+
+.checkbox{
+	display: flex;
+	padding-top: 4px;
+}
+
+.yes{
+	display: flex;
+	font-family: 'Lato', bold, sans-serif;
+	font-size: 16px;
+}
+
+.full-page{
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 2;
+}
+.blockform{
+	z-index: 10;
+	background-color: white;
+	text-align: center;
+	padding: 25px;
+	box-shadow: 0px 5px 5px gray;
+}
+
+.form{
+	z-index: 10;
+	background-color: white;
+	text-align: center;
+	padding: 25px;
+}
+
+.signupbutton{
+	background-color: #53B89C;
+	width: 125px;
+	height: 40px;
+	border: #53B89C;
+	font-family: 'Lato', bold, sans-serif;
+	color: white;
+}
