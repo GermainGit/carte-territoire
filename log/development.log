@@ -4866,6 +4866,7 @@ Completed 200 OK in 79ms (Views: 72.5ms | ActiveRecord: 4.7ms)
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   [1m[35m (3.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   [1m[35m (4.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
   [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
@@ -5138,6 +5139,8 @@ Completed 200 OK in 5393ms (Views: 5384.8ms | ActiveRecord: 0.3ms)
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
 Started GET "/" for 127.0.0.1 at 2019-03-12 09:15:47 +0100
 Processing by PhotosController#index as HTML
   Rendering photos/index.html.erb within layouts/application
@@ -5258,6 +5261,9 @@ Completed 200 OK in 82ms (Views: 78.1ms | ActiveRecord: 2.6ms)
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes

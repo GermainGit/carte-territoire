@@ -10,7 +10,7 @@
 /test/version_tmp/
 /tmp/
 
-/initializers/cloudinary.rb
+secret.sh
 # Used by dotenv library to load environment variables.
 # .env
 
