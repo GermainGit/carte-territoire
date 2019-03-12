@@ -2,18 +2,18 @@
 development:
   cloud_name: les-associes
   api_key: <%= ENV["cloud_key"] %>
-  api_secret: <%= ENV["could_secret"] %>
+  api_secret: <%= ENV["cloud_private"] %>
   enhance_image_tag: true
   static_file_support: false
 production:
   cloud_name: les-associes
   api_key: <%= ENV["cloud_key"] %>
-  api_secret: <%= ENV["could_secret"] %>
+  api_secret: <%= ENV["cloud_private"] %>
   enhance_image_tag: true
   static_file_support: true
 test:
   cloud_name: les-associes
   api_key: <%= ENV["cloud_key"] %>
-  api_secret: <%= ENV["could_secret"] %>
+  api_secret: <%= ENV["cloud_private"] %>
   enhance_image_tag: true
   static_file_support: false
