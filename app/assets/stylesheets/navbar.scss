@@ -1,3 +1,10 @@
+$color1: #53B89C;
+$color2: #1A1A1A;
+$phone: 320px;
+$tablet: 768px;
+$tablet-wide:992px;
+$desktop: 1248px;
+
 .nav-link {
   &:hover{
     text-decoration:none;
@@ -5,29 +12,27 @@
     color: inherit;
   }
 }
-.navbar-brand img {
-  max-width: 30%;
-}
 
-.nav-link {
-  text-decoration: none;
-  color:#1A1A1A;
+.navbar-light .navbar-nav .nav-link {
+     text-decoration: none;
+  color:$color2;
   font-family: 'Lato', sans-serif;
   text-transform: uppercase;
   font-size: 12px;
+  padding:0;
 }
+
 .account {
-  color: #53B89C;
-  &:hover{
-    color: #53B89C;
+  color: $color1!important;
+}
+
+.navbar-brand img{
+   width:100%;
+  @media screen and (max-width: $phone){
+    width:100%;
+  }
+    @media screen and (min-width: $tablet-wide){
+    width:40%;
   }
 }
 
-.navbar-collapse {
-  justify-content: right;
-}
-
-
-.navbar-expand-md .navbar-collapse {
-
-}

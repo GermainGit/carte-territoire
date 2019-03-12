@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>Carte</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -12,42 +13,48 @@
 <body>
    <header>
 
-      <nav class="navbar navbar-expand-md">
-        <%= link_to image_tag("logo.png", alt: "logo"), root_path, class: 'navbar-brand' %>
-        <div class="collapse navbar-collapse" id="navbarCollapse"">
-          <div>
-              <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <%= link_to "Notre projet",static_path(staticpage: 'about'), class: "nav-link" %></%>
-                    </li>
-                    <li class="nav-item">
-                        <%= link_to "Nos expositions",static_path(staticpage: 'exposition'), class: "nav-link" %></%>
-                    </li>
-                    <li class="nav-item">
-                        <%= link_to "Vos questions",static_path(staticpage: 'question'), class: "nav-link" %></%>
-                    </li>
-              </ul>
-          </div>
-          <div>
-            <ul class="navbar-nav ml-auto">
-              <% if user_signed_in?%>
-                <li class="nav-item">
-                  <%= link_to 'Déconnexion', destroy_user_session_path, method: :delete, class: "nav-link account" %>
-                </li>
-              <% else %>
-                <li class="nav-item">
-                  <%= link_to "Inscription",new_user_registration_path, class: "nav-link account" %></%>
-                </li>
-                <li class="nav-item">
-                  <%= link_to "Connexion",new_user_session_path, class: "nav-link account" %></%>
-                </li>
-              <% end %>
-            </ul>
-          </div>
 
+<nav class="navbar navbar-expand-lg navbar-light">
+    <div class="d-flex flex-grow-1">
+        <span class="w-100 d-lg-none d-block"></span>
+        <a class="navbar-brand-two mx-auto d-lg-none d-inline-block" href="#">
+            <%= link_to image_tag("logo.png", alt: "logo"), root_path, class: 'navbar-brand' %>
+        </a>
+        <div class="w-100 text-right">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
         </div>
-      </nav>
-    </header>
+    </div>
+    <div class="collapse navbar-collapse flex-grow-1 text-right" id="myNavbar">
+        <ul class="navbar-nav ml-auto flex-nowrap">
+            <li class="nav-item">
+                <%= link_to "Notre projet",static_path(staticpage: 'about'), class: "nav-link m-2 menu-item" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "Nos expositions",static_path(staticpage: 'exposition'), class: "nav-link m-2 menu-item" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "Vos questions",static_path(staticpage: 'question'), class: "m-2 nav-link menu-item" %>
+            </li>
+               <% if user_signed_in?%>
+                  <li class="nav-item">
+               <%= link_to "Déconnexion",new_user_session_path, class: "nav-link m-2 account menu-item" %>
+            </li>
+             <% else %>
+             <li class="nav-item">
+                <%= link_to "Inscription",new_user_registration_path, class: "nav-link m-2 account menu-item" %>
+            </li>
+                        <li class="nav-item">
+                <%= link_to "Connexion",new_user_session_path, class: "nav-link m-2 account menu-item" %>
+            </li>
+            <% end %>
+
+        </ul>
+    </div>
+</nav>
+
+     </header>
     <%= yield %>
    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </body>
