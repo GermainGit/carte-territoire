@@ -41,10 +41,11 @@
 <script>
   var map = new L.Map('mapid').setView([44.84561111, -0.58027778], 6);
 
- L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+ L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}{r}.{ext}', {
     attribution: '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors',
     maxZoom: 18,
-    minZoom: 10
+    minZoom: 10,
+    ext: 'png'
  }).addTo(map);
  map.attributionControl.setPrefix('');
 
