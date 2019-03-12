@@ -41,8 +41,52 @@
     <%= form.file_field :file %>
     <%= form.hidden_field :file_cache %>
   </div>
+  <div id="coucou">
 
+  </div>
   <div class="actions">
     <%= form.submit %>
   </div>
+
+  <div id="mapid"></div>
 <% end %>
+<script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+   integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+   crossorigin=""></script>
+
+<script>
+
+  var map = new L.Map('mapid');
+
+ L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors',
+    maxZoom: 18,
+    minZoom: 10
+ }).addTo(map);
+ map.attributionControl.setPrefix(''); // Don't show the 'Powered by Leaflet' text.
+
+ var bordeaux = new L.LatLng(44.84561111,-0.58027778);
+ map.setView(bordeaux, 13);
+
+
+ var marker = {};
+
+ function addMarker(e){
+
+  if(marker != undefined){
+    map.removeLayer(marker);
+  }
+
+
+  marker = new L.marker(e.latlng).addTo(map);
+    document.getElementById('photo_long').value = e.latlng.lng;
+    document.getElementById('photo_lat').value = e.latlng.lat;
+}
+
+ map.on('click', addMarker);
+
+
+
+
+
+</script>

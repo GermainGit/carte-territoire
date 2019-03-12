@@ -5129,3 +5129,712 @@ Processing by PhotosController#index as HTML
 Completed 200 OK in 5393ms (Views: 5384.8ms | ActiveRecord: 0.3ms)
 
 
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7364326613903542500)[0m
+  [1m[35m (44.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (42.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(7364326613903542500)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2019-03-12 09:44:36 +0100
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (21.7ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  Rendered photos/index.html.erb within layouts/application (33.7ms)
+Completed 200 OK in 8302ms (Views: 8147.7ms | ActiveRecord: 23.4ms)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2019-03-12 09:48:48 +0100
+Processing by PhotosController#new as HTML
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-03-12 09:48:48 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering /home/mmibdx/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/gems/devise-4.6.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/mmibdx/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/gems/devise-4.6.1/app/views/devise/shared/_links.html.erb (8.8ms)
+  Rendered /home/mmibdx/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/gems/devise-4.6.1/app/views/devise/sessions/new.html.erb within layouts/application (320.5ms)
+Completed 200 OK in 552ms (Views: 503.7ms | ActiveRecord: 4.6ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2019-03-12 09:49:08 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nvwo/zgRNTY9duzUuuafCXj8sSWnZXeg7moHD5DfX8eTW20JmngFdlou7T/vanFMwkiTYI7pV/PgCf7+mcF88A==", "user"=>{"email"=>"hugo@admin.fr", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (53.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "hugo@admin.fr"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 491ms (ActiveRecord: 53.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-12 09:49:08 +0100
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  Rendered photos/index.html.erb within layouts/application (4.4ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 78ms (Views: 75.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2019-03-12 09:49:15 +0100
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/new.html.erb within layouts/application
+  Rendered photos/_form.html.erb (34.9ms)
+  Rendered photos/new.html.erb within layouts/application (39.6ms)
+Completed 200 OK in 118ms (Views: 97.7ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2019-03-12 09:51:52 +0100
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/new.html.erb within layouts/application
+  Rendered photos/_form.html.erb (13.8ms)
+  Rendered photos/new.html.erb within layouts/application (15.9ms)
+Completed 200 OK in 89ms (Views: 85.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2019-03-12 09:52:25 +0100
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/new.html.erb within layouts/application
+  Rendered photos/_form.html.erb (36.8ms)
+  Rendered photos/new.html.erb within layouts/application (41.4ms)
+Completed 200 OK in 180ms (Views: 146.7ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2019-03-12 09:53:17 +0100
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/new.html.erb within layouts/application
+  Rendered photos/_form.html.erb (22.3ms)
+  Rendered photos/new.html.erb within layouts/application (25.6ms)
+Completed 200 OK in 139ms (Views: 122.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2019-03-12 09:57:27 +0100
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (5.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/new.html.erb within layouts/application
+  Rendered photos/_form.html.erb (54.7ms)
+  Rendered photos/new.html.erb within layouts/application (65.7ms)
+Completed 200 OK in 261ms (Views: 225.2ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2019-03-12 09:58:47 +0100
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/new.html.erb within layouts/application
+  Rendered photos/_form.html.erb (41.5ms)
+  Rendered photos/new.html.erb within layouts/application (46.3ms)
+Completed 200 OK in 176ms (Views: 158.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2019-03-12 10:00:02 +0100
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/new.html.erb within layouts/application
+  Rendered photos/_form.html.erb (35.4ms)
+  Rendered photos/new.html.erb within layouts/application (41.0ms)
+Completed 200 OK in 145ms (Views: 124.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2019-03-12 10:11:35 +0100
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/new.html.erb within layouts/application
+  Rendered photos/_form.html.erb (12.6ms)
+  Rendered photos/new.html.erb within layouts/application (14.5ms)
+Completed 200 OK in 92ms (Views: 88.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2019-03-12 10:22:56 +0100
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/new.html.erb within layouts/application
+  Rendered photos/_form.html.erb (13.4ms)
+  Rendered photos/new.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 67ms (Views: 64.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2019-03-12 10:25:18 +0100
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/new.html.erb within layouts/application
+  Rendered photos/_form.html.erb (12.5ms)
+  Rendered photos/new.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 86ms (Views: 82.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2019-03-12 10:25:58 +0100
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/new.html.erb within layouts/application
+  Rendered photos/_form.html.erb (13.4ms)
+  Rendered photos/new.html.erb within layouts/application (14.8ms)
+Completed 200 OK in 91ms (Views: 87.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2019-03-12 10:26:20 +0100
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/new.html.erb within layouts/application
+  Rendered photos/_form.html.erb (14.5ms)
+  Rendered photos/new.html.erb within layouts/application (17.2ms)
+Completed 200 OK in 131ms (Views: 120.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2019-03-12 10:32:12 +0100
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/new.html.erb within layouts/application
+  Rendered photos/_form.html.erb (8.8ms)
+  Rendered photos/new.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 65ms (Views: 61.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2019-03-12 10:32:36 +0100
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/new.html.erb within layouts/application
+  Rendered photos/_form.html.erb (15.1ms)
+  Rendered photos/new.html.erb within layouts/application (24.4ms)
+Completed 200 OK in 80ms (Views: 71.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2019-03-12 10:32:59 +0100
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/new.html.erb within layouts/application
+  Rendered photos/_form.html.erb (6.1ms)
+  Rendered photos/new.html.erb within layouts/application (19.9ms)
+Completed 200 OK in 101ms (Views: 97.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2019-03-12 10:33:16 +0100
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/new.html.erb within layouts/application
+  Rendered photos/_form.html.erb (11.8ms)
+  Rendered photos/new.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 72ms (Views: 66.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2019-03-12 10:35:02 +0100
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/new.html.erb within layouts/application
+  Rendered photos/_form.html.erb (13.8ms)
+  Rendered photos/new.html.erb within layouts/application (15.4ms)
+Completed 200 OK in 96ms (Views: 92.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2019-03-12 10:39:43 +0100
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/new.html.erb within layouts/application
+  Rendered photos/_form.html.erb (8.6ms)
+  Rendered photos/new.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 74ms (Views: 70.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2019-03-12 10:40:04 +0100
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/new.html.erb within layouts/application
+  Rendered photos/_form.html.erb (25.1ms)
+  Rendered photos/new.html.erb within layouts/application (28.5ms)
+Completed 200 OK in 127ms (Views: 123.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2019-03-12 10:43:22 +0100
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/new.html.erb within layouts/application
+  Rendered photos/_form.html.erb (15.3ms)
+  Rendered photos/new.html.erb within layouts/application (16.6ms)
+Completed 200 OK in 61ms (Views: 57.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2019-03-12 10:43:42 +0100
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/new.html.erb within layouts/application
+  Rendered photos/_form.html.erb (18.1ms)
+  Rendered photos/new.html.erb within layouts/application (20.5ms)
+Completed 200 OK in 93ms (Views: 86.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2019-03-12 10:45:18 +0100
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/new.html.erb within layouts/application
+  Rendered photos/_form.html.erb (18.3ms)
+  Rendered photos/new.html.erb within layouts/application (30.3ms)
+Completed 200 OK in 125ms (Views: 121.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2019-03-12 10:45:41 +0100
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/new.html.erb within layouts/application
+  Rendered photos/_form.html.erb (12.2ms)
+  Rendered photos/new.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 95ms (Views: 92.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2019-03-12 10:45:50 +0100
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/new.html.erb within layouts/application
+  Rendered photos/_form.html.erb (10.9ms)
+  Rendered photos/new.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 103ms (Views: 99.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2019-03-12 10:46:11 +0100
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/new.html.erb within layouts/application
+  Rendered photos/_form.html.erb (6.3ms)
+  Rendered photos/new.html.erb within layouts/application (23.2ms)
+Completed 200 OK in 100ms (Views: 93.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2019-03-12 10:47:12 +0100
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/new.html.erb within layouts/application
+  Rendered photos/_form.html.erb (5.7ms)
+  Rendered photos/new.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 66ms (Views: 62.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2019-03-12 10:49:02 +0100
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/new.html.erb within layouts/application
+  Rendered photos/_form.html.erb (14.5ms)
+  Rendered photos/new.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 95ms (Views: 85.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2019-03-12 10:49:17 +0100
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/new.html.erb within layouts/application
+  Rendered photos/_form.html.erb (11.3ms)
+  Rendered photos/new.html.erb within layouts/application (16.3ms)
+Completed 200 OK in 97ms (Views: 94.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2019-03-12 10:50:26 +0100
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/new.html.erb within layouts/application
+  Rendered photos/_form.html.erb (20.6ms)
+  Rendered photos/new.html.erb within layouts/application (26.9ms)
+Completed 200 OK in 103ms (Views: 98.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2019-03-12 10:51:24 +0100
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/new.html.erb within layouts/application
+  Rendered photos/_form.html.erb (7.3ms)
+  Rendered photos/new.html.erb within layouts/application (13.8ms)
+Completed 200 OK in 105ms (Views: 101.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2019-03-12 10:52:17 +0100
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/new.html.erb within layouts/application
+  Rendered photos/_form.html.erb (10.9ms)
+  Rendered photos/new.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 91ms (Views: 83.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2019-03-12 10:52:56 +0100
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/new.html.erb within layouts/application
+  Rendered photos/_form.html.erb (6.7ms)
+  Rendered photos/new.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 76ms (Views: 73.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2019-03-12 11:05:25 +0100
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/new.html.erb within layouts/application
+  Rendered photos/_form.html.erb (16.1ms)
+  Rendered photos/new.html.erb within layouts/application (18.2ms)
+Completed 200 OK in 110ms (Views: 105.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2019-03-12 11:08:30 +0100
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/new.html.erb within layouts/application
+  Rendered photos/_form.html.erb (11.1ms)
+  Rendered photos/new.html.erb within layouts/application (15.3ms)
+Completed 200 OK in 100ms (Views: 96.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2019-03-12 11:09:56 +0100
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/new.html.erb within layouts/application
+  Rendered photos/_form.html.erb (10.4ms)
+  Rendered photos/new.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 59ms (Views: 55.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2019-03-12 11:10:36 +0100
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/new.html.erb within layouts/application
+  Rendered photos/_form.html.erb (11.5ms)
+  Rendered photos/new.html.erb within layouts/application (16.1ms)
+Completed 200 OK in 93ms (Views: 84.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2019-03-12 11:12:24 +0100
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/new.html.erb within layouts/application
+  Rendered photos/_form.html.erb (13.7ms)
+  Rendered photos/new.html.erb within layouts/application (20.5ms)
+Completed 200 OK in 101ms (Views: 97.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2019-03-12 11:12:40 +0100
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/new.html.erb within layouts/application
+  Rendered photos/_form.html.erb (17.9ms)
+  Rendered photos/new.html.erb within layouts/application (20.2ms)
+Completed 200 OK in 96ms (Views: 91.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2019-03-12 11:13:29 +0100
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/new.html.erb within layouts/application
+  Rendered photos/_form.html.erb (12.2ms)
+  Rendered photos/new.html.erb within layouts/application (17.1ms)
+Completed 200 OK in 75ms (Views: 70.9ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/photos" for 127.0.0.1 at 2019-03-12 11:28:15 +0100
+Processing by PhotosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9PKxJNbusUSvlygfyzWAxaDUQILwfG9ufrFhuUN/hAGjNRXE49hprFgW0mt/O6y3KBpH1j0MZKepKAXXFfsv/A==", "photo"=>{"title"=>"Test", "content"=>"Salut", "long"=>"-0.5889701843261719", "lat"=>"44.87102425925486", "date(1i)"=>"2019", "date(2i)"=>"3", "date(3i)"=>"12", "file"=>#<ActionDispatch::Http::UploadedFile:0x00007f6c08544f40 @tempfile=#<Tempfile:/tmp/RackMultipart20190312-3273-1nuwdxa.jpeg>, @original_filename="index.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"photo[file]\"; filename=\"index.jpeg\"\r\nContent-Type: image/jpeg\r\n">, "file_cache"=>""}, "commit"=>"Create Photo"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Unpermitted parameter: :file_cache
+  [1m[35m (4.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (16.4ms)[0m  [1m[32mINSERT INTO "photos" ("title", "content", "long", "lat", "date", "user_id", "created_at", "updated_at", "file") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["title", "Test"], ["content", "Salut"], ["long", -0.5889701843261719], ["lat", 44.87102425925486], ["date", "2019-03-12"], ["user_id", 1], ["created_at", "2019-03-12 10:28:15.678721"], ["updated_at", "2019-03-12 10:28:15.678721"], ["file", "j8srqjdbgxry6qjfqzpg.jpeg"]]
+  [1m[35mSQL (1.1ms)[0m  [1m[33mUPDATE "photos" SET "file" = 'image/upload/v1552386496/j8srqjdbgxry6qjfqzpg.jpg' WHERE "photos"."id" = $1[0m  [["id", 1]]
+  [1m[35m (37.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "photos" SET "updated_at" = $1, "file" = $2 WHERE "photos"."id" = $3[0m  [["updated_at", "2019-03-12 10:28:17.170792"], ["file", "image/upload/v1552386496/j8srqjdbgxry6qjfqzpg.jpg"], ["id", 1]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/photos/1
+Completed 302 Found in 1594ms (ActiveRecord: 61.5ms)
+
+
+Started GET "/photos/1" for 127.0.0.1 at 2019-03-12 11:28:17 +0100
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/show.html.erb within layouts/application
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered photos/show.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 81ms (Views: 73.8ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/photos" for 127.0.0.1 at 2019-03-12 11:28:21 +0100
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered photos/index.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 72ms (Views: 69.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2019-03-12 11:28:46 +0100
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/new.html.erb within layouts/application
+  Rendered photos/_form.html.erb (13.4ms)
+  Rendered photos/new.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 70ms (Views: 65.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2019-03-12 11:29:38 +0100
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/new.html.erb within layouts/application
+  Rendered photos/_form.html.erb (13.9ms)
+  Rendered photos/new.html.erb within layouts/application (16.3ms)
+Completed 200 OK in 93ms (Views: 84.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2019-03-12 11:30:28 +0100
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/new.html.erb within layouts/application
+  Rendered photos/_form.html.erb (12.4ms)
+  Rendered photos/new.html.erb within layouts/application (13.8ms)
+Completed 200 OK in 81ms (Views: 78.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2019-03-12 11:32:41 +0100
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/new.html.erb within layouts/application
+  Rendered photos/_form.html.erb (8.1ms)
+  Rendered photos/new.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 66ms (Views: 62.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2019-03-12 11:32:49 +0100
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/new.html.erb within layouts/application
+  Rendered photos/_form.html.erb (14.3ms)
+  Rendered photos/new.html.erb within layouts/application (15.7ms)
+Completed 200 OK in 75ms (Views: 72.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2019-03-12 11:49:03 +0100
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/new.html.erb within layouts/application
+  Rendered photos/_form.html.erb (9.7ms)
+  Rendered photos/new.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 72ms (Views: 69.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2019-03-12 11:51:09 +0100
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/new.html.erb within layouts/application
+  Rendered photos/_form.html.erb (11.2ms)
+  Rendered photos/new.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 71ms (Views: 68.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2019-03-12 11:51:20 +0100
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/new.html.erb within layouts/application
+  Rendered photos/_form.html.erb (9.2ms)
+  Rendered photos/new.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 53ms (Views: 50.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2019-03-12 11:55:35 +0100
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/new.html.erb within layouts/application
+  Rendered photos/_form.html.erb (6.5ms)
+  Rendered photos/new.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 65ms (Views: 62.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2019-03-12 11:55:46 +0100
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/new.html.erb within layouts/application
+  Rendered photos/_form.html.erb (6.9ms)
+  Rendered photos/new.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 62ms (Views: 59.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2019-03-12 11:58:28 +0100
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/new.html.erb within layouts/application
+  Rendered photos/_form.html.erb (7.0ms)
+  Rendered photos/new.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 56ms (Views: 53.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2019-03-12 12:03:41 +0100
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/new.html.erb within layouts/application
+  Rendered photos/_form.html.erb (9.4ms)
+  Rendered photos/new.html.erb within layouts/application (14.5ms)
+Completed 200 OK in 90ms (Views: 83.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2019-03-12 12:05:00 +0100
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/new.html.erb within layouts/application
+  Rendered photos/_form.html.erb (6.2ms)
+  Rendered photos/new.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 61ms (Views: 57.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2019-03-12 12:06:01 +0100
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/new.html.erb within layouts/application
+  Rendered photos/_form.html.erb (10.7ms)
+  Rendered photos/new.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 51ms (Views: 47.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2019-03-12 12:25:59 +0100
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/new.html.erb within layouts/application
+  Rendered photos/_form.html.erb (12.9ms)
+  Rendered photos/new.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 119ms (Views: 116.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2019-03-12 12:26:46 +0100
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/new.html.erb within layouts/application
+  Rendered photos/_form.html.erb (10.4ms)
+  Rendered photos/new.html.erb within layouts/application (16.1ms)
+Completed 200 OK in 69ms (Views: 66.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2019-03-12 12:28:55 +0100
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/new.html.erb within layouts/application
+  Rendered photos/_form.html.erb (6.3ms)
+  Rendered photos/new.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 80ms (Views: 77.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2019-03-12 12:31:13 +0100
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/new.html.erb within layouts/application
+  Rendered photos/_form.html.erb (8.5ms)
+  Rendered photos/new.html.erb within layouts/application (14.4ms)
+Completed 200 OK in 75ms (Views: 71.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2019-03-12 12:32:05 +0100
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/new.html.erb within layouts/application
+  Rendered photos/_form.html.erb (11.0ms)
+  Rendered photos/new.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 64ms (Views: 61.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2019-03-12 12:32:40 +0100
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/new.html.erb within layouts/application
+  Rendered photos/_form.html.erb (5.8ms)
+  Rendered photos/new.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 78ms (Views: 71.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2019-03-12 12:32:46 +0100
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/new.html.erb within layouts/application
+  Rendered photos/_form.html.erb (10.3ms)
+  Rendered photos/new.html.erb within layouts/application (13.8ms)
+Completed 200 OK in 89ms (Views: 82.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2019-03-12 12:40:55 +0100
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/new.html.erb within layouts/application
+  Rendered photos/_form.html.erb (10.6ms)
+  Rendered photos/new.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 55ms (Views: 52.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2019-03-12 12:43:16 +0100
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/new.html.erb within layouts/application
+  Rendered photos/_form.html.erb (5.8ms)
+  Rendered photos/new.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 66ms (Views: 62.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2019-03-12 12:44:25 +0100
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/new.html.erb within layouts/application
+  Rendered photos/_form.html.erb (10.2ms)
+  Rendered photos/new.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 70ms (Views: 66.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2019-03-12 12:57:10 +0100
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/new.html.erb within layouts/application
+  Rendered photos/_form.html.erb (12.1ms)
+  Rendered photos/new.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 134ms (Views: 130.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2019-03-12 13:06:41 +0100
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/new.html.erb within layouts/application
+  Rendered photos/_form.html.erb (13.1ms)
+  Rendered photos/new.html.erb within layouts/application (14.5ms)
+Completed 200 OK in 181ms (Views: 177.0ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/photos" for 127.0.0.1 at 2019-03-12 14:09:15 +0100
+Processing by PhotosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Zo6K0i4M1RDitxo8WxdVZ/NBejoclgKwGanprQ8YCdExSS4yGzoN+BU24EjvGXkVe499btHmCXnOMI3DWZyiLA==", "photo"=>{"title"=>"gare", "content"=>"", "long"=>"-0.5552816390991212", "lat"=>"44.82524861849135", "date(1i)"=>"2019", "date(2i)"=>"3", "date(3i)"=>"12", "file"=>#<ActionDispatch::Http::UploadedFile:0x00007f6c10a2bab0 @tempfile=#<Tempfile:/tmp/RackMultipart20190312-3273-zitbqi.jpeg>, @original_filename="index.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"photo[file]\"; filename=\"index.jpeg\"\r\nContent-Type: image/jpeg\r\n">, "file_cache"=>""}, "commit"=>"Create Photo"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Unpermitted parameter: :file_cache
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (10.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "photos" ("title", "content", "long", "lat", "date", "user_id", "created_at", "updated_at", "file") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["title", "gare"], ["content", ""], ["long", -0.5552816390991212], ["lat", 44.82524861849135], ["date", "2019-03-12"], ["user_id", 1], ["created_at", "2019-03-12 13:09:15.149178"], ["updated_at", "2019-03-12 13:09:15.149178"], ["file", "cnr0jylasnlynwnxtxpz.jpeg"]]
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "photos" SET "file" = 'image/upload/v1552396155/cnr0jylasnlynwnxtxpz.jpg' WHERE "photos"."id" = $1[0m  [["id", 2]]
+  [1m[35m (41.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "photos" SET "updated_at" = $1, "file" = $2 WHERE "photos"."id" = $3[0m  [["updated_at", "2019-03-12 13:09:16.519893"], ["file", "image/upload/v1552396155/cnr0jylasnlynwnxtxpz.jpg"], ["id", 2]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/photos/2
+Completed 302 Found in 1394ms (ActiveRecord: 56.3ms)
+
+
+Started GET "/photos/2" for 127.0.0.1 at 2019-03-12 14:09:16 +0100
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering photos/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered photos/show.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 71ms (Views: 66.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/photos" for 127.0.0.1 at 2019-03-12 14:09:20 +0100
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (1.0ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered photos/index.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 80ms (Views: 76.9ms | ActiveRecord: 1.9ms)
+
+
