@@ -10,7 +10,7 @@
 /test/version_tmp/
 /tmp/
 
-cloudinary.yml
+
 # Used by dotenv library to load environment variables.
 # .env
 
