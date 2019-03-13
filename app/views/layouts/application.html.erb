@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>Carte</title>
+
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= csrf_meta_tags %>
 
@@ -11,9 +12,8 @@
    crossorigin=""/>
   </head>
 <body>
+
    <header>
-
-
 <nav class="navbar navbar-expand-lg navbar-light">
     <div class="d-flex flex-grow-1">
         <span class="w-100 d-lg-none d-block"></span>
@@ -55,7 +55,31 @@
 </nav>
 
      </header>
-    <%= yield %>
-   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <footer>
+      <div class="container">
+    <span class="text-muted">
+
+      <div class="info">
+         <%= image_tag("logo-associe.png", :alt => "logo", class:'logo') %>
+        <ul>
+          <li><a href=""><strong>Contact</strong></a></li>
+          <li><a href="">Soutenez-nous</a></li>
+          <li><a href="">Vos questions</a></li>
+        </ul>
+        <ul>
+          <li><a href=""><strong>Nos partenaires</strong></a></li>
+          <li><a href="">Conditions générales</a></li>
+        </ul>
+      </div>
+    </span>
+      </div>
+      <div class="reseaux">
+        <%= image_tag("fb.png", :alt => "logo", class:'reseaux-sociaux') %>
+        <%= image_tag("insta.png", :alt => "logo", class:'reseaux-sociaux') %>
+        <%= image_tag("linkedin.png", :alt => "logo", class:'reseaux-sociaux') %>
+      </div>
+    </footer>
+      <%= yield %>
+     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </body>
 </html>
