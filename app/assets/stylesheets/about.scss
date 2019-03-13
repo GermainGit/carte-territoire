@@ -1,0 +1,52 @@
+#team{
+  height: calc(100vh - 56.8167px);
+  width: 100%;
+}
+
+footer{
+  display: none;
+}
+
+body{
+  overflow-x: hidden;
+}
+
+.perimetre, .voyage, .carte_territoire{
+  padding: 7% 0;
+}
+
+.voyage{
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+.carte_territoire{
+  background-color: #ebe9e9;
+}
+
+.box{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#voyage, #perimetre{
+  width: 15%;
+}
+
+#carte_territoire{
+  width: 30%;
+  margin-bottom: 5%;
+}
+
+.box h2{
+  margin: 5% 0;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.box p{
+  font-size: 0.8em;
+  text-align: center;
+}
