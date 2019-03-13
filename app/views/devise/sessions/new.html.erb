@@ -15,7 +15,7 @@
 
           <div class="form">
               <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-                <div class="field">
+                <div class="field_user">
                   <%= f.input :email,
                               required: false,
                               autofocus: true,
@@ -24,12 +24,12 @@
                               label: false %>
                 </div>
                 <br>
-                <div class="field">
+                <div class="field_user">
                   <%= f.input :password,
                               required: false,
                               input_html: { autocomplete: "current-password", size: 40 },
                               placeholder: "Mot de passe",
-                              label: false%>
+                              label: false %>
                 </div>
                 <br>
                 <div class="checkbox">
@@ -37,8 +37,10 @@
                   <p class="checkboxtitle">Se souvenir de moi</p>
                 </div>
                 <br>
+
+
                 <div class="actions">
-                  <%= f.button :submit, t(".sign_in"), :class => 'signupbutton' %>
+                  <%= f.submit "Connexion", :class => 'signupbutton' %>
                 </div>
               <% end %>
               <br>

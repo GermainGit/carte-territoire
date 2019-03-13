@@ -2,12 +2,30 @@
   text-transform: uppercase;
 }
 
+.field_user{
+	margin: 1.5% 0;
+  	padding: 1%;
+  	width: 100%;
+  	border: none;
+  	box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.07);
+  	font: lato, arial;
+  	font-weight: 600;
+}
+
+.field_user input{
+	border: none;
+}
+
 .backnav{
 	margin-left: 100px;
 	margin-top: 80px;
 	position: absolute;
 	z-index: 9;
 	display: flex;
+	img {
+		width: 40px;
+		height: 40px;
+	}
 }
 
 .notice-signup{
@@ -53,6 +71,12 @@
 	font-size: 16px;
 }
 
+.subtitle{
+	display: flex;
+	font-family: 'Lato', bold, sans-serif;
+	font-size: 12px;
+}
+
 .full-page{
 	height: 100vh;
 	width: 100vw;
@@ -66,8 +90,8 @@
 	background-color: white;
 	text-align: center;
 	padding: 25px;
-	box-shadow: 0px 5px 5px gray;
-}
+  	box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.07);
+  }
 
 .form{
 	z-index: 10;
@@ -85,3 +109,6 @@
 	color: white;
 }
 
+.signupbutton:hover{
+	color: #EBE9E9;
+}
