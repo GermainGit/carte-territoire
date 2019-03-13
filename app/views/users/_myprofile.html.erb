@@ -1,1 +1,21 @@
-C MON PROFIL
+<div class="container feed">
+  <div class="row">
+    <div class="card-columns">
+    <% @photos.each do |photo| %>
+      <div class="card">
+        <%= link_to photo do %>
+          <img class="card-img-top" src="<%=  photo.file %>" alt="Card image cap">
+        <% end %>
+        <div class="card-body photo_content">
+          <h5 class="card-title"><%= photo.title %></h5>
+          <p class="card-text"><%= photo.content %></p>
+            <% if user_signed_in? && photo.user_id == current_user.id %>
+            <%= link_to 'Modifier', edit_photo_path(photo) %> |
+            <%= link_to 'Supprimer', photo, method: :delete %>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+       </div>
+  </div>
+</div>

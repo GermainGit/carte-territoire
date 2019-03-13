@@ -80,9 +80,10 @@ class PhotosController < ApplicationController
   # DELETE /photos/1
   # DELETE /photos/1.json
   def destroy
+    @user = @photo.user
     @photo.destroy
     respond_to do |format|
-      format.html { redirect_to photos_url, notice: 'Votre photo a bien été supprimée.' }
+      format.html { redirect_to user_path(@user), notice: 'Votre photo a bien été supprimée.' }
       format.json { head :no_content }
     end
   end
