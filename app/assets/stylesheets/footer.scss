@@ -3,21 +3,20 @@ footer {
   font-family: lato, sans-serif;
   font-size: 1em;
   bottom:0;
-  height:30px;
+
   width:100%;
-  position: fixed;
   text-transform: uppercase;
   .container{
-    width: 30%;
+    width: 50%;
     margin-right: auto;
     margin-left : auto;
   }
+}
   .logo{
     width: 25%;
     height:25%;
     margin-top:20px;
   }
- }
 
 footer ul{
   list-style: none;

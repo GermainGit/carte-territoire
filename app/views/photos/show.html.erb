@@ -2,61 +2,42 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-lg-8 ">
-      <div class="row test">
-        <div class="col-lg-6">
-          <img src="<%= @photo.file %>" alt="" class="post">
-           <p><%= @photo.user %></p>
-
-        </div>
-
-        <div class="col-lg-6 photodiv">
-            <h1><%= @photo.title %></h1>
-              <p><%= @photo.date %></p>
-              <p class="descriptionphoto"><%= @photo.content %></p>
-
-              <% if user_signed_in? && @photo.id == current_user.id %>
-              <%= link_to 'Modifier', edit_photo_path(@photo) %> |
-              <% end %>
-              <%= link_to 'Retour', photos_path %>
-        </div>
-      </div>
+    <div class="col-md-6">
+      <%= image_tag @photo.file.url, class: 'img-fluid' %>
+      <p><%= @photo.user %></p>
     </div>
-    <div id="mapid" class="col-lg-4">
-
-
-
-              <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
-                 integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
-                 crossorigin=""></script>
-
-              <script>
-
-                  var map = new L.Map('mapid').setView([44.84561111, -0.58027778], 6);
-
-                   L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                      attribution: '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors',
-                      maxZoom: 18,
-                      minZoom: 10
-                   }).addTo(map);
-                   map.attributionControl.setPrefix(''); // Don't show the 'Powered by Leaflet' text.
-
-                  var southWest = L.latLng(42.58155760646617, -0.90),
-                      northEast = L.latLng(46.99346179538875, -0.02);
-                  var bounds = L.latLngBounds(southWest, northEast);
-
-                  map.setMaxBounds(bounds);
-                  map.on('drag', function(){
-                  map.panInsideBounds(bounds, { animate: true});
-                  });
-
-
-              </script>
-
-
+    <div class="col-md-4 offset-md-1">
+      <h1><%= @photo.title %></h1>
+      <p><%= @photo.date %></p>
+      <p><%= @photo.content %></p>
+      <% if user_signed_in? && @photo.user == current_user %>
+        <%= link_to 'Modifier', edit_photo_path(@photo) %> |
+      <% end %>
+      <%= link_to 'Retour', photos_path %>
+      <div id="mapid" ></div>
+    </div>
   </div>
-  </div>
+</div>
 
+<script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+        integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+        crossorigin=""></script>
+<script>
+  var map = new L.Map('mapid').setView([44.84561111, -0.58027778], 6);
 
+   L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors',
+      maxZoom: 18,
+      minZoom: 10
+   }).addTo(map);
+   map.attributionControl.setPrefix(''); // Don't show the 'Powered by Leaflet' text.
 
+  var southWest = L.latLng(42.58155760646617, -0.90),
+      northEast = L.latLng(46.99346179538875, -0.02);
+  var bounds = L.latLngBounds(southWest, northEast);
 
+  map.setMaxBounds(bounds);
+  map.on('drag', function(){
+  map.panInsideBounds(bounds, { animate: true});
+  });
+</script>
