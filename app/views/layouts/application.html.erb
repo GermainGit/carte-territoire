@@ -43,7 +43,7 @@
              <li class="nav-item">
                 <%= link_to "Inscription",new_user_registration_path, class: "nav-link m-2 account menu-item" %>
             </li>
-                        <li class="nav-item">
+            <li class="nav-item">
                 <%= link_to "Connexion",new_user_session_path, class: "nav-link m-2 account menu-item" %>
             </li>
             <% end %>
@@ -54,30 +54,35 @@
 
      </header>
      <%= yield %>
-    <footer class="footer mt-auto py-3">
-      <div class="container">
-          <span class="text-muted">
 
-            <div class="info">
-               <%= image_tag("logo-associe.png", :alt => "logo", class:'logo') %>
-              <ul>
-                <li><a href=""><strong>Contact</strong></a></li>
-                <li><a href="">Soutenez-nous</a></li>
-                <li><a href="">Vos questions</a></li>
-              </ul>
-              <ul>
-                <li><a href=""><strong>Nos partenaires</strong></a></li>
-                <li><a href="">Conditions générales</a></li>
-              </ul>
-            </div>
-          </span>
+  <!-- Footer -->
+
+<footer class="footer py-3">
+  <div class="row">
+    <div class="col-md-3">
+    <%= link_to image_tag("logo-associe.png", :alt => "logo", class:'logo'), href="https://www.lesassocies.net/" %>
+  </div>
+    <div class="col-md-3">
+      <ul class="list-unstyled text-small">
+        <li>Nos partenaires</li>
+        <li>Conditions générales</li>
+      </ul>
+    </div>
+    <div class="col-md-3">
+      <ul class="list-unstyled text-small">
+        <li>Contact</li>
+        <li>
+                <%= link_to "Vos questions",static_path(staticpage: 'question') %>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="row">
+        <%= link_to image_tag("fb.png", :alt => "logo facebook", class:'rs'), href="https://www.facebook.com/LESASSOCIES.NET" %>
+        <%= link_to image_tag("insta.png", :alt => "logo instagram", class:'rs'), href="https://www.instagram.com/collectiflesassocies" %>
+        <%= link_to image_tag("linkedin.png", :alt => "logo linkedin", class:'rs'), href="https://fr.linkedin.com/in/les-associés-bb6462110"%>
       </div>
-      <div class="reseaux">
-        <%= image_tag("fb.png", :alt => "logo", class:'reseaux-sociaux') %>
-        <%= image_tag("insta.png", :alt => "logo", class:'reseaux-sociaux') %>
-        <%= image_tag("linkedin.png", :alt => "logo", class:'reseaux-sociaux') %>
-      </div>
-    </footer>
+</footer>
 
      <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </body>
