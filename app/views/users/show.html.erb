@@ -1,8 +1,10 @@
 <% if user_signed_in? && @user == current_user %>
-<%= render 'myprofile' %>
+  <%= render 'myprofile' %>
 <% elsif(@user.public == true) %>
-<%= render 'public' %>
+  <%= render 'public' %>
 <% elsif(@user.public == false) %>
-<%= render 'nopublic'  %>
+  <%= render 'nopublic'  %>
+<% else %>
+<%= render 'unexist' %>
 <% end %>
 

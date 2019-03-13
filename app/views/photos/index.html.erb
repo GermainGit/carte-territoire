@@ -57,7 +57,6 @@ map.on('drag', function(){
 <% @photos.each do |photo| %>
     var long = <%= photo.long %>;
     var lat = <%= photo.lat %>;
-    var popupText = "<%= photo.title %>";
     var icon = L.icon({
       iconUrl: '<%= photo.file %>',
       iconSize: [45, 45]
@@ -66,7 +65,10 @@ map.on('drag', function(){
     var marker = new L.Marker(markerLocation, {icon: icon});
     map.addLayer(marker);
 
-    marker.bindPopup(popupText);
+    marker.on("click", function (event) {
+    var clickedMarker = event.layer;
+    document.location.href="photos/<%= photo.id %>";
+});
 
 <% end %>
 
