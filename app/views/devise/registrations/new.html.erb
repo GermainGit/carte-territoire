@@ -28,8 +28,8 @@
                       <%= f.email_field :email, placeholder: "Email",autocomplete: "email", size: 40 %>
                     </div>
                     <div class="checkbox">
-                        <%= f.input :public, as: :boolean, checked_value: true, unchecked_value: false, label: "" %>&nbsp&nbsp
-                        <p class="checkboxtitle">Je souhaite pouvoir être contacté</p>
+                        <%= f.input :public, as: :boolean, checked_value: false, unchecked_value: true, label: "" %>&nbsp&nbsp
+                        <p class="checkboxtitle">Je ne souhaite pas que mon profil soit publique</p>
                     </div>
                     <div class="field">
                       <% if @minimum_password_length %>

@@ -1,18 +1,8 @@
-<% if(@user.public == true) %>
-
-  <h2><%= @user.prenom %> <%= @user.nom %> </h2>
-  <h3>Mes photos</h3>
-  <% @photos.each do |photo| %>
-      <% if(photo.user_id == @user.id) %>
-
-        <div><%= photo.title %></div>
-        <a href="photos/<%= photo.id %>"><img src="<%=  photo.file %>"></a>
-        <% if(@user.id == current_user.id) %>
-        <%= link_to 'Modifier', edit_photo_path(@photo) %>
-        <% end %>
-
-     <% end %>
-  <% end %>
-<% else(@user.public == false) %>
+<% if user_signed_in? && @user == current_user %>
+<%= render 'myprofile' %>
+<% elsif(@user.public == true) %>
+<%= render 'public' %>
+<% elsif(@user.public == false) %>
 <%= render 'nopublic'  %>
 <% end %>
+
