@@ -55,23 +55,24 @@
 </nav>
 
      </header>
-    <footer>
+     <%= yield %>
+    <footer class="footer mt-auto py-3">
       <div class="container">
-    <span class="text-muted">
+          <span class="text-muted">
 
-      <div class="info">
-         <%= image_tag("logo-associe.png", :alt => "logo", class:'logo') %>
-        <ul>
-          <li><a href=""><strong>Contact</strong></a></li>
-          <li><a href="">Soutenez-nous</a></li>
-          <li><a href="">Vos questions</a></li>
-        </ul>
-        <ul>
-          <li><a href=""><strong>Nos partenaires</strong></a></li>
-          <li><a href="">Conditions générales</a></li>
-        </ul>
-      </div>
-    </span>
+            <div class="info">
+               <%= image_tag("logo-associe.png", :alt => "logo", class:'logo') %>
+              <ul>
+                <li><a href=""><strong>Contact</strong></a></li>
+                <li><a href="">Soutenez-nous</a></li>
+                <li><a href="">Vos questions</a></li>
+              </ul>
+              <ul>
+                <li><a href=""><strong>Nos partenaires</strong></a></li>
+                <li><a href="">Conditions générales</a></li>
+              </ul>
+            </div>
+          </span>
       </div>
       <div class="reseaux">
         <%= image_tag("fb.png", :alt => "logo", class:'reseaux-sociaux') %>
@@ -79,7 +80,7 @@
         <%= image_tag("linkedin.png", :alt => "logo", class:'reseaux-sociaux') %>
       </div>
     </footer>
-      <%= yield %>
+
      <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </body>
 </html>
