@@ -71,17 +71,16 @@
 .resize_photo {
   padding:20px;
   margin-bottom:10%;
-  display: flex;
-  justify-content: center;
+  height:auto;
   img{
     width:100%;
+    z-index:-1;
   }
   .content{
     background-color:white;
-    justify-content:center;
+    margin: 0 auto;
     padding:5%;
     z-index:2;
-    position:absolute;
     bottom:-30px;
     width:60%;
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.4);
@@ -140,3 +139,11 @@ p {
 
 }
 
+.card-columns{
+  width:100%;
+  column-count:2;
+  display:inline-block;
+  .card{
+    margin-bottom:10%;
+  }
+}

@@ -3,21 +3,26 @@
 
 
 <div id="mapid"></div>
+
 <div class="container">
   <div class="row">
+    <div class="card-columns">
+<% @photos.each do |photo| %>
 
-
-    <% @photos.each do |photo| %>
-    <div class="col-lg-6 resize_photo">
-        <a href="photos/<%= photo.id %>"><img src="<%=  photo.file %>"></a>
-
-  <div class="content">
-   <h3><%= photo.title %></h3>
-        <p><%= photo.content %></p></div>
-      </div>
-    <% end %>
+  <div class="card">
+    <a href="photos/<%= photo.id %>">
+    <img class="card-img-top" src="<%=  photo.file %>" alt="Card image cap">
+    </a>
+    <div class="card-body">
+      <h5 class="card-title"><%= photo.title %></h5>
+      <p class="card-text"><%= photo.content %></p>
     </div>
+  </div>
+    <% end %>
+       </div>
+  </div>
 </div>
+
 <br>
 <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
    integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
