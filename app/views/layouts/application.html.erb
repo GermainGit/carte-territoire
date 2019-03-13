@@ -28,7 +28,7 @@
     </div>
     <div class="collapse navbar-collapse flex-grow-1 text-right" id="myNavbar">
         <ul class="navbar-nav ml-auto flex-nowrap">
-            <li class="nav-item">
+<!--             <li class="nav-item">
                 <%= link_to "Notre projet",static_path(staticpage: 'about'), class: "nav-link m-2 menu-item" %>
             </li>
             <li class="nav-item">
@@ -36,7 +36,7 @@
             </li>
             <li class="nav-item">
               <%= link_to "Vos questions",static_path(staticpage: 'question'), class: "m-2 nav-link menu-item" %>
-            </li>
+            </li> -->
                <% if user_signed_in?%>
                   <li class="nav-item">
                <%= link_to "Déconnexion",destroy_user_session_path, method: :delete, class: "nav-link m-2 account menu-item" %>

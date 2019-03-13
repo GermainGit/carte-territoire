@@ -20,7 +20,9 @@
   font-family: "Lato";
   src: url(/assets/Lato.ttf) format("truetype");
 }
-
+body{
+  height:100%;
+}
 .title_inscription{
   text-transform: uppercase;
 }

@@ -2,6 +2,10 @@ footer {
   background-color: #1A1A1A;
   font-family: lato, sans-serif;
   font-size: 1em;
+  bottom:0;
+  height:30px;
+  width:100%;
+  position: fixed;
   text-transform: uppercase;
   }
 
@@ -9,7 +13,6 @@ footer {
   width: 30%;
   margin-right: auto;
   margin-left : auto;
-  padding: 3% 0;
 }
 
 footer ul{
