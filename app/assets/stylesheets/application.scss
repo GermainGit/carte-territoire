@@ -27,3 +27,7 @@ body{
 .title_inscription{
   text-transform: uppercase;
 }
+.leaflet-container .leaflet-marker-pane img{
+  border-radius:25px;
+  padding:10px;
+}
