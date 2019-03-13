@@ -15,8 +15,9 @@
 	font-size: 15px;
 }
 
-.form h2 {
+.blockform h2 {
 	text-align: center;
+	text-transform: uppercase;
 	font-family: 'Lato', bold, sans-serif;
 	font-size: 25px;
 	padding-top: 8px;
@@ -46,7 +47,7 @@
 	padding-top: 4px;
 }
 
-.yes{
+.checkboxtitle{
 	display: flex;
 	font-family: 'Lato', bold, sans-serif;
 	font-size: 16px;
@@ -83,3 +84,4 @@
 	font-family: 'Lato', bold, sans-serif;
 	color: white;
 }
+

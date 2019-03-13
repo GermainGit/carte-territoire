@@ -1,25 +1,54 @@
-<h2><%= t(".sign_up") %></h2>
+<style> .navbar-expand-lg { display: none } </style>
 
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= f.error_notification %>
+<div class="background_img">
+<%= image_tag("NoFACES.jpg", :alt => "background") %>
+</div>
 
-  <div class="form-inputs">
-    <%= f.input :email,
-                required: true,
-                autofocus: true ,
-                input_html: { autocomplete: "email" }%>
-    <%= f.input :password,
-                required: true,
-                hint: (t('devise.shared.minimum_password_length', count: @minimum_password_length) if @minimum_password_length),
-                input_html: { autocomplete: "new-password" } %>
-    <%= f.input :password_confirmation,
-                required: true,
-                input_html: { autocomplete: "new-password" } %>
+  <div class="backnav">
+  <a href=""></a>
+  <%= link_to image_tag("left-arrow.png", alt: "retour"),photos_path, width: 64, height: 64 %>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit, t(".sign_up") %>
-  </div>
-<% end %>
+<div class="full-page">
+  <div class="blockform">
+    <h2>tu veux contribuer ?</h2>
 
-<%= render "devise/shared/links" %>
+          <div class="form">
+          <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+            <%= render "devise/shared/error_messages", resource: resource %>
+             <div class="field">
+              <%= f.text_field :prenom, placeholder: "Prénom", autofocus: true, autocomplete:"prenom", size: 40 %>
+            </div>
+            <br>
+            <div class="field">
+              <%= f.text_field :nom, placeholder: "Nom",autocomplete: "nom", size: 40 %>
+            </div>
+            <br>
+            <div class="field">
+              <%= f.email_field :email, placeholder: "Email",autocomplete: "email", size: 40 %>
+            </div>
+            <div class="checkbox">
+                <%= f.input :public, as: :boolean, checked_value: true, unchecked_value: false, label: "" %>&nbsp&nbsp
+                <p class="checkboxtitle">Je souhaite pouvoir être contacté</p>
+            </div>
+            <div class="field">
+              <% if @minimum_password_length %>
+              <% end %><br />
+              <%= f.password_field :password, placeholder: "Mot de passe (6 caractère min)", autocomplete: "new-password", size: 40 %>
+            </div>
+            <div class="field">
+              <%= f.password_field :password_confirmation, placeholder: "Confirmer mdp",autocomplete: "new-password", size: 40 %>
+            </div>
+          </div>
+
+            <div class="actions">
+              <%= f.submit "En route !", :class => 'signupbutton' %>
+          </div>
+
+            <br>
+          <% end %>
+          <br>
+          <%= render "devise/shared/links" %>
+  </div>
+</div>
+
