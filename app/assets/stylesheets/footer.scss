@@ -7,8 +7,17 @@ footer {
   width:100%;
   position: fixed;
   text-transform: uppercase;
+  .container{
+    width: 30%;
+    margin-right: auto;
+    margin-left : auto;
   }
-
+  .logo{
+    width: 25%;
+    height:25%;
+    margin-top:20px;
+  }
+ }
 
 footer ul{
   list-style: none;
@@ -20,11 +29,6 @@ footer a{
   color: white;
 }
 footer li {
-  margin-top:20px;
-}
-.logo{
-  width: 25%;
-  height:25%;
   margin-top:20px;
 }
 

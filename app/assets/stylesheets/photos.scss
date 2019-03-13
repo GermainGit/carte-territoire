@@ -2,7 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
 .field input, .field textarea{
   margin: 1.5% 0;
   padding: 1%;
@@ -72,5 +71,52 @@
     text-transform:uppercase;
     font-weight:bold;
   }
+}
+
+.post{
+  max-width: 100%;
+}
+
+#mapid{
+  height:100vh;
+}
+
+
+.post {
+  max-width: 100%;
+}
+
+#mapid {
+  height:100vh;
+}
+
+.test {
+  display: flex;
+  align-items: flex-end;
+  height:100vh;
+}
+
+p{
+  margin-bottom: 0px;
+}
+
+
+p {
+  margin-bottom: 0px;
+}
+
+.test > h1 {
+  font-family: Lato, arial;
+  font-size: 14px;
+}
+
+
+.photodiv{
+  padding-right: 20px;
+}
+
+.descriptionphoto{
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.07);
+
 }
 
