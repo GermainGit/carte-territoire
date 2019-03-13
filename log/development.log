@@ -42376,6 +42376,7 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+<<<<<<< Updated upstream
 Started GET "/photos" for 127.0.0.1 at 2019-03-13 13:57:33 +0100
 Processing by PhotosController#index as HTML
   Rendering photos/index.html.erb within layouts/application
@@ -42384,6 +42385,7 @@ Processing by PhotosController#index as HTML
 Completed 200 OK in 120ms (Views: 92.6ms | ActiveRecord: 4.6ms)
 
 
+<<<<<<< Updated upstream
 Started GET "/photos" for 127.0.0.1 at 2019-03-13 14:00:40 +0100
   [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
 Processing by PhotosController#index as HTML
@@ -42391,6 +42393,23 @@ Processing by PhotosController#index as HTML
   [1m[36mPhoto Load (0.5ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
   Rendered photos/index.html.erb within layouts/application (36.5ms)
 Completed 200 OK in 526ms (Views: 493.2ms | ActiveRecord: 7.1ms)
+=======
+=======
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7364326613903542500)[0m
+  [1m[35m (11.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (45.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(7364326613903542500)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2019-03-13 13:16:01 +0100
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (33.7ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  Rendered photos/index.html.erb within layouts/application (80.5ms)
+Completed 200 OK in 13356ms (Views: 13256.0ms | ActiveRecord: 37.8ms)
+>>>>>>> Stashed changes
 
 
   
@@ -42428,6 +42447,7 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+<<<<<<< Updated upstream
 Started GET "/users/sign_up" for 127.0.0.1 at 2019-03-13 14:00:51 +0100
 Processing by Users::RegistrationsController#new as HTML
   Rendering devise/registrations/new.html.erb within layouts/application
@@ -42466,6 +42486,24 @@ Processing by Devise::SessionsController#new as HTML
   Rendered devise/shared/_links.html.erb (1.7ms)
   Rendered devise/sessions/new.html.erb within layouts/application (37.9ms)
 Completed 200 OK in 245ms (Views: 114.5ms | ActiveRecord: 0.0ms)
+=======
+Started GET "/users/sign_up" for 127.0.0.1 at 2019-03-13 13:17:28 +0100
+Processing by Users::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (1.8ms)
+  Rendered devise/shared/_links.html.erb (4.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (1296.5ms)
+Completed 200 OK in 1394ms (Views: 1371.1ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2019-03-13 13:20:13 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (1.1ms)
+  Rendered devise/shared/_links.html.erb (1.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (17.3ms)
+Completed 200 OK in 100ms (Views: 73.3ms | ActiveRecord: 3.9ms)
+>>>>>>> Stashed changes
 
 
   
@@ -42503,6 +42541,7 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+<<<<<<< Updated upstream
 Started POST "/users/sign_in" for 127.0.0.1 at 2019-03-13 14:01:18 +0100
 Processing by Devise::SessionsController#create as HTML
   Parameters: {"utf8"=>"✓", "authenticity_token"=>"DnzOb6SEtZJsiS00PaVKEmd4zGxN3Vwh/gOlScl8YDgoD20vv0/TYpiwWCqX66Llz7v4VF9KRVQtcoutRyfV6A==", "user"=>{"email"=>"hugo@admin.fr", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Connexion"}
@@ -42518,6 +42557,19 @@ Processing by PhotosController#index as HTML
   Rendered photos/index.html.erb within layouts/application (4.4ms)
   [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
 Completed 200 OK in 75ms (Views: 72.0ms | ActiveRecord: 1.4ms)
+=======
+Started POST "/users" for 127.0.0.1 at 2019-03-13 13:20:15 +0100
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YmGv9WNAN8C24KttZzFDOLsznlLZYt5+cirr4M0o3qxSb4ZvB5gm06kGEOt35NYnFa1E8ZlbPE1rLw+ThfiP4g==", "user"=>{"prenom"=>"", "nom"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"En route !"}
+Unpermitted parameters: :prenom, :nom
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (2.1ms)
+  Rendered devise/shared/_links.html.erb (1.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (14.8ms)
+Completed 200 OK in 112ms (Views: 83.9ms | ActiveRecord: 0.4ms)
+>>>>>>> Stashed changes
 
 
   
@@ -42555,6 +42607,7 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+<<<<<<< Updated upstream
 Started GET "/" for 127.0.0.1 at 2019-03-13 14:01:24 +0100
 Processing by PhotosController#index as HTML
   Rendering photos/index.html.erb within layouts/application
@@ -42575,6 +42628,11 @@ Completed 200 OK in 66ms (Views: 63.1ms | ActiveRecord: 1.3ms)
 
   
 ActionController::RoutingError (No route matches [GET] "/assets/Lato.ttf"):
+=======
+Started GET "/users" for 127.0.0.1 at 2019-03-13 13:20:46 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+>>>>>>> Stashed changes
   
 actionpack (5.1.6.1) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
@@ -42588,12 +42646,16 @@ activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:69:in `block in tag
 activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:26:in `tagged'
 activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:69:in `tagged'
 railties (5.1.6.1) lib/rails/rack/logger.rb:24:in `call'
+<<<<<<< Updated upstream
 sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
 activesupport (5.1.6.1) lib/active_support/logger_silence.rb:20:in `silence'
 activesupport (5.1.6.1) lib/active_support/logger.rb:63:in `block (3 levels) in broadcast'
 activesupport (5.1.6.1) lib/active_support/logger_silence.rb:20:in `silence'
 activesupport (5.1.6.1) lib/active_support/logger.rb:61:in `block (2 levels) in broadcast'
 sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+=======
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+>>>>>>> Stashed changes
 actionpack (5.1.6.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
 actionpack (5.1.6.1) lib/action_dispatch/middleware/request_id.rb:25:in `call'
 rack (2.0.6) lib/rack/method_override.rb:22:in `call'
@@ -42608,12 +42670,22 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+<<<<<<< Updated upstream
 Started GET "/users/sign_in" for 127.0.0.1 at 2019-03-13 14:05:40 +0100
 Processing by Devise::SessionsController#new as HTML
   Rendering devise/sessions/new.html.erb within layouts/application
   Rendered devise/shared/_links.html.erb (2.1ms)
   Rendered devise/sessions/new.html.erb within layouts/application (31.5ms)
 Completed 200 OK in 107ms (Views: 105.6ms | ActiveRecord: 0.0ms)
+=======
+Started GET "/users/sign_up" for 127.0.0.1 at 2019-03-13 13:20:51 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.8ms)
+  Rendered devise/shared/_links.html.erb (1.4ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 85ms (Views: 66.5ms | ActiveRecord: 3.3ms)
+>>>>>>> Stashed changes
 
 
   
@@ -42651,9 +42723,27 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+<<<<<<< Updated upstream
 Started GET "/about" for 127.0.0.1 at 2019-03-13 14:33:16 +0100
   
 ActionController::RoutingError (No route matches [GET] "/about"):
+=======
+Started POST "/users" for 127.0.0.1 at 2019-03-13 13:20:54 +0100
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"O+QVAQn3dbyUQuwPwhsCGSuG1MI1FBHCXO0YqVuFEIAL6jybbS9kr4ukV4nSzpcGhRgOYXUt8/FF6PzaE1VBzg==", "user"=>{"prenom"=>"", "nom"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"En route !"}
+Unpermitted parameters: :prenom, :nom
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (1.8ms)
+  Rendered devise/shared/_links.html.erb (3.3ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (16.6ms)
+Completed 200 OK in 93ms (Views: 79.0ms | ActiveRecord: 0.6ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/Lato.ttf"):
+>>>>>>> Stashed changes
   
 actionpack (5.1.6.1) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
@@ -42667,7 +42757,16 @@ activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:69:in `block in tag
 activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:26:in `tagged'
 activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:69:in `tagged'
 railties (5.1.6.1) lib/rails/rack/logger.rb:24:in `call'
+<<<<<<< Updated upstream
 sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+=======
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.1.6.1) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.1.6.1) lib/active_support/logger.rb:63:in `block (3 levels) in broadcast'
+activesupport (5.1.6.1) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.1.6.1) lib/active_support/logger.rb:61:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+>>>>>>> Stashed changes
 actionpack (5.1.6.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
 actionpack (5.1.6.1) lib/action_dispatch/middleware/request_id.rb:25:in `call'
 rack (2.0.6) lib/rack/method_override.rb:22:in `call'
@@ -42682,6 +42781,7 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+<<<<<<< Updated upstream
 Started GET "/staticpages/about" for 127.0.0.1 at 2019-03-13 14:33:30 +0100
 Processing by StaticpagesController#show as HTML
   Parameters: {"staticpage"=>"about"}
@@ -42689,6 +42789,32 @@ Processing by StaticpagesController#show as HTML
   Rendered staticpages/about.html.erb within layouts/application (7476.7ms)
   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
 Completed 200 OK in 7599ms (Views: 7597.7ms | ActiveRecord: 0.4ms)
+=======
+Started GET "/photos" for 127.0.0.1 at 2019-03-13 13:21:10 +0100
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  Rendered photos/index.html.erb within layouts/application (18.2ms)
+Completed 200 OK in 73ms (Views: 63.9ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2019-03-13 13:21:14 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (1.1ms)
+  Rendered devise/shared/_links.html.erb (1.6ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (16.2ms)
+Completed 200 OK in 84ms (Views: 83.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2019-03-13 13:21:47 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.9ms)
+  Rendered devise/shared/_links.html.erb (1.4ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (20.5ms)
+Completed 200 OK in 75ms (Views: 74.1ms | ActiveRecord: 0.0ms)
+>>>>>>> Stashed changes
 
 
   
@@ -42726,6 +42852,7 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+<<<<<<< Updated upstream
 Started GET "/staticpages/about" for 127.0.0.1 at 2019-03-13 14:35:58 +0100
 Processing by StaticpagesController#show as HTML
   Parameters: {"staticpage"=>"about"}
@@ -42733,6 +42860,19 @@ Processing by StaticpagesController#show as HTML
   Rendered staticpages/about.html.erb within layouts/application (2574.2ms)
   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
 Completed 200 OK in 3131ms (Views: 3130.3ms | ActiveRecord: 0.3ms)
+=======
+Started POST "/users" for 127.0.0.1 at 2019-03-13 13:21:51 +0100
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JZtNpFgThqmyKRLC+G4e0x0omH2gURs7rRn4mg+fCzQVlWQ+PMuXuq3PqUTou4vMs7ZC3uBo+Qi0HBzpR09aeg==", "user"=>{"prenom"=>"", "nom"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"En route !"}
+Unpermitted parameters: :prenom, :nom
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (1.6ms)
+  Rendered devise/shared/_links.html.erb (1.6ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (13.8ms)
+Completed 200 OK in 80ms (Views: 69.1ms | ActiveRecord: 0.2ms)
+>>>>>>> Stashed changes
 
 
   
@@ -42770,6 +42910,31 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+<<<<<<< Updated upstream
+=======
+Started POST "/users" for 127.0.0.1 at 2019-03-13 13:22:07 +0100
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ABHG2bCjzxpEeo/lyDoG5aOWUMJfNcaJCvivVLFbShIwH+9D1HveCVucNGPY75P6DQiKYR8MJLoT/Usn+YsbXA==", "user"=>{"prenom"=>"Germain", "nom"=>"Prevot", "email"=>"sify.germain@gmail.com", "public"=>"true", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"En route !"}
+Unpermitted parameters: :prenom, :nom, :public
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (26.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "sify.germain@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (2.8ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "sify.germain@gmail.com"], ["encrypted_password", "$2a$11$.TnTmly9rktPQrIwJq7/FOh.BSECGGEH5/IFuZu22PzZBZ1fLCBRy"], ["created_at", "2019-03-13 12:22:07.597130"], ["updated_at", "2019-03-13 12:22:07.597130"]]
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 235ms (ActiveRecord: 35.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-13 13:22:07 +0100
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered photos/index.html.erb within layouts/application (48.9ms)
+Completed 200 OK in 101ms (Views: 97.0ms | ActiveRecord: 2.8ms)
+
+
+>>>>>>> Stashed changes
   
 ActionController::RoutingError (No route matches [GET] "/assets/Lato.ttf"):
   
@@ -42805,6 +42970,7 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+<<<<<<< Updated upstream
 Started GET "/staticpages/about" for 127.0.0.1 at 2019-03-13 14:36:39 +0100
 Processing by StaticpagesController#show as HTML
   Parameters: {"staticpage"=>"about"}
@@ -42812,6 +42978,24 @@ Processing by StaticpagesController#show as HTML
   Rendered staticpages/about.html.erb within layouts/application (1976.5ms)
   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
 Completed 200 OK in 2038ms (Views: 2036.4ms | ActiveRecord: 0.3ms)
+=======
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2019-03-13 13:22:11 +0100
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"sKjJ+xbdqLySACK6IP0GxTPZPetonG9BLHddC/X/XnyApuBhcgW5r43mmTwwKJPanUfnSCiljXI1crl4vS8PMg=="}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (1.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 20ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-13 13:22:11 +0100
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (1.1ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  Rendered photos/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 51ms (Views: 48.7ms | ActiveRecord: 1.1ms)
+>>>>>>> Stashed changes
 
 
   
@@ -42849,6 +43033,7 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+<<<<<<< Updated upstream
 Started GET "/" for 127.0.0.1 at 2019-03-13 14:36:56 +0100
 Processing by PhotosController#index as HTML
   Rendering photos/index.html.erb within layouts/application
@@ -42874,6 +43059,25 @@ Processing by StaticpagesController#show as HTML
   Rendered staticpages/about.html.erb within layouts/application (2176.2ms)
   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
 Completed 200 OK in 2210ms (Views: 2208.8ms | ActiveRecord: 0.3ms)
+=======
+Started GET "/users/sign_up" for 127.0.0.1 at 2019-03-13 13:22:13 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.9ms)
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (19.4ms)
+Completed 200 OK in 97ms (Views: 95.3ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/users/sign_up" for 127.0.0.1 at 2019-03-13 13:22:55 +0100
+Processing by Users::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.9ms)
+  Rendered devise/shared/_links.html.erb (1.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 98ms (Views: 80.0ms | ActiveRecord: 3.9ms)
+>>>>>>> Stashed changes
 
 
   
@@ -42911,6 +43115,7 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+<<<<<<< Updated upstream
 Started GET "/staticpages/about" for 127.0.0.1 at 2019-03-13 14:47:48 +0100
 Processing by StaticpagesController#show as HTML
   Parameters: {"staticpage"=>"about"}
@@ -42918,6 +43123,18 @@ Processing by StaticpagesController#show as HTML
   Rendered staticpages/about.html.erb within layouts/application (2024.9ms)
   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
 Completed 200 OK in 2065ms (Views: 2063.9ms | ActiveRecord: 0.4ms)
+=======
+Started POST "/users" for 127.0.0.1 at 2019-03-13 13:22:57 +0100
+Processing by Users::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SAwOdr5rh2j4kpIjqVmJTmX3cUDUDim9MwvXE+9WDUDqCgosIF1uSpjXPjl74B0OXf3XzrIbvGjQUlVG5LfYYg==", "user"=>{"prenom"=>"", "nom"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"En route !"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (4.5ms)
+  Rendered devise/shared/_links.html.erb (1.2ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (20.7ms)
+Completed 200 OK in 94ms (Views: 81.3ms | ActiveRecord: 0.4ms)
+>>>>>>> Stashed changes
 
 
   
@@ -42955,6 +43172,30 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+<<<<<<< Updated upstream
+=======
+Started POST "/users" for 127.0.0.1 at 2019-03-13 13:23:13 +0100
+Processing by Users::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7ifVXFd9iYzxJgaVIV8ATEEsNKWYAWDqfId+6bsiIaRMIdEGyUtgrpFjqo/z5pQMeSaSK/4U9T+f3vy8sMP0hg==", "user"=>{"prenom"=>"Germain", "nom"=>"Mochel", "email"=>"mochel@moche.fr", "public"=>"true", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"En route !"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "mochel@moche.fr"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "prenom", "nom", "public") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "mochel@moche.fr"], ["encrypted_password", "$2a$11$Y33Hx1VXNOHJlnicxfJRNO5edA6n4tMxS9QU2YsGM3ma4tSq9kSlO"], ["created_at", "2019-03-13 12:23:13.829134"], ["updated_at", "2019-03-13 12:23:13.829134"], ["prenom", "Germain"], ["nom", "Mochel"], ["public", "t"]]
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 159ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-13 13:23:13 +0100
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered photos/index.html.erb within layouts/application (25.3ms)
+Completed 200 OK in 88ms (Views: 79.1ms | ActiveRecord: 4.0ms)
+
+
+>>>>>>> Stashed changes
   
 ActionController::RoutingError (No route matches [GET] "/assets/Lato.ttf"):
   
@@ -42990,6 +43231,7 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+<<<<<<< Updated upstream
 Started GET "/staticpages/about" for 127.0.0.1 at 2019-03-13 14:48:40 +0100
 Processing by StaticpagesController#show as HTML
   Parameters: {"staticpage"=>"about"}
@@ -42997,6 +43239,17 @@ Processing by StaticpagesController#show as HTML
   Rendered staticpages/about.html.erb within layouts/application (1874.7ms)
   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
 Completed 200 OK in 1912ms (Views: 1910.8ms | ActiveRecord: 0.4ms)
+=======
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/" for 127.0.0.1 at 2019-03-13 13:24:15 +0100
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.5ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered photos/index.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 61ms (Views: 55.8ms | ActiveRecord: 2.7ms)
+>>>>>>> Stashed changes
 
 
   
@@ -43034,6 +43287,7 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+<<<<<<< Updated upstream
 Started GET "/staticpages/about" for 127.0.0.1 at 2019-03-13 14:49:22 +0100
 Processing by StaticpagesController#show as HTML
   Parameters: {"staticpage"=>"about"}
@@ -43041,6 +43295,24 @@ Processing by StaticpagesController#show as HTML
   Rendered staticpages/about.html.erb within layouts/application (1903.2ms)
   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
 Completed 200 OK in 1941ms (Views: 1939.7ms | ActiveRecord: 0.5ms)
+=======
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2019-03-13 13:24:17 +0100
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"bjShgobktajElhhFXpDLkKxeH/3URj+0RGmed9z6MHfMMqXYGNJciqTTtF+MKV/QlFS5c7JTqmGnMBwi1xvlVQ=="}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 15ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-13 13:24:17 +0100
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  Rendered photos/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 69ms (Views: 67.1ms | ActiveRecord: 0.3ms)
+>>>>>>> Stashed changes
 
 
   
@@ -43078,6 +43350,7 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+<<<<<<< Updated upstream
 Started GET "/staticpages/about" for 127.0.0.1 at 2019-03-13 14:50:14 +0100
 Processing by StaticpagesController#show as HTML
   Parameters: {"staticpage"=>"about"}
@@ -43085,6 +43358,24 @@ Processing by StaticpagesController#show as HTML
   Rendered staticpages/about.html.erb within layouts/application (1925.9ms)
   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
 Completed 200 OK in 1970ms (Views: 1968.9ms | ActiveRecord: 0.5ms)
+=======
+Started GET "/users/sign_up" for 127.0.0.1 at 2019-03-13 13:24:18 +0100
+Processing by Users::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (1.1ms)
+  Rendered devise/shared/_links.html.erb (2.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (25.5ms)
+Completed 200 OK in 106ms (Views: 105.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2019-03-13 13:27:43 +0100
+Processing by Users::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.8ms)
+  Rendered devise/shared/_links.html.erb (1.2ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (18.2ms)
+Completed 200 OK in 75ms (Views: 74.1ms | ActiveRecord: 0.0ms)
+>>>>>>> Stashed changes
 
 
   
@@ -43122,6 +43413,7 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+<<<<<<< Updated upstream
 Started GET "/staticpages/about" for 127.0.0.1 at 2019-03-13 14:50:52 +0100
 Processing by StaticpagesController#show as HTML
   Parameters: {"staticpage"=>"about"}
@@ -43129,6 +43421,15 @@ Processing by StaticpagesController#show as HTML
   Rendered staticpages/about.html.erb within layouts/application (1958.7ms)
   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
 Completed 200 OK in 2005ms (Views: 2004.2ms | ActiveRecord: 0.3ms)
+=======
+Started GET "/users/sign_up" for 127.0.0.1 at 2019-03-13 13:28:01 +0100
+Processing by Users::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.8ms)
+  Rendered devise/shared/_links.html.erb (1.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 72ms (Views: 70.6ms | ActiveRecord: 0.0ms)
+>>>>>>> Stashed changes
 
 
   
@@ -43166,6 +43467,7 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+<<<<<<< Updated upstream
 Started GET "/staticpages/about" for 127.0.0.1 at 2019-03-13 14:50:58 +0100
 Processing by StaticpagesController#show as HTML
   Parameters: {"staticpage"=>"about"}
@@ -43173,6 +43475,27 @@ Processing by StaticpagesController#show as HTML
   Rendered staticpages/about.html.erb within layouts/application (24.8ms)
   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
 Completed 200 OK in 57ms (Views: 55.8ms | ActiveRecord: 0.4ms)
+=======
+Started POST "/users" for 127.0.0.1 at 2019-03-13 13:28:21 +0100
+Processing by Users::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"o0pZRpJCwwXGGOtgfD/iQhU8x3oT6TY26q0iNOe4gE9yy/seCBytP5eqCN2mIse9GNI8c4lGzPjFdFgQf8vyOg==", "user"=>{"prenom"=>"Michel", "nom"=>"Michel", "email"=>"michel@gmail.com", "public"=>"true", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"En route !"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "michel@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "prenom", "nom", "public") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "michel@gmail.com"], ["encrypted_password", "$2a$11$9Wwu4FS/QPkxQ6ma3vyLtejPzppBZOv/3QxyjNwmnsALQoYrKJrLm"], ["created_at", "2019-03-13 12:28:21.678692"], ["updated_at", "2019-03-13 12:28:21.678692"], ["prenom", "Michel"], ["nom", "Michel"], ["public", "t"]]
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 166ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-13 13:28:21 +0100
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered photos/index.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 56ms (Views: 53.3ms | ActiveRecord: 1.2ms)
+>>>>>>> Stashed changes
 
 
   
@@ -43210,6 +43533,27 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+<<<<<<< Updated upstream
+=======
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2019-03-13 13:28:24 +0100
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"cdiQlqAdFOh+3qn+9sA9InyKCdZbHAIrdi+AhS4W7BygWTLOOkN60i9sSkMs3RjdcWTy38Gz+OVZ9vqhtmWeaQ=="}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (1.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-13 13:28:24 +0100
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  Rendered photos/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 57ms (Views: 53.6ms | ActiveRecord: 0.3ms)
+
+
+>>>>>>> Stashed changes
   
 ActionController::RoutingError (No route matches [GET] "/assets/Lato.ttf"):
   
@@ -43245,6 +43589,7 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+<<<<<<< Updated upstream
 Started GET "/staticpages/about" for 127.0.0.1 at 2019-03-13 14:51:40 +0100
 Processing by StaticpagesController#show as HTML
   Parameters: {"staticpage"=>"about"}
@@ -43252,6 +43597,17 @@ Processing by StaticpagesController#show as HTML
   Rendered staticpages/about.html.erb within layouts/application (2018.7ms)
   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
 Completed 200 OK in 2066ms (Views: 2062.3ms | ActiveRecord: 0.4ms)
+=======
+>>>>>>> Stashed changes
+Started GET "/photos/new" for 127.0.0.1 at 2019-03-13 15:00:51 +0100
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/new.html.erb within layouts/application
+  Rendered photos/_form.html.erb (386.7ms)
+  Rendered photos/new.html.erb within layouts/application (1311.5ms)
+Completed 200 OK in 1507ms (Views: 1400.8ms | ActiveRecord: 20.3ms)
+>>>>>>> Stashed changes
 
 
   
@@ -43289,6 +43645,7 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+<<<<<<< Updated upstream
 Started GET "/staticpages/about" for 127.0.0.1 at 2019-03-13 14:52:01 +0100
 Processing by StaticpagesController#show as HTML
   Parameters: {"staticpage"=>"about"}
@@ -43296,6 +43653,24 @@ Processing by StaticpagesController#show as HTML
   Rendered staticpages/about.html.erb within layouts/application (18.8ms)
   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
 Completed 200 OK in 57ms (Views: 56.0ms | ActiveRecord: 0.4ms)
+=======
+Started POST "/photos" for 127.0.0.1 at 2019-03-13 15:01:02 +0100
+Processing by PhotosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3vt+HaFY8Mdmco0gy4LFIRqaR7ph/pGfmIaaqF7DMwRp49yzDU5CglxJMkKR9ctawsGq6BQO1+Rr8R9f/r4/1g==", "photo"=>{"file"=>#<ActionDispatch::Http::UploadedFile:0x00007fcd400dc4c8 @tempfile=#<Tempfile:/tmp/RackMultipart20190313-30210-1vr9in0.jpg>, @original_filename="ufo-portal.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"photo[file]\"; filename=\"ufo-portal.jpg\"\r\nContent-Type: image/jpeg\r\n">, "file_cache"=>"", "title"=>"Test a moi", "content"=>"ok", "long"=>"-0.5565777280286422", "lat"=>"44.81405790595947", "date(3i)"=>"13", "date(2i)"=>"3", "date(1i)"=>"2019"}, "commit"=>"Partagez-moi !"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Unpermitted parameter: :file_cache
+  [1m[35m (2.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "photos" ("title", "content", "long", "lat", "date", "user_id", "created_at", "updated_at", "file") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["title", "Test a moi"], ["content", "ok"], ["long", -0.5565777280286422], ["lat", 44.81405790595947], ["date", "2019-03-13"], ["user_id", 1], ["created_at", "2019-03-13 14:01:02.802972"], ["updated_at", "2019-03-13 14:01:02.802972"], ["file", "rc91codower4jpromzsi.jpg"]]
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "photos" SET "file" = 'image/upload/v1552485663/rc91codower4jpromzsi.jpg' WHERE "photos"."id" = $1[0m  [["id", 4]]
+  [1m[35m (4.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering photos/new.html.erb within layouts/application
+  Rendered photos/_form.html.erb (4.0ms)
+  Rendered photos/new.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 1527ms (Views: 74.3ms | ActiveRecord: 10.6ms)
+>>>>>>> Stashed changes
 
 
   
@@ -43333,6 +43708,7 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+<<<<<<< Updated upstream
 Started GET "/staticpages/about" for 127.0.0.1 at 2019-03-13 14:52:20 +0100
 Processing by StaticpagesController#show as HTML
   Parameters: {"staticpage"=>"about"}
@@ -43340,6 +43716,32 @@ Processing by StaticpagesController#show as HTML
   Rendered staticpages/about.html.erb within layouts/application (2083.9ms)
   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
 Completed 200 OK in 2148ms (Views: 2146.6ms | ActiveRecord: 0.3ms)
+=======
+Started PATCH "/photos/4" for 127.0.0.1 at 2019-03-13 15:01:22 +0100
+Processing by PhotosController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"djykO+QNlgkrGXDLi74n+KLb94Atdcn+eiQ3CLojISzBJAaVSBskTBEiz6nRySmDeoAa0liFj4WJU7L/Gl4t/g==", "photo"=>{"file"=>#<ActionDispatch::Http::UploadedFile:0x00007fcd40d603e8 @tempfile=#<Tempfile:/tmp/RackMultipart20190313-30210-1tcazlz.jpg>, @original_filename="ufo-portal.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"photo[file]\"; filename=\"ufo-portal.jpg\"\r\nContent-Type: image/jpeg\r\n">, "file_cache"=>"", "title"=>"Test a moi", "content"=>"ok", "long"=>"-0.552455566406258", "lat"=>"44.817353885814406", "date(3i)"=>"13", "date(2i)"=>"3", "date(1i)"=>"2019"}, "commit"=>"Partagez-moi !", "id"=>"4"}
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Unpermitted parameter: :file_cache
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "photos" SET "long" = $1, "lat" = $2, "file" = $3, "updated_at" = $4 WHERE "photos"."id" = $5[0m  [["long", -0.552455566406258], ["lat", 44.817353885814406], ["file", "txqhwohnqexpuwvikin0.jpg"], ["updated_at", "2019-03-13 14:01:22.581102"], ["id", 4]]
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "photos" SET "file" = 'image/upload/v1552485683/txqhwohnqexpuwvikin0.jpg' WHERE "photos"."id" = $1[0m  [["id", 4]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/photos/4
+Completed 302 Found in 859ms (ActiveRecord: 4.9ms)
+
+
+Started GET "/photos/4" for 127.0.0.1 at 2019-03-13 15:01:23 +0100
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering photos/show.html.erb within layouts/application
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered photos/show.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 80ms (Views: 72.4ms | ActiveRecord: 3.8ms)
+>>>>>>> Stashed changes
 
 
   
@@ -43377,6 +43779,7 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+<<<<<<< Updated upstream
 Started GET "/staticpages/about" for 127.0.0.1 at 2019-03-13 14:52:48 +0100
 Processing by StaticpagesController#show as HTML
   Parameters: {"staticpage"=>"about"}
@@ -43384,6 +43787,24 @@ Processing by StaticpagesController#show as HTML
   Rendered staticpages/about.html.erb within layouts/application (1897.8ms)
   [1m[36mUser Load (5.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
 Completed 200 OK in 2022ms (Views: 2015.0ms | ActiveRecord: 5.5ms)
+=======
+Started GET "/" for 127.0.0.1 at 2019-03-13 15:01:32 +0100
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  Rendered photos/index.html.erb within layouts/application (3.2ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 53ms (Views: 51.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2019-03-13 15:01:42 +0100
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/new.html.erb within layouts/application
+  Rendered photos/_form.html.erb (4.0ms)
+  Rendered photos/new.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 76ms (Views: 72.6ms | ActiveRecord: 0.6ms)
+>>>>>>> Stashed changes
 
 
   
@@ -43421,6 +43842,7 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+<<<<<<< Updated upstream
 Started GET "/staticpages/about" for 127.0.0.1 at 2019-03-13 14:53:26 +0100
 Processing by StaticpagesController#show as HTML
   Parameters: {"staticpage"=>"about"}
@@ -43428,6 +43850,24 @@ Processing by StaticpagesController#show as HTML
   Rendered staticpages/about.html.erb within layouts/application (2012.0ms)
   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
 Completed 200 OK in 2065ms (Views: 2062.9ms | ActiveRecord: 0.5ms)
+=======
+Started POST "/photos" for 127.0.0.1 at 2019-03-13 15:01:54 +0100
+Processing by PhotosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"imnOS9YDoq+dpzgI/2WQUlVHfu+h6S0f30spuuP1bl49cWzlehUQ6qech2qlEp4pjRyTvdQZa2QsPKxNQ4hijA==", "photo"=>{"file"=>#<ActionDispatch::Http::UploadedFile:0x00007fcd40678918 @tempfile=#<Tempfile:/tmp/RackMultipart20190313-30210-vxlunl.jpg>, @original_filename="ufo-portal.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"photo[file]\"; filename=\"ufo-portal.jpg\"\r\nContent-Type: image/jpeg\r\n">, "file_cache"=>"", "title"=>"retest moi", "content"=>"ok", "long"=>"-0.637644881595041", "lat"=>"44.836460375226814", "date(3i)"=>"13", "date(2i)"=>"3", "date(1i)"=>"2019"}, "commit"=>"Partagez-moi !"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Unpermitted parameter: :file_cache
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "photos" ("title", "content", "long", "lat", "date", "user_id", "created_at", "updated_at", "file") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["title", "retest moi"], ["content", "ok"], ["long", -0.637644881595041], ["lat", 44.836460375226814], ["date", "2019-03-13"], ["user_id", 1], ["created_at", "2019-03-13 14:01:54.384255"], ["updated_at", "2019-03-13 14:01:54.384255"], ["file", "druzfelxdkdqcwk7mql0.jpg"]]
+  [1m[35mSQL (1.1ms)[0m  [1m[33mUPDATE "photos" SET "file" = 'image/upload/v1552485714/druzfelxdkdqcwk7mql0.jpg' WHERE "photos"."id" = $1[0m  [["id", 5]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering photos/new.html.erb within layouts/application
+  Rendered photos/_form.html.erb (4.2ms)
+  Rendered photos/new.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 1002ms (Views: 71.0ms | ActiveRecord: 5.4ms)
+>>>>>>> Stashed changes
 
 
   
@@ -43465,6 +43905,7 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+<<<<<<< Updated upstream
 Started GET "/staticpages/about" for 127.0.0.1 at 2019-03-13 14:53:40 +0100
 Processing by StaticpagesController#show as HTML
   Parameters: {"staticpage"=>"about"}
@@ -43472,6 +43913,26 @@ Processing by StaticpagesController#show as HTML
   Rendered staticpages/about.html.erb within layouts/application (2052.8ms)
   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
 Completed 200 OK in 2086ms (Views: 2085.5ms | ActiveRecord: 0.3ms)
+=======
+Started GET "/" for 127.0.0.1 at 2019-03-13 15:02:04 +0100
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  Rendered photos/index.html.erb within layouts/application (5.2ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 70ms (Views: 68.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2019-03-13 15:02:08 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPhoto Load (1.5ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  Rendered users/show.html.erb within layouts/application (3.4ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 76ms (Views: 70.1ms | ActiveRecord: 2.7ms)
+>>>>>>> Stashed changes
 
 
   
@@ -43509,6 +43970,7 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+<<<<<<< Updated upstream
 Started GET "/staticpages/about" for 127.0.0.1 at 2019-03-13 14:54:49 +0100
 Processing by StaticpagesController#show as HTML
   Parameters: {"staticpage"=>"about"}
@@ -43516,6 +43978,24 @@ Processing by StaticpagesController#show as HTML
   Rendered staticpages/about.html.erb within layouts/application (1889.4ms)
   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
 Completed 200 OK in 1921ms (Views: 1920.4ms | ActiveRecord: 0.3ms)
+=======
+Started GET "/" for 127.0.0.1 at 2019-03-13 15:02:11 +0100
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.8ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  Rendered photos/index.html.erb within layouts/application (5.5ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 70ms (Views: 66.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2019-03-13 15:02:23 +0100
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/new.html.erb within layouts/application
+  Rendered photos/_form.html.erb (6.7ms)
+  Rendered photos/new.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 80ms (Views: 75.4ms | ActiveRecord: 0.5ms)
+>>>>>>> Stashed changes
 
 
   
@@ -43553,6 +44033,7 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+<<<<<<< Updated upstream
 Started GET "/staticpages/about" for 127.0.0.1 at 2019-03-13 14:55:43 +0100
 Processing by StaticpagesController#show as HTML
   Parameters: {"staticpage"=>"about"}
@@ -43560,6 +44041,24 @@ Processing by StaticpagesController#show as HTML
   Rendered staticpages/about.html.erb within layouts/application (1917.8ms)
   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
 Completed 200 OK in 1952ms (Views: 1950.8ms | ActiveRecord: 0.3ms)
+=======
+Started POST "/photos" for 127.0.0.1 at 2019-03-13 15:02:31 +0100
+Processing by PhotosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZV4wVL0C79doHRvSsdkgYZe8x5MTIj+TAJhZkEll91zSRpL6ERRdklImpLDrri4aT+cqwWbSeejz79xn6Rj7jg==", "photo"=>{"file"=>#<ActionDispatch::Http::UploadedFile:0x00007fcd40ab84b0 @tempfile=#<Tempfile:/tmp/RackMultipart20190313-30210-14r5wld.jpg>, @original_filename="ufo-portal.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"photo[file]\"; filename=\"ufo-portal.jpg\"\r\nContent-Type: image/jpeg\r\n">, "file_cache"=>"", "title"=>"ok", "content"=>"ok", "long"=>"-0.5290973369891773", "lat"=>"44.81016093564253", "date(3i)"=>"13", "date(2i)"=>"3", "date(1i)"=>"2019"}, "commit"=>"Partagez-moi !"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Unpermitted parameter: :file_cache
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "photos" ("title", "content", "long", "lat", "date", "user_id", "created_at", "updated_at", "file") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["title", "ok"], ["content", "ok"], ["long", -0.5290973369891773], ["lat", 44.81016093564253], ["date", "2019-03-13"], ["user_id", 1], ["created_at", "2019-03-13 14:02:31.836285"], ["updated_at", "2019-03-13 14:02:31.836285"], ["file", "rseqizye4pwsr7eda9lw.jpg"]]
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "photos" SET "file" = 'image/upload/v1552485752/rseqizye4pwsr7eda9lw.jpg' WHERE "photos"."id" = $1[0m  [["id", 6]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  Rendering photos/new.html.erb within layouts/application
+  Rendered photos/_form.html.erb (7.5ms)
+  Rendered photos/new.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 891ms (Views: 80.3ms | ActiveRecord: 5.0ms)
+>>>>>>> Stashed changes
 
 
   
@@ -43597,6 +44096,7 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+<<<<<<< Updated upstream
 Started GET "/staticpages/about" for 127.0.0.1 at 2019-03-13 14:56:14 +0100
 Processing by StaticpagesController#show as HTML
   Parameters: {"staticpage"=>"about"}
@@ -43604,6 +44104,15 @@ Processing by StaticpagesController#show as HTML
   Rendered staticpages/about.html.erb within layouts/application (1927.0ms)
   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
 Completed 200 OK in 1978ms (Views: 1977.2ms | ActiveRecord: 0.3ms)
+=======
+Started GET "/photos" for 127.0.0.1 at 2019-03-13 15:02:49 +0100
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  Rendered photos/index.html.erb within layouts/application (21.3ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 114ms (Views: 101.7ms | ActiveRecord: 6.8ms)
+>>>>>>> Stashed changes
 
 
   
@@ -43641,6 +44150,7 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+<<<<<<< Updated upstream
 Started GET "/staticpages/about" for 127.0.0.1 at 2019-03-13 14:57:20 +0100
 Processing by StaticpagesController#show as HTML
   Parameters: {"staticpage"=>"about"}
@@ -43648,6 +44158,15 @@ Processing by StaticpagesController#show as HTML
   Rendered staticpages/about.html.erb within layouts/application (1927.8ms)
   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
 Completed 200 OK in 1968ms (Views: 1967.6ms | ActiveRecord: 0.4ms)
+=======
+Started GET "/photos/new" for 127.0.0.1 at 2019-03-13 15:02:52 +0100
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/new.html.erb within layouts/application
+  Rendered photos/_form.html.erb (4.0ms)
+  Rendered photos/new.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 70ms (Views: 66.4ms | ActiveRecord: 0.5ms)
+>>>>>>> Stashed changes
 
 
   
@@ -43685,6 +44204,7 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+<<<<<<< Updated upstream
 Started GET "/staticpages/about" for 127.0.0.1 at 2019-03-13 14:57:50 +0100
 Processing by StaticpagesController#show as HTML
   Parameters: {"staticpage"=>"about"}
@@ -43692,6 +44212,34 @@ Processing by StaticpagesController#show as HTML
   Rendered staticpages/about.html.erb within layouts/application (1980.4ms)
   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
 Completed 200 OK in 2015ms (Views: 2014.2ms | ActiveRecord: 0.3ms)
+=======
+Started POST "/photos" for 127.0.0.1 at 2019-03-13 15:03:08 +0100
+Processing by PhotosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nCOPBPgJiyPRvRp0Ml9QOphziXeOR3NsLyS4x0DamWQrOy2qVB85ZuuGpRZoKF5BQChkJfu3NRfcUz0w4KeVtg==", "photo"=>{"file"=>#<ActionDispatch::Http::UploadedFile:0x000055f168a40fb0 @tempfile=#<Tempfile:/tmp/RackMultipart20190313-30210-19z4h3r.jpg>, @original_filename="ufo-portal.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"photo[file]\"; filename=\"ufo-portal.jpg\"\r\nContent-Type: image/jpeg\r\n">, "file_cache"=>"", "title"=>"test moiii", "content"=>"ok", "long"=>"-0.549707630268781", "lat"=>"44.82769522842452", "date(3i)"=>"13", "date(2i)"=>"3", "date(1i)"=>"2019"}, "commit"=>"Partagez-moi !"}
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Unpermitted parameter: :file_cache
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO "photos" ("title", "content", "long", "lat", "date", "user_id", "created_at", "updated_at", "file") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["title", "test moiii"], ["content", "ok"], ["long", -0.549707630268781], ["lat", 44.82769522842452], ["date", "2019-03-13"], ["user_id", 1], ["created_at", "2019-03-13 14:03:08.783010"], ["updated_at", "2019-03-13 14:03:08.783010"], ["file", "nulvrqh2ktgk5r1et6jt.jpg"]]
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "photos" SET "file" = 'image/upload/v1552485789/nulvrqh2ktgk5r1et6jt.jpg' WHERE "photos"."id" = $1[0m  [["id", 7]]
+  [1m[35m (3.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "photos" SET "updated_at" = $1, "file" = $2 WHERE "photos"."id" = $3[0m  [["updated_at", "2019-03-13 14:03:09.720394"], ["file", "image/upload/v1552485789/nulvrqh2ktgk5r1et6jt.jpg"], ["id", 7]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/photos/7
+Completed 302 Found in 967ms (ActiveRecord: 10.8ms)
+
+
+Started GET "/photos/7" for 127.0.0.1 at 2019-03-13 15:03:09 +0100
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering photos/show.html.erb within layouts/application
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered photos/show.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 87ms (Views: 79.5ms | ActiveRecord: 4.7ms)
+>>>>>>> Stashed changes
 
 
   
@@ -43729,6 +44277,7 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+<<<<<<< Updated upstream
 Started GET "/staticpages/about" for 127.0.0.1 at 2019-03-13 14:58:40 +0100
 Processing by StaticpagesController#show as HTML
   Parameters: {"staticpage"=>"about"}
@@ -43736,6 +44285,26 @@ Processing by StaticpagesController#show as HTML
   Rendered staticpages/about.html.erb within layouts/application (2044.4ms)
   [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
 Completed 200 OK in 2094ms (Views: 2092.0ms | ActiveRecord: 0.9ms)
+=======
+Started GET "/" for 127.0.0.1 at 2019-03-13 15:03:14 +0100
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.8ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  Rendered photos/index.html.erb within layouts/application (5.6ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 71ms (Views: 68.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2019-03-13 15:03:18 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPhoto Load (0.6ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  Rendered users/show.html.erb within layouts/application (4.1ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 76ms (Views: 68.8ms | ActiveRecord: 2.7ms)
+>>>>>>> Stashed changes
 
 
   
@@ -43773,6 +44342,7 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+<<<<<<< Updated upstream
 Started GET "/staticpages/about" for 127.0.0.1 at 2019-03-13 14:58:57 +0100
 Processing by StaticpagesController#show as HTML
   Parameters: {"staticpage"=>"about"}
@@ -43780,6 +44350,17 @@ Processing by StaticpagesController#show as HTML
   Rendered staticpages/about.html.erb within layouts/application (1939.9ms)
   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
 Completed 200 OK in 1985ms (Views: 1984.4ms | ActiveRecord: 0.4ms)
+=======
+Started GET "/users/2" for 127.0.0.1 at 2019-03-13 15:03:26 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  Rendered users/show.html.erb within layouts/application (1.8ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 64ms (Views: 61.0ms | ActiveRecord: 0.9ms)
+>>>>>>> Stashed changes
 
 
   
@@ -43817,6 +44398,7 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+<<<<<<< Updated upstream
 Started GET "/staticpages/about" for 127.0.0.1 at 2019-03-13 14:59:07 +0100
 Processing by StaticpagesController#show as HTML
   Parameters: {"staticpage"=>"about"}
@@ -43824,6 +44406,17 @@ Processing by StaticpagesController#show as HTML
   Rendered staticpages/about.html.erb within layouts/application (1955.0ms)
   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
 Completed 200 OK in 1999ms (Views: 1997.9ms | ActiveRecord: 0.4ms)
+=======
+Started GET "/users/1" for 127.0.0.1 at 2019-03-13 15:03:28 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  Rendered users/show.html.erb within layouts/application (2.2ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 58ms (Views: 54.2ms | ActiveRecord: 1.1ms)
+>>>>>>> Stashed changes
 
 
   
@@ -43861,6 +44454,7 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+<<<<<<< Updated upstream
 Started GET "/staticpages/about" for 127.0.0.1 at 2019-03-13 15:00:07 +0100
 Processing by StaticpagesController#show as HTML
   Parameters: {"staticpage"=>"about"}
@@ -43868,6 +44462,24 @@ Processing by StaticpagesController#show as HTML
   Rendered staticpages/about.html.erb within layouts/application (2040.3ms)
   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
 Completed 200 OK in 2085ms (Views: 2083.6ms | ActiveRecord: 0.4ms)
+=======
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2019-03-13 15:03:48 +0100
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"sIPRrC90iifNX4VqYgyUtwLEO5DDmcwvaf4Sp1IGfxUHm3MCg2I4YvdkOgg4e5rM2p/WwrZpilSaiZdQ8ntzxw=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 9ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-13 15:03:48 +0100
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  Rendered photos/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 62ms (Views: 60.5ms | ActiveRecord: 0.3ms)
+>>>>>>> Stashed changes
 
 
   
@@ -43905,6 +44517,7 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+<<<<<<< Updated upstream
 Started GET "/staticpages/about" for 127.0.0.1 at 2019-03-13 15:00:17 +0100
 Processing by StaticpagesController#show as HTML
   Parameters: {"staticpage"=>"about"}
@@ -43912,6 +44525,41 @@ Processing by StaticpagesController#show as HTML
   Rendered staticpages/about.html.erb within layouts/application (1924.8ms)
   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
 Completed 200 OK in 1965ms (Views: 1964.2ms | ActiveRecord: 0.3ms)
+=======
+Started GET "/users/sign_up" for 127.0.0.1 at 2019-03-13 15:03:50 +0100
+Processing by Users::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.9ms)
+  Rendered devise/shared/_links.html.erb (11.2ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (111.7ms)
+Completed 200 OK in 197ms (Views: 195.9ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-03-13 15:04:12 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (3.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (21.4ms)
+Completed 200 OK in 79ms (Views: 74.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2019-03-13 15:04:16 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"a77p330Zvobh5zfGRuwF9KHFI7l3Go7aIop9QpzzVTPurCKSy4jNL8y+GcNyNykJoIdisUsHOk0GE2HO6JhiVg==", "user"=>{"email"=>"sify.germain@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Connexion"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "sify.germain@gmail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 177ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-13 15:04:16 +0100
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.7ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  Rendered photos/index.html.erb within layouts/application (6.3ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 70ms (Views: 67.8ms | ActiveRecord: 1.2ms)
+>>>>>>> Stashed changes
 
 
   
@@ -43949,6 +44597,7 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+<<<<<<< Updated upstream
 Started GET "/staticpages/about" for 127.0.0.1 at 2019-03-13 15:00:30 +0100
 Processing by StaticpagesController#show as HTML
   Parameters: {"staticpage"=>"about"}
@@ -43956,6 +44605,15 @@ Processing by StaticpagesController#show as HTML
   Rendered staticpages/about.html.erb within layouts/application (1978.6ms)
   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
 Completed 200 OK in 2011ms (Views: 2010.1ms | ActiveRecord: 0.3ms)
+=======
+Started GET "/photos/new" for 127.0.0.1 at 2019-03-13 15:04:36 +0100
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering photos/new.html.erb within layouts/application
+  Rendered photos/_form.html.erb (5.1ms)
+  Rendered photos/new.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 63ms (Views: 59.6ms | ActiveRecord: 0.4ms)
+>>>>>>> Stashed changes
 
 
   
@@ -43993,6 +44651,7 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+<<<<<<< Updated upstream
 Started GET "/staticpages/about" for 127.0.0.1 at 2019-03-13 15:00:40 +0100
 Processing by StaticpagesController#show as HTML
   Parameters: {"staticpage"=>"about"}
@@ -44132,6 +44791,34 @@ Processing by StaticpagesController#show as HTML
   Rendered staticpages/about.html.erb within layouts/application (1792.5ms)
   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
 Completed 200 OK in 1827ms (Views: 1825.8ms | ActiveRecord: 0.3ms)
+=======
+Started POST "/photos" for 127.0.0.1 at 2019-03-13 15:04:47 +0100
+Processing by PhotosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jUmbFr67Pt7pET0NIvheBB9FaHPLlyHrstk/x2+rpU7XcHd0oTxFoPL9TwPLBMkXrqrbs1un3BlLpBgoTWivgA==", "photo"=>{"file"=>#<ActionDispatch::Http::UploadedFile:0x00007fcd3d68af08 @tempfile=#<Tempfile:/tmp/RackMultipart20190313-30210-j7kdmm.jpg>, @original_filename="ufo-portal.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"photo[file]\"; filename=\"ufo-portal.jpg\"\r\nContent-Type: image/jpeg\r\n">, "file_cache"=>"", "title"=>"test pas moi", "content"=>"ok", "long"=>"-0.6403929206989735", "lat"=>"44.863721195807756", "date(3i)"=>"13", "date(2i)"=>"3", "date(1i)"=>"2019"}, "commit"=>"Partagez-moi !"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Unpermitted parameter: :file_cache
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "photos" ("title", "content", "long", "lat", "date", "user_id", "created_at", "updated_at", "file") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["title", "test pas moi"], ["content", "ok"], ["long", -0.6403929206989735], ["lat", 44.863721195807756], ["date", "2019-03-13"], ["user_id", 2], ["created_at", "2019-03-13 14:04:47.993894"], ["updated_at", "2019-03-13 14:04:47.993894"], ["file", "thpzrenvsj0pi8atkl0k.jpg"]]
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "photos" SET "file" = 'image/upload/v1552485888/thpzrenvsj0pi8atkl0k.jpg' WHERE "photos"."id" = $1[0m  [["id", 8]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "photos" SET "updated_at" = $1, "file" = $2 WHERE "photos"."id" = $3[0m  [["updated_at", "2019-03-13 14:04:48.898781"], ["file", "image/upload/v1552485888/thpzrenvsj0pi8atkl0k.jpg"], ["id", 8]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/photos/8
+Completed 302 Found in 933ms (ActiveRecord: 7.3ms)
+
+
+Started GET "/photos/8" for 127.0.0.1 at 2019-03-13 15:04:48 +0100
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering photos/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered photos/show.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 84ms (Views: 80.4ms | ActiveRecord: 1.2ms)
+>>>>>>> Stashed changes
 
 
   
@@ -44169,6 +44856,7 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+<<<<<<< Updated upstream
 Started GET "/staticpages/about" for 127.0.0.1 at 2019-03-13 15:04:35 +0100
 Processing by StaticpagesController#show as HTML
   Parameters: {"staticpage"=>"about"}
@@ -44176,6 +44864,17 @@ Processing by StaticpagesController#show as HTML
   Rendered staticpages/about.html.erb within layouts/application (1992.4ms)
   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
 Completed 200 OK in 2038ms (Views: 2037.1ms | ActiveRecord: 0.4ms)
+=======
+Started GET "/users/2" for 127.0.0.1 at 2019-03-13 15:04:54 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPhoto Load (0.6ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  Rendered users/show.html.erb within layouts/application (3.1ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 64ms (Views: 59.9ms | ActiveRecord: 1.5ms)
+>>>>>>> Stashed changes
 
 
   
@@ -44213,6 +44912,7 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+<<<<<<< Updated upstream
 Started GET "/staticpages/about" for 127.0.0.1 at 2019-03-13 15:08:07 +0100
 Processing by StaticpagesController#show as HTML
   Parameters: {"staticpage"=>"about"}
@@ -44220,6 +44920,17 @@ Processing by StaticpagesController#show as HTML
   Rendered staticpages/about.html.erb within layouts/application (1862.9ms)
   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
 Completed 200 OK in 1903ms (Views: 1902.4ms | ActiveRecord: 0.4ms)
+=======
+Started GET "/users/1" for 127.0.0.1 at 2019-03-13 15:04:57 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (4.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPhoto Load (0.6ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  Rendered users/show.html.erb within layouts/application (2.3ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 82ms (Views: 72.9ms | ActiveRecord: 5.8ms)
+>>>>>>> Stashed changes
 
 
   
@@ -44257,6 +44968,7 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+<<<<<<< Updated upstream
 Started GET "/staticpages/about" for 127.0.0.1 at 2019-03-13 15:08:47 +0100
 Processing by StaticpagesController#show as HTML
   Parameters: {"staticpage"=>"about"}
@@ -44264,6 +44976,34 @@ Processing by StaticpagesController#show as HTML
   Rendered staticpages/about.html.erb within layouts/application (1965.2ms)
   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
 Completed 200 OK in 2003ms (Views: 2001.6ms | ActiveRecord: 0.4ms)
+=======
+Started GET "/users/1" for 127.0.0.1 at 2019-03-13 15:40:04 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.9ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 1, expected 0)):
+    1: <h2><%= @user.prenom @user.nom %></h2>
+    2: 
+    3: <% @photos.each do |photo| %>
+    4:     <% if(photo.user_id == @user.id) %>
+  
+app/views/users/show.html.erb:1:in `_app_views_users_show_html_erb__1043689977020770823_70259760817720'
+Started GET "/users/1" for 127.0.0.1 at 2019-03-13 15:40:12 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPhoto Load (0.5ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  Rendered users/show.html.erb within layouts/application (2.5ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 60ms (Views: 55.5ms | ActiveRecord: 1.2ms)
+>>>>>>> Stashed changes
 
 
   
@@ -44301,6 +45041,7 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+<<<<<<< Updated upstream
 Started GET "/staticpages/about" for 127.0.0.1 at 2019-03-13 15:10:59 +0100
 Processing by StaticpagesController#show as HTML
   Parameters: {"staticpage"=>"about"}
@@ -44308,6 +45049,17 @@ Processing by StaticpagesController#show as HTML
   Rendered staticpages/about.html.erb within layouts/application (2029.6ms)
   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
 Completed 200 OK in 2086ms (Views: 2084.0ms | ActiveRecord: 0.3ms)
+=======
+Started GET "/users/1" for 127.0.0.1 at 2019-03-13 15:40:24 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPhoto Load (2.9ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  Rendered users/show.html.erb within layouts/application (8.7ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 71ms (Views: 61.8ms | ActiveRecord: 3.9ms)
+>>>>>>> Stashed changes
 
 
   
@@ -44345,6 +45097,7 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+<<<<<<< Updated upstream
 Started GET "/staticpages/about" for 127.0.0.1 at 2019-03-13 15:11:11 +0100
 Processing by StaticpagesController#show as HTML
   Parameters: {"staticpage"=>"about"}
@@ -44406,6 +45159,17 @@ Completed 200 OK in 271ms (Views: 263.8ms | ActiveRecord: 5.2ms)
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+=======
+Started GET "/users/1" for 127.0.0.1 at 2019-03-13 15:40:41 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPhoto Load (0.5ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  Rendered users/show.html.erb within layouts/application (2.9ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 70ms (Views: 64.7ms | ActiveRecord: 1.5ms)
+>>>>>>> Stashed changes
 
 
   
@@ -44443,6 +45207,7 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 =======
@@ -44461,6 +45226,19 @@ Completed 200 OK in 422ms (Views: 386.8ms | ActiveRecord: 6.1ms)
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+=======
+Started GET "/users/1" for 127.0.0.1 at 2019-03-13 15:40:48 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPhoto Load (1.1ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  Rendered users/show.html.erb within layouts/application (3.1ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 95ms (Views: 91.0ms | ActiveRecord: 1.8ms)
+
+
+>>>>>>> Stashed changes
   
 ActionController::RoutingError (No route matches [GET] "/assets/Lato.ttf"):
   
@@ -44496,6 +45274,7 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 Started GET "/staticpages/about" for 127.0.0.1 at 2019-03-13 15:12:42 +0100
@@ -44518,6 +45297,17 @@ Completed 200 OK in 3473ms (Views: 3470.4ms | ActiveRecord: 0.8ms)
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+=======
+Started GET "/users/1" for 127.0.0.1 at 2019-03-13 15:41:37 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  Rendered users/show.html.erb within layouts/application (3.4ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 67ms (Views: 63.1ms | ActiveRecord: 1.1ms)
+>>>>>>> Stashed changes
 
 
   
@@ -44555,6 +45345,7 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 Started GET "/staticpages/about" for 127.0.0.1 at 2019-03-13 15:14:22 +0100
@@ -44577,6 +45368,17 @@ Completed 200 OK in 2455ms (Views: 2453.1ms | ActiveRecord: 0.6ms)
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+=======
+Started GET "/users/1" for 127.0.0.1 at 2019-03-13 15:43:22 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered users/show.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 59ms (Views: 54.6ms | ActiveRecord: 1.3ms)
+>>>>>>> Stashed changes
 
 
   
@@ -44614,6 +45416,7 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 Started GET "/staticpages/about" for 127.0.0.1 at 2019-03-13 15:14:48 +0100
@@ -44636,6 +45439,17 @@ Completed 200 OK in 2523ms (Views: 2517.4ms | ActiveRecord: 4.2ms)
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+=======
+Started GET "/users/1" for 127.0.0.1 at 2019-03-13 15:43:25 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPhoto Load (1.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered users/show.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 66ms (Views: 60.4ms | ActiveRecord: 2.3ms)
+>>>>>>> Stashed changes
 
 
   
@@ -44673,6 +45487,7 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 =======
@@ -44806,6 +45621,125 @@ Completed 200 OK in 98ms (Views: 96.5ms | ActiveRecord: 0.5ms)
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+=======
+Started GET "/users/2" for 127.0.0.1 at 2019-03-13 15:43:38 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPhoto Load (0.5ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered users/show.html.erb within layouts/application (8.3ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 1.2ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"edit", :controller=>"photos", :id=>nil}, missing required keys: [:id]):
+     6:       <div><%= photo.title %></div>
+     7:       <a href="photos/<%= photo.id %>"><img src="<%=  photo.file %>"></a>
+     8:       <% if(@user.id == current_user.id) %>
+     9:       <%= link_to 'Modifier', edit_photo_path(@photo) %>
+    10:       <% end %>
+    11: 
+    12:    <% end %>
+  
+app/views/users/show.html.erb:9:in `block in _app_views_users_show_html_erb__1043689977020770823_70259761666460'
+app/views/users/show.html.erb:3:in `_app_views_users_show_html_erb__1043689977020770823_70259761666460'
+Started GET "/users/2" for 127.0.0.1 at 2019-03-13 15:43:46 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered users/show.html.erb within layouts/application (6.8ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 2.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"edit", :controller=>"photos", :id=>nil}, missing required keys: [:id]):
+     6:       <div><%= photo.title %></div>
+     7:       <a href="photos/<%= photo.id %>"><img src="<%=  photo.file %>"></a>
+     8:       <% if(@user.id == current_user.id) %>
+     9:       <%= link_to 'Modifier', edit_photo_path(@photo) %>
+    10:       <% end %>
+    11: 
+    12:    <% end %>
+  
+app/views/users/show.html.erb:9:in `block in _app_views_users_show_html_erb__1043689977020770823_70259761711520'
+app/views/users/show.html.erb:3:in `_app_views_users_show_html_erb__1043689977020770823_70259761711520'
+Started GET "/users/2" for 127.0.0.1 at 2019-03-13 15:44:05 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered users/show.html.erb within layouts/application (6.7ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 1.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+     6:       <div><%= photo.title %></div>
+     7:       <a href="photos/<%= photo.id %>"><img src="<%=  photo.file %>"></a>
+     8:       <% if(@user.id == current_user.id) %>
+     9:       <%= link_to 'Modifier', edit_photo_path(@photo.id) %>
+    10:       <% end %>
+    11: 
+    12:    <% end %>
+  
+app/views/users/show.html.erb:9:in `block in _app_views_users_show_html_erb__1043689977020770823_70259762264860'
+app/views/users/show.html.erb:3:in `_app_views_users_show_html_erb__1043689977020770823_70259762264860'
+Started GET "/users/2" for 127.0.0.1 at 2019-03-13 15:44:08 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered users/show.html.erb within layouts/application (6.6ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 1.2ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"edit", :controller=>"photos", :id=>nil}, missing required keys: [:id]):
+     6:       <div><%= photo.title %></div>
+     7:       <a href="photos/<%= photo.id %>"><img src="<%=  photo.file %>"></a>
+     8:       <% if(@user.id == current_user.id) %>
+     9:       <%= link_to 'Modifier', edit_photo_path(@photo) %>
+    10:       <% end %>
+    11: 
+    12:    <% end %>
+  
+app/views/users/show.html.erb:9:in `block in _app_views_users_show_html_erb__1043689977020770823_70259764703200'
+app/views/users/show.html.erb:3:in `_app_views_users_show_html_erb__1043689977020770823_70259764703200'
+Started GET "/users/2" for 127.0.0.1 at 2019-03-13 16:46:18 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.7ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (You invoked render but did not give any of :partial, :template, :inline, :file, :plain, :html or :body option.):
+    14:      <% end %>
+    15:   <% end %>
+    16: <% else(@user.public == false) %>
+    17: <% render  %>
+    18: <% end %>
+  
+app/views/users/show.html.erb:17:in `_app_views_users_show_html_erb__1043689977020770823_70259762417060'
+Started GET "/" for 127.0.0.1 at 2019-03-13 16:48:33 +0100
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  Rendered photos/index.html.erb within layouts/application (7.2ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 91ms (Views: 88.1ms | ActiveRecord: 1.3ms)
+>>>>>>> Stashed changes
 
 
   
@@ -44843,6 +45777,7 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 =======
@@ -44860,6 +45795,19 @@ Completed 200 OK in 2524ms (Views: 2520.6ms | ActiveRecord: 0.9ms)
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+=======
+Started GET "/users/1" for 127.0.0.1 at 2019-03-13 16:48:41 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_nopublic.html.erb (0.3ms)
+  Rendered users/show.html.erb within layouts/application (4.2ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 103ms (Views: 97.7ms | ActiveRecord: 0.7ms)
+
+
+>>>>>>> Stashed changes
   
 ActionController::RoutingError (No route matches [GET] "/assets/Lato.ttf"):
   
@@ -44895,6 +45843,7 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 Started GET "/staticpages/about" for 127.0.0.1 at 2019-03-13 15:20:17 +0100
@@ -44918,6 +45867,17 @@ Completed 200 OK in 422ms (Views: 386.8ms | ActiveRecord: 6.1ms)
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+=======
+Started GET "/users/2" for 127.0.0.1 at 2019-03-13 16:48:44 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_nopublic.html.erb (1.4ms)
+  Rendered users/show.html.erb within layouts/application (3.3ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 69ms (Views: 65.3ms | ActiveRecord: 1.0ms)
+>>>>>>> Stashed changes
 
 
   
@@ -44955,6 +45915,7 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 =======
@@ -44972,6 +45933,19 @@ Completed 200 OK in 3473ms (Views: 3470.4ms | ActiveRecord: 0.8ms)
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+=======
+Started GET "/users/4" for 127.0.0.1 at 2019-03-13 16:48:46 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPhoto Load (0.5ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  Rendered users/show.html.erb within layouts/application (2.4ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 76ms (Views: 71.9ms | ActiveRecord: 1.1ms)
+
+
+>>>>>>> Stashed changes
   
 ActionController::RoutingError (No route matches [GET] "/assets/Lato.ttf"):
   
@@ -45007,6 +45981,7 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 Started GET "/staticpages/about" for 127.0.0.1 at 2019-03-13 15:21:09 +0100
@@ -45199,6 +46174,46 @@ Completed 200 OK in 2397ms (Views: 2394.7ms | ActiveRecord: 0.4ms)
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+=======
+Started GET "/" for 127.0.0.1 at 2019-03-13 16:48:50 +0100
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.5ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  Rendered photos/index.html.erb within layouts/application (10.2ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 70ms (Views: 68.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/photos/5" for 127.0.0.1 at 2019-03-13 16:49:09 +0100
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPhoto Load (2.5ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering photos/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered photos/show.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 89ms (Views: 82.1ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-13 16:49:13 +0100
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.5ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  Rendered photos/index.html.erb within layouts/application (7.7ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 108ms (Views: 105.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2019-03-13 17:05:39 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_nopublic.html.erb (0.3ms)
+  Rendered users/show.html.erb within layouts/application (1.9ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 64ms (Views: 60.2ms | ActiveRecord: 0.8ms)
+>>>>>>> Stashed changes
 
 
   
@@ -45236,6 +46251,7 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 Started GET "/" for 127.0.0.1 at 2019-03-13 15:26:12 +0100
@@ -45267,6 +46283,17 @@ Completed 200 OK in 98ms (Views: 96.5ms | ActiveRecord: 0.5ms)
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+=======
+Started GET "/users/4" for 127.0.0.1 at 2019-03-13 17:05:41 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPhoto Load (0.7ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  Rendered users/show.html.erb within layouts/application (5.1ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 80ms (Views: 76.0ms | ActiveRecord: 1.6ms)
+>>>>>>> Stashed changes
 
 
   
@@ -45304,6 +46331,7 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 Started POST "/photos" for 127.0.0.1 at 2019-03-13 15:26:42 +0100
@@ -45345,6 +46373,17 @@ Completed 200 OK in 2524ms (Views: 2520.6ms | ActiveRecord: 0.9ms)
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+=======
+Started GET "/users/1" for 127.0.0.1 at 2019-03-13 17:08:49 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_nopublic.html.erb (0.5ms)
+  Rendered users/show.html.erb within layouts/application (2.4ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 65ms (Views: 61.8ms | ActiveRecord: 0.9ms)
+>>>>>>> Stashed changes
 
 
   
@@ -45384,6 +46423,7 @@ puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 Started GET "/" for 127.0.0.1 at 2019-03-13 15:26:49 +0100
 Processing by PhotosController#index as HTML
   Rendering photos/index.html.erb within layouts/application
@@ -45393,6 +46433,8 @@ Processing by PhotosController#index as HTML
 Completed 200 OK in 69ms (Views: 67.1ms | ActiveRecord: 1.2ms)
 
 
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 =======
