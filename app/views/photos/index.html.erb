@@ -3,37 +3,25 @@
 
 
 <div id="mapid"></div>
-<table>
-  <thead>
-    <tr>
-      <th>Titre</th>
-      <th>Contenu</th>
-      <th>Longitude</th>
-      <th>Latitude</th>
-      <th>Date</th>
-      <th>Créé par</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-  <tbody>
+
+<div class="container">
+  <div class="row">
+
     <% @photos.each do |photo| %>
-      <tr>
-        <td><%= photo.title %></td>
-        <td><%= photo.content %></td>
-        <td><%= photo.long %></td>
-        <td><%= photo.lat %></td>
-        <td><%= photo.date %></td>
-        <td><%= photo.user %></td>
-        <td><%= link_to 'Afficher', photo %></td>
-        <% if user_signed_in? && current_user.id == photo.user.id  %>
+    <div class="col-lg-6 resize_photo">
+        <a href="photos/<%= photo.id %>"><img src="<%=  photo.file %>"></a>
+
+  <div class="content">
+   <h3><%= photo.title %></h3>
+        <p><%= photo.content %></p></div>
+<!--         <% if user_signed_in? && current_user.id == photo.user.id  %>
           <td><%= link_to 'Modifier', edit_photo_path(photo) %></td>
           <td><%= link_to 'Supprimer', photo, method: :delete, data: { confirm: 'Etes-vous sur ?' } %></td>
-        <% end %>
-      </tr>
+        <% end %> -->
+      </div>
     <% end %>
-  </tbody>
-</table>
-
+    </div>
+</div>
 <br>
 <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
    integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
