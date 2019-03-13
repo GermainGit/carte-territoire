@@ -2,26 +2,28 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.field input, .field textarea{
+
+
+.field_img input, .field_img textarea{
   margin: 1.5% 0;
   padding: 1%;
-  width: 40%;
+  width: 50%;
   border: none;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.07);
   font: lato, arial;
   font-weight: 600;
 }
 
-.field input::placeholder , .field textarea::placeholder{
+.field_img input::placeholder , .field_img textarea::placeholder{
   color: #d6d3d3;
 }
 
 .actions input{
   background-color: #53B89C;
   color: #ffffff;
-  width: 15%;
-  margin: 1.5% 0;
-  padding: 1%;
+  font-weight: 600;
+  margin-top: 10%;
+  padding: 2% 3%;
   border: none;
 }
 
@@ -40,12 +42,30 @@
 
 #back{
   position: absolute;
-  top: 15%;
+  top: 12%;
   left: 5%;
 }
 
 #back_img{
-  width: 10%;
+  width: 5%;
+}
+
+.map_add{
+  height: calc(100vh - 70px) !important;
+}
+
+#photo_long, #photo_lat{
+  display: none;
+}
+
+#photo_date_3i, #photo_date_2i, #photo_date_1i{
+  border: none;
+  background: none;
+  margin: 0 2%;
+}
+
+.date select{
+  appearance: none;
 }
 
 .resize_photo {

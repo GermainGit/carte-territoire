@@ -6,6 +6,7 @@
 <div class="container">
   <div class="row">
 
+
     <% @photos.each do |photo| %>
     <div class="col-lg-6 resize_photo">
         <a href="photos/<%= photo.id %>"><img src="<%=  photo.file %>"></a>

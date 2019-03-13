@@ -14,39 +14,39 @@
 
     <div class="row justify-content-center">
       <div class="col-lg-6 form_photo">
-        <div class="field">
+        <div class="field_img">
           <%= form.file_field :file %>
           <%= form.hidden_field :file_cache %>
         </div>
 
-        <div class="field">
-          <%= form.text_field :title, id: :photo_title, placeholder: "Titre" %>
+        <div class="field_img">
+          <%= form.text_field :title, id: :photo_title, placeholder: "Titre", :required => true %>
         </div>
 
-        <div class="field">
-          <%= form.text_area :content, id: :photo_content, placeholder: "J'écris mon récit..." %>
+        <div class="field_img">
+          <%= form.text_area :content, id: :photo_content, placeholder: "J'écris mon récit...", :required => true %>
         </div>
 
-        <div class="field">
-          <%= form.text_field :long, id: :photo_long %>
+        <div class="field_img">
+          <%= form.text_field :long, id: :photo_long, :required => true %>
         </div>
 
-        <div class="field">
-          <%= form.text_field :lat, id: :photo_lat %>
+        <div class="field_img">
+          <%= form.text_field :lat, id: :photo_lat, :required => true %>
         </div>
 
-        <div class="field">
-          <%= form.date_select :date, id: :photo_date %>
+        <div class="field_img date">
+          <%= form.date_select :date, id: :photo_date, :required => true %>
         </div>
 
         <div class="actions">
-          <%= form.submit "Partage moi !" %>
+          <%= form.submit "Partagez-moi !" %>
         </div>
 
       </div>
 
       <div class="col-lg-6">
-        <div id="mapid"></div>
+        <div id="mapid" class="map_add"></div>
       </div>
     </div>
 
