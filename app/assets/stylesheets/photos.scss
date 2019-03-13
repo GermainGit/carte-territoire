@@ -68,14 +68,11 @@
   appearance: none;
 }
 
-.resize_photo {
+.photo_content {
   padding:20px;
-  margin-bottom:10%;
   height:auto;
-  img{
-    width:100%;
-    z-index:-1;
-  }
+  width: 70%;
+  margin: 0 auto;
   .content{
     background-color:white;
     margin: 0 auto;
@@ -116,11 +113,18 @@ p {
 
 }
 
+.feed{
+margin-top:5%;
 .card-columns{
   width:100%;
   column-count:2;
   display:inline-block;
   .card{
-    margin-bottom:10%;
+    margin-bottom:20%;
+    border: 0;
+    }
   }
+}
+.card-body{
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
 }
