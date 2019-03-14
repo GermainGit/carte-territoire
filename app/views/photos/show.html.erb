@@ -3,12 +3,14 @@
 <div class="container">
   <div class="row">
     <div class="col-md-6">
-      <%= image_tag @photo.file.url, class: 'img-fluid' %>
+      <%= image_tag @photo.file.url, class: 'img-fluid', id: 'img_fluid' %>
       <p><%= link_to_if @photo.user.public, @photo.user, @photo.user %></p>
+
+
     </div>
     <div class="col-md-4 offset-md-1">
       <h1><%= @photo.title %></h1>
-      <p><%= @photo.date %></p>
+      <p>Photo prise le : <%= @photo.date %></p>
       <p><%= @photo.content %></p>
       <% if user_signed_in? && @photo.user == current_user %>
         <%= link_to 'Modifier', edit_photo_path(@photo) %> |
@@ -16,6 +18,16 @@
       <%= link_to 'Retour', photos_path %>
       <div id="mapid" ></div>
     </div>
+  </div>
+</div>
+
+
+
+
+<div class="modal" id="myModal">
+  <div class="modal-content" id="content_img_modal">
+     <span class="close_modal">&times;</span>
+      <%= image_tag @photo.file.url, class: 'img-fluid', id: 'img_modal' %>
   </div>
 </div>
 

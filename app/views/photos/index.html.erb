@@ -1,8 +1,14 @@
 
 <div id="notice"><%= notice %></div>
 
+  <div id="mapid">
+    <div class="menu">
+      <%= link_to image_tag('add.svg', alt: 'bouton ajouter nouvelle photo', id: 'add_img'), new_photo_path, id: 'btn_add_img' %>
+    </div>
 
-<div id="mapid"></div>
+  </div>
+
+
 
 <div class="container feed">
   <div class="row">
@@ -74,4 +80,4 @@ map.on('drag', function(){
 <% end %>
 
 </script>
-<%= link_to 'Nouvelle photo', new_photo_path %>
+
