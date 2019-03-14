@@ -3,6 +3,9 @@
   <h1><span> Bienvenue, </span> <%= @user.prenom + " " + @user.nom %></h1>
   <div class="row">
     <div class="card-columns">
+      <% if(current_user.admin) %>
+        <%= link_to 'Supprimer', user_path(@user), method: :delete, data: { confirm: "Etes vous de sur de supprimer " + @user.prenom + " " + @user.nom + " des utilisateurs ?"} %>
+      <% end %>
       <% @photos.each do |photo| %>
 
         <div class="card">

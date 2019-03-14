@@ -44,6 +44,9 @@ $desktop: 1248px;
 #photo_content{
   resize: none;
 }
+.card-body{
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
 
 #back{
   position: absolute;

@@ -6,6 +6,7 @@
     <div class="col-md-6">
       <%= image_tag @photo.file.url, class: 'img-fluid', id: 'img_fluid' %>
       <p class="userlink">Photo prise par <%= link_to_if @photo.user.public, @photo.user, @photo.user %></p>
+
     </div>
     <div class="col-md-5 offset-md-1">
       <h1><%= @photo.title %></h1>
