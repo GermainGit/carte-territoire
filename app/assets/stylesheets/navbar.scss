@@ -14,7 +14,7 @@ $desktop: 1248px;
 }
 
 .navbar-light .navbar-nav .nav-link {
-     text-decoration: none;
+  text-decoration: none;
   color:$color2;
   font-family: 'Lato', sans-serif;
   text-transform: uppercase;
@@ -36,3 +36,6 @@ $desktop: 1248px;
   }
 }
 
+.navbar{
+  padding:0.5rem 3rem;
+}

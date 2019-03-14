@@ -13,13 +13,11 @@
 # Used by dotenv library to load environment variables.
 # .env
 
-<<<<<<< Updated upstream
+
 
 log/development.log
->>>>>>> Stashed changes
-=======
-/log/development.log
->>>>>>> Stashed changes
+
+
 ## Specific to RubyMotion:
 .dat*
 .repl_history
