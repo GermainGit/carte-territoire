@@ -58,16 +58,19 @@
 </nav>
 
      </header>
-     <%= yield %>
 
+  <main class="content">
+    <%= yield %>
+    <div class="push"></div>
+  </main>
   <!-- Footer -->
 
 <footer class="footer py-3">
   <div class="row">
-    <div class="col-md-3">
+    <div class="col-md-12">
     <%= link_to image_tag("logo-associe.png", :alt => "logo", class:'logo'), href="https://www.lesassocies.net/" %>
   </div>
-    <div class="col-md-3">
+<!--     <div class="col-md-3">
       <ul class="list-unstyled text-small">
         <li>Nos partenaires</li>
         <li>Conditions générales</li>
@@ -80,7 +83,7 @@
                 <%= link_to "Vos questions",static_path(staticpage: 'question') %>
         </li>
       </ul>
-    </div>
+    </div> -->
   </div>
   <div class="row">
         <%= link_to image_tag("fb.png", :alt => "logo facebook", class:'rs'), href="https://www.facebook.com/LESASSOCIES.NET" %>

@@ -1,6 +1,15 @@
+$color1: #53B89C;
+$color2: #1A1A1A;
+$phone: 320px;
+$tablet: 768px;
+$tablet-wide:992px;
+$desktop: 1248px;
 
-footer {
+footer, .push {
   background-color:black;
+  height:100%;
+  width:100%;
+  text-align:center;
   li{
     color:white;
   }
@@ -17,8 +26,10 @@ footer {
     max-width: 30px;
     margin: 0px 10px;
   }
+  @media screen and (max-width: $tablet){
+  text-align:center;
+  }
+
 }
-
-
 
 
