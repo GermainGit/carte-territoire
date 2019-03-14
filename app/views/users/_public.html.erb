@@ -1,5 +1,3 @@
-
-
 <div class="row justify-content-center">
   <div class="col-lg-3">
     <p id="user_name"> <span id="green_underscore">_</span> <%= @user.prenom + " " + @user.nom %></p>
@@ -12,7 +10,7 @@
     <div class="container feed">
       <div class="row">
         <div class="card-columns">
-          <% if(current_user.admin) %>
+          <% if(user_signed_in? && current_user.admin) %>
             <%= link_to 'Supprimer', user_path(@user), method: :delete, data: { confirm: "Etes vous de sur de supprimer " + @user.prenom + " " + @user.nom + " des utilisateurs ?"} %>
           <% end %>
           <% @photos.each do |photo| %>
