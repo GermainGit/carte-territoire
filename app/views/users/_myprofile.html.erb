@@ -2,7 +2,7 @@
   <div class="col-lg-3">
       <p id="user_name"> <span id="green_underscore">_</span> <%= @user.prenom + " " + @user.nom %></p>
       <% if(@user.bio) %>
-        <%= @user.bio %>
+        <p id="bio"><%= @user.bio %></p>
       <% end %>
       <p id="welcome">bienvenue sur votre profil</p>
 
