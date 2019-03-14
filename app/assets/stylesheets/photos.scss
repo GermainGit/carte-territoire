@@ -20,7 +20,7 @@ $desktop: 1248px;
 }
 
 .field_img input::placeholder , .field_img textarea::placeholder{
-  color: #d6d3d3;
+  color: #bcbaba;
 }
 
 .actions input{
@@ -142,9 +142,10 @@ p {
     .card-columns{
       width:100%;
       column-count:2;
+      column-gap: 5%;
       display:inline-block;
       .card{
-        margin-bottom:20%;
+        margin-bottom:10%;
         border: 0;
         position:relative;
         }
@@ -154,7 +155,7 @@ p {
     }
 }
 .card-body{
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.07);
   position:relative;
   z-index:10;
   margin-top:-10%;

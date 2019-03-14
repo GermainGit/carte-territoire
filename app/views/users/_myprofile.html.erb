@@ -1,22 +1,43 @@
-<div class="container feed">
-  <h1><span> Bienvenue, </span> <%= @user.prenom + " " + @user.nom %></h1>
-  <div class="row">
-    <div class="card-columns">
-    <% @photos.each do |photo| %>
-      <div class="card">
-        <%= link_to photo do %>
-          <img class="card-img-top" src="<%=  photo.file %>" alt="Card image cap">
-        <% end %>
-        <div class="card-body photo_content">
-          <h5 class="card-title"><%= photo.title %></h5>
-          <p class="card-text"><%= photo.content %></p>
-            <% if user_signed_in? && photo.user_id == current_user.id %>
-            <%= link_to 'Modifier', edit_photo_path(photo) %> |
-            <%= link_to 'Supprimer', photo, method: :delete %>
+<div class="row justify-content-center">
+  <div class="col-lg-3">
+      <p id="user_name"> <span id="green_underscore">_</span> <%= @user.prenom + " " + @user.nom %></p>
+      <p id="welcome">bienvenue sur votre profil</p>
+      <%= link_to 'Modifier votre profil', edit_user_registration_path, id: 'btn_edit_profil' %>
+  </div>
+
+  <div class="col-lg-6">
+    <div class="container feed">
+      <div class="row">
+        <div class="card-columns">
+
+        </div>
+
+        <div class="card-columns">
+          <div class="card btn_add">
+            <%= link_to image_tag('add.svg', alt: 'Bouton ajouter une nouvelle photo', id: 'img_btn_add') + 'Nouvelle photo', new_photo_path, id: 'btn_add' %>
+          </div>
+          <% @photos.each do |photo| %>
+            <div class="card">
+              <%= link_to photo do %>
+                <img class="card-img-top" src="<%=  photo.file %>" alt="Card image cap">
+              <% end %>
+              <div class="card-body photo_content">
+                <h5 class="card-title"><%= photo.title %></h5>
+                <p class="card-text"><%= photo.content %></p>
+                  <% if user_signed_in? && photo.user_id == current_user.id %>
+                  <div class="btn_card">
+                    <%= link_to image_tag('edit.png', alt: 'Crayon', class: 'btn_card_edit'), photo, method: :delete %>
+                    <%= link_to image_tag('trash.png', alt: 'Poubelle', class: 'btn_card_trash'), edit_photo_path(photo) %>
+                  </div>
+                <% end %>
+              </div>
+            </div>
           <% end %>
         </div>
       </div>
-    <% end %>
-       </div>
+    </div>
   </div>
 </div>
+
+
+

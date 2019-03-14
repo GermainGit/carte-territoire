@@ -112,3 +112,82 @@
 .signupbutton:hover{
 	color: #EBE9E9;
 }
+
+// USERS SHOW //
+
+#user_name{
+  font-size: 1.5em;
+  font-weight: 500;
+}
+
+#green_underscore{
+  color: $color1;
+}
+
+#welcome{
+  color: $color1;
+  text-transform: uppercase;
+  font-size: 3.5em;
+  line-height: 1;
+  margin-top: 4%;
+}
+
+#btn_edit_profil{
+  background-color: #1a1a1a;
+  color: #ffffff;
+  padding: 2% 4%;
+  position: absolute;
+  top: 30%;
+}
+
+#btn_edit_profil:hover{
+  text-decoration: none;
+}
+
+#btn_add{
+  padding: 6% 8%;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+#btn_add:hover{
+  text-decoration: none;
+}
+
+.btn_add{
+  background-color: $color1;
+  display: flex !important;
+  align-items: center;
+}
+
+#img_btn_add{
+  margin-right: 2%;
+  width: 8%;
+}
+
+.card-title{
+  color: $color1;
+}
+
+.btn_card{
+  position: absolute;
+  top: 15px;
+  right: 5px;
+}
+
+.btn_card_edit, .btn_card_trash{
+  width: 20px;
+}
+
+@media screen and (max-width: $tablet-wide){
+
+    #welcome{
+      font-size: 2em;
+      margin-bottom: 4%;
+    }
+     #btn_edit_profil{
+      position: unset;
+     }
+}
+
