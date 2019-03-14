@@ -15,9 +15,9 @@
     <div class="row justify-content-center">
       <div class="col-lg-6 form_photo">
         <div class="field_img">
-          <%= form.file_field :file %>
+          <%= form.file_field :file, onchange: "validateFiles(this);", data: { max_file_size: 5.megabytes} %>
           <%= form.hidden_field :file_cache %>
-          <br> Votre photo ne doit pas dépasser 10Mo
+          <br> Votre photo ne doit pas dépasser 5Mo
 
         </div>
 

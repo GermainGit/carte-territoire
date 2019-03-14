@@ -5,6 +5,8 @@ class User < ApplicationRecord
   validates :nom, presence: true
   validates :email, presence: true
 
+  validate :file_size_validation
+
   has_many :photos, dependent: :destroy
 
   devise :database_authenticatable, :registerable,
@@ -12,4 +14,9 @@ class User < ApplicationRecord
   def to_s
     "#{prenom}"
 end
+  private
+
+  def file_size_validation
+    errors[:file] << "Le fichier doit être inférieur à 5 Mo" if file.size > 5.megabytes
+  end
 end

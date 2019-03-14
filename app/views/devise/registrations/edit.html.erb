@@ -1,86 +1,67 @@
-<style> .navbar-expand-lg { display: none } </style>
-<style> .footer { display: none } </style>
+<style>
+  .navbar-expand-lg {
+    display: none;
+  }
+</style>
+<style>
+  .footer {
+    display: none;
+  }
+</style>
 
 <% content_for :title, "La carte & le territoire - Editer mon profil" %>
 
-<div class="background_img">
-<%= image_tag("NoFACES.jpg", :alt => "background") %>
-</div>
-
-  <div class="backnav">
-  <%= link_to image_tag("left-arrow.png", alt: "retour"),photos_path, width: 40, height: 40 %>
+  <div class="background_img">
+    <%= image_tag("NoFACES.jpg", :alt => "background") %>
   </div>
 
-<div class="full-page">
-  <div class="justify-content-center">
-    <h2>Modifier mon profil</h2>
+  <div class="backnav">
+    <%= link_to image_tag("left-arrow.png", alt: "retour"),photos_path, width: 40, height: 40 %>
+  </div>
 
-          <div class="form">
-            <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-              <%= f.error_notification %>
+  <div class="full-page">
+    <div class="justify-content-center">
+      <h2>Modifier mon profil</h2>
 
-              <div class="field_user">
-                    <%= f.input :email,
-                                required: true,
-                                autofocus: true,
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-                                input_html: { autocomplete: "email", size: 40},
-                                placeholder: "Email",
-=======
-=======
->>>>>>> Stashed changes
-                                input_html: { autocomplete: "email"},
-                                placeholder: "Email", 
->>>>>>> Stashed changes
-                                label: false %>
-                  </div>
-                  <br>
-                    <div class="field_user">
-                      <%= f.input :bio, placeholder: "Quelques mots sur vous", size: 40, as: :text, label: false %>
-                    </div>
+      <div class="form">
+        <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+        <%= f.error_notification %>
 
-                  <br>
-                    <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-                      <p><%= t(".currently_waiting_confirmation_for_email", email: resource.unconfirmed_email) %></p>
-                    <% end %>
-                    <div class="field_user">
-                    <%= f.input :password,
-                                required: false,
-                                input_html: { autocomplete: "new-password"},
-                                placeholder: "Mot de passe*",
-                                label: false,
-                                size: 40 %>
-                    </div>
-                    <p class="subtitle">* Laissez vide si vous ne souhaitez pas le changer</p>
-                    <br>
-                    <div class="field_user">
-                    <%= f.input :password_confirmation,
-                                required: false,
-                                input_html: { autocomplete: "new-password"},
-                                placeholder: "Confimer mot de passe",
-                                label: false,
-                                size: 40 %>
-                    </div>
-                    <br>
-                    <div class="field_user">
-                    <%= f.input :current_password,
-                                required: true,
-                                input_html: { autocomplete: "current-password"},
-                                placeholder: "Mot de passe actuel",
-                                label: false%>
-                    </div>
-                    <br>
-                <div class="actions">
-                  <%= f.submit "Modifier", :class => 'signupbutton' %>
-                </div>
+        <div class="field_user">
+          <%= f.input :email, required: true, autofocus: true, input_html: { autocomplete: "email", size: 40}, placeholder: "Email", label: false %>
+        </div>
+        <br>
+        <div class="field_user">
+          <%= f.input :bio, placeholder: "Quelques mots sur vous", size: 40, as: :text, label: false %>
+        </div>
 
-              </div>
-              <% end %>
+        <br>
+        <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+          <p><%= t(".currently_waiting_confirmation_for_email", email: resource.unconfirmed_email) %></p>
+        <% end %>
+        <div class="field_user">
+          <%= f.input :password, required: false, input_html: { autocomplete: "new-password"}, placeholder: "Mot de passe*", label: false, size: 40 %>
+        </div>
+        <p class="subtitle">* Laissez vide si vous ne souhaitez pas le changer</p>
+        <br>
+        <div class="field_user">
+          <%= f.input :password_confirmation, required: false, input_html: { autocomplete: "new-password"}, placeholder: "Confimer mot de passe", label: false, size: 40 %>
+        </div>
+        <br>
+        <div class="field_user">
+          <%= f.input :current_password, required: true, input_html: { autocomplete: "current-password"}, placeholder: "Mot de passe actuel", label: false%>
+        </div>
+        <br>
+        <div class="actions">
+          <%= f.submit "Modifier", :class => 'signupbutton' %>
+        </div>
 
-        <p><%= link_to t(".cancel_my_account"), registration_path(resource_name), data: { confirm: t(".are_you_sure") }, method: :delete %></p>
+      </div>
+    <% end %>
 
-        <%= link_to t("devise.shared.links.back"), :back %>
+    <p><%= link_to t(".cancel_my_account"), registration_path(resource_name), data: { confirm: t(".are_you_sure") }, method: :delete %></p>
+
+    <%= link_to t("devise.shared.links.back"), :back %>
 
   </div>
 </div>
