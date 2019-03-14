@@ -27,6 +27,11 @@
                     <div class="field_user">
                       <%= f.email_field :email, placeholder: "Email",autocomplete: "email", size: 40 %>
                     </div>
+                    <br>
+                    <div class="field_user">
+                      <%= f.input :bio, placeholder: "Quelques mots sur vous", size: 40, as: :text %>
+                    </div>
+
                     <div class="checkbox">
                         <%= f.input :public, as: :boolean, checked_value: false, unchecked_value: true, label: "" %>&nbsp&nbsp
                         <p class="checkboxtitle">Je ne souhaite pas que mon profil soit publique</p>
