@@ -41,6 +41,11 @@
               <%= link_to "Vos questions",static_path(staticpage: 'question'), class: "m-2 nav-link menu-item" %>
             </li> -->
                <% if user_signed_in?%>
+                <% if current_user.admin %>
+                  <li class="nav-item">
+                    <%= link_to "Gestion utilisateurs",users_path, class: "nav-link m-2 account menu-item" %>
+                  </li>
+                <% end %>
                   <li class="nav-item">
                <%= link_to "Déconnexion",destroy_user_session_path, method: :delete, class: "nav-link m-2 account menu-item" %>
             </li>

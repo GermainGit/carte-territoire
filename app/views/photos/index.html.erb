@@ -22,6 +22,10 @@
     <div class="card-body photo_content">
       <h5 class="card-title"><%= photo.title %></h5>
       <p class="card-text"><%= photo.content %></p>
+      <% if(user_signed_in? && current_user.admin) %>
+        <%= link_to 'Modifier', photo %>
+        <%= link_to 'Supprimer', photo, method: :delete %>
+      <% end %>
     </div>
   </div>
     <% end %>

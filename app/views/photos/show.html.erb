@@ -15,6 +15,9 @@
         <% if user_signed_in? && @photo.user == current_user %>
         <div class="btn">
           <%= link_to 'Modifier', edit_photo_path(@photo) %>
+          <% if current_user == @photo.user %>
+            <%= link_to 'Supprimer', @photo, method: :delete, data: {confirm: 'Etes vous sur ?'} %>
+          <% end %>
         </div>
         <% end %>
         <div id="mapid" >

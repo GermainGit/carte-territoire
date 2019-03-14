@@ -35,7 +35,7 @@ class PhotosController < ApplicationController
 
   # GET /photos/1/edit
   def edit
-    if current_user.id == @photo.user_id
+    if current_user.id == @photo.user_id or current_user.admin
     else redirect_to new_user_session_path
     end
   end
