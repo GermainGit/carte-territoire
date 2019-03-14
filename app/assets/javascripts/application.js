@@ -13,6 +13,7 @@
 
 //= require_tree .
 //= require leaflet
+//= require bootstrap
 //= require turbolinks
 //= require rails-ujs
 
@@ -20,20 +21,23 @@
 //Modal
 // Get the modal
 // Get the modal
-var modal = document.getElementById('myModal');
+window.onload = function(){
+  var modal = document.getElementById('myModal');
 
-// Get the image and insert it inside the modal - use its "alt" text as a caption
-var img = document.getElementById('img_fluid');
-var modalImg = document.getElementById("content_img_modal");
-img.onclick = function(){
-  modal.style.display = "block";
-  modalImg.src = this.src;
+  // Get the image and insert it inside the modal - use its "alt" text as a caption
+  var img = document.getElementById('img_fluid');
+  var modalImg = document.getElementById("content_img_modal");
+  img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+  }
+
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close_modal")[0];
+
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
 }
 
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close_modal")[0];
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
