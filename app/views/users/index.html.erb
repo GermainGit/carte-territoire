@@ -1,0 +1,35 @@
+<% if(current_user.admin == true) %>
+  <h1>Gestion des utilisateurs :</h1>
+
+  <table>
+      <thead>
+          <tr>
+              <th>ID</th>
+              <th>Email</th>
+              <th>Prenom</th>
+              <th>Nom</th>
+              <th>Crée le</th>
+              <th>Publique</th>
+              <th>Admin</th>
+          </tr>
+      </thead>
+      <% @users.each do |user| %>
+      <tbody>
+          <tr>
+              <td><%=user.id%></td>
+              <td><%=user.email%></td>
+              <td><%=user.prenom%></td>
+              <td><%=user.nom%></td>
+              <td><%=user.created_at%></td>
+              <td><%=user.public%></td>
+              <td><%=user.admin%></td>
+              <td><%= link_to 'Afficher', user %></td>
+              <td></td>
+              <td><%= link_to 'Supprimer', user_path(user), method: :delete, data: { confirm: "Etes vous de sur de supprimer " + user.prenom + " " + user.nom + " des utilisateurs ?"} %></td>
+          </tr>
+          <% end %>
+      </tbody>
+  </table>
+
+
+<% end %>
