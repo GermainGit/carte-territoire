@@ -1,27 +1,21 @@
 <% content_for :title, "La carte & le territoire" %>
 
-<div id="notice"><%= notice %></div>
 
-  <div id="mapid">
-    <div class="menu">
-      <%= link_to image_tag('add.svg', alt: 'bouton ajouter nouvelle photo', id: 'add_img'), new_photo_path, id: 'btn_add_img' %>
-    </div>
+  <div id="mapid"></div>
 
-  </div>
-
-
+  <div id="notice"><%= notice %></div>
 
 <div class="container feed">
   <div class="row">
     <div class="card-columns">
-<% @photos.each do |photo| %>
+<% @photos.reverse_each do |photo| %>
 
   <div class="card">
     <a href="photos/<%= photo.id %>">
     <img class="card-img-top" src="<%=  photo.file %>" alt="<%= photo.title %>">
     </a>
     <div class="card-body photo_content">
-      <h5 class="card-title"><%= photo.title %></h5>
+      <h5><%= link_to photo.title, photo, :class => "card-title" %></h5>
       <p class="card-text"><%= photo.content %></p>
       <% if(user_signed_in? && current_user.admin) %>
         <%= link_to 'Modifier', photo %>

@@ -9,6 +9,9 @@ $tablet: 768px;
 $tablet-wide:992px;
 $desktop: 1248px;
 
+.navbar{
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
 .field_img input, .field_img textarea{
   margin: 1.5% 0;
   padding: 1%;
@@ -23,13 +26,15 @@ $desktop: 1248px;
   color: #bcbaba;
 }
 
+.actions{
+  text-align: center;
+}
+
 .actions input{
   background-color: $color1;
   color: #ffffff;
   font-weight: 600;
-  margin-top: 10%;
-  padding: 2% 3%;
-  border: none;
+  margin-top: 15px;
 }
 
 .col-lg-6{
@@ -71,9 +76,16 @@ $desktop: 1248px;
   background: none;
   margin: 0 2%;
 }
-
+#edit_photo{
+  color:$color1;
+  text-transform: uppercase;
+  margin-bottom:50px;
+}
 .date select{
   appearance: none;
+}
+.card-title:hover{
+  color:$color1;
 }
 
 .photo_content {
@@ -97,7 +109,7 @@ $desktop: 1248px;
   }
 }
 
-#mapid{
+#content_map > #mapid{
   height: 400px;
   z-index: 1;
 }
@@ -170,27 +182,10 @@ p {
   }
 }
 
-.menu{
-  position: absolute;
-  z-index: 998;
-  background-color: $color1;
-  width: 100px;
-  height: 60px;
-  right: 0;
-  bottom: 0;
-}
-
-#btn_add_img{
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  z-index: 999;
-  top: 10%;
-  left: 25%;
-}
-
-#add_img{
-  width: 100%;
+#btn_new{
+  margin-top: 30px;
+  border: none;
+  padding: 2% 3%;
 }
 
 #img_fluid{

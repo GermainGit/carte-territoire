@@ -1,9 +1,11 @@
-<div class="row justify-content-center">
+<div class="row justify-content-center mt-4">
   <div class="col-lg-3">
-      <p id="user_name"> <span id="green_underscore">_</span> <%= @user.prenom + " " + @user.nom %></p>
-      <% if(@user.bio) %>
-        <p id="bio"><%= @user.bio %></p>
-      <% end %>
+
+        <div id="bio">
+          <p id="user_name"> <span id="green_underscore">_</span> <%= @user.prenom + " " + @user.nom %></p>
+          <% if(@user.bio) %>
+          <%= @user.bio %></div>
+          <% end %>
       <p id="welcome">bienvenue sur votre profil</p>
 
       <%= link_to 'Modifier votre profil', edit_user_registration_path, id: 'btn_edit_profil' %>
@@ -20,13 +22,13 @@
           <div class="card btn_add">
             <%= link_to image_tag('add.svg', alt: 'Bouton ajouter une nouvelle photo', id: 'img_btn_add') + 'Nouvelle photo', new_photo_path, id: 'btn_add' %>
           </div>
-          <% @photos.each do |photo| %>
+          <% @photos.reverse_each do |photo| %>
             <div class="card">
               <%= link_to photo do %>
                 <img class="card-img-top" src="<%=  photo.file %>" alt="Card image cap">
               <% end %>
               <div class="card-body photo_content">
-                <h5 class="card-title"><%= photo.title %></h5>
+                <h5><%= link_to photo.title, photo, :class => "card-title" %></h5>
                 <p class="card-text"><%= photo.content %></p>
                   <% if user_signed_in? && photo.user_id == current_user.id %>
                   <div class="btn_card">

@@ -1,67 +1,65 @@
-<style>
-  .navbar-expand-lg {
-    display: none;
-  }
-</style>
-<style>
-  .footer {
-    display: none;
-  }
-</style>
-
 <% content_for :title, "La carte & le territoire - Créer mon profil" %>
 
-  <div class="background_img">
-    <%= image_tag("NoFACES.jpg", :alt => "background") %>
-  </div>
+
 
   <div class="backnav">
     <%= link_to image_tag("left-arrow.png", alt: "retour"),photos_path, width: 40, height: 40 %>
   </div>
-
-  <div class="full-page">
-    <div class="justify-content-center">
-      <h2>Tu veux contribuer ?</h2>
-
-      <div class="form">
+<div class="row justify-content-center form">
+  <div class="col-lg-4 card_form">
         <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-        <%= render "devise/shared/error_messages", resource: resource %>
-        <div class="field_user">
-          <%= f.text_field :prenom, placeholder: "Prénom", autofocus: true, autocomplete:"prenom"%>
-        </div>
-        <br>
-        <div class="field_user">
-          <%= f.text_field :nom, placeholder: "Nom",autocomplete: "nom" %>
-        </div>
-        <br>
-        <div class="field_user">
-          <%= f.email_field :email, placeholder: "Email",autocomplete: "email" %>
-        </div>
-        <br>
-        <div class="field_user">
-          <%= f.input :bio, placeholder: "Quelques mots sur vous", size: 40, as: :text %>
+        <h2>Tu veux contribuer ?</h2>
+        <div class="form-group">
+
+            <div id="notice"><%= render "devise/shared/error_messages", resource: resource %></div>
+            <div class="field_user">
+              <%= f.text_field :prenom, placeholder: "Prénom", autofocus: true, autocomplete:"prenom"%>
+            </div>
         </div>
 
-        <div class="checkbox">
-          <%= f.input :public, as: :boolean, checked_value: false, unchecked_value: true, label: "" %>&nbsp&nbsp
-          <p class="checkboxtitle">Je ne souhaite pas que mon profil soit public</p>
-        </div>
-        <br>
-        <div class="field_user">
-          <% if @minimum_password_length %><% end %>
-          <%= f.password_field :password, placeholder: "Mot de passe (6 caractère min)", autocomplete: "new-password" %>
-        </div>
-        <br>
-        <div class="field_user">
-          <%= f.password_field :password_confirmation, placeholder: "Confirmer mot de passe",autocomplete: "new-password" %>
+        <div class="form-group">
+          <div class="field_user">
+              <%= f.text_field :nom, placeholder: "Nom",autocomplete: "nom" %>
+            </div>
         </div>
 
-        <div class="actions">
-          <%= f.submit "En route !", :class => 'signupbutton' %>
+        <div class="form-group">
+          <div class="field_user">
+              <%= f.email_field :email, placeholder: "Email",autocomplete: "email" %>
+            </div>
         </div>
-      </div>
-    <% end %>
-    <br>
-    <%= render "devise/shared/links" %>
+
+        <div class="form-group">
+          <div class="field_user">
+              <%= f.input :bio, placeholder: "Quelques mots sur vous", size: 40, as: :text, label: false, id: 'bio_content' %>
+            </div>
+        </div>
+
+        <div class="form-group">
+          <div class="checkbox">
+              <%= f.input :public, as: :boolean, checked_value: false, unchecked_value: true, label: "" %>&nbsp&nbsp
+              <p class="checkboxtitle">Je ne souhaite pas que mon profil soit public</p>
+            </div>
+        </div>
+
+        <div class="form-group">
+          <div class="field_user">
+              <% if @minimum_password_length %><% end %>
+              <%= f.password_field :password, placeholder: "Mot de passe (6 caractère min)", autocomplete: "new-password" %>
+            </div>
+        </div>
+
+        <div class="form-group">
+          <div class="field_user">
+              <%= f.password_field :password_confirmation, placeholder: "Confirmer mot de passe", autocomplete: "new-password" %>
+            </div>
+        </div>
+            <div class="form-group">
+              <div class="actions">
+                <%= f.submit "En route !", :class => 'signupbutton' %>
+                <p id="btn_render"><%= render "devise/shared/links" %></p>
+              </div>
+            </div>
+        <% end %>
   </div>
 </div>

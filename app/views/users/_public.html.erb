@@ -1,9 +1,10 @@
-<div class="row justify-content-center">
+<div class="row justify-content-center mt-4">
   <div class="col-lg-3">
-    <p id="user_name"> <span id="green_underscore">_</span> <%= @user.prenom + " " + @user.nom %></p>
-      <% if(@user.bio) %>
-        <p id="bio"><%= @user.bio %></p>
-      <% end %>
+        <div id="bio">
+           <p id="user_name"> <span id="green_underscore">_</span> <%= @user.prenom + " " + @user.nom %></p>
+            <% if(@user.bio || !@user.bio.empty? || !@user.bio.nil?) %>
+            <%= @user.bio %></div>
+            <% end %>
   </div>
 
   <div class="col-lg-6">
@@ -13,13 +14,13 @@
           <% if(user_signed_in? && current_user.admin) %>
             <%= link_to 'Supprimer', user_path(@user), method: :delete, data: { confirm: "Etes vous de sur de supprimer " + @user.prenom + " " + @user.nom + " des utilisateurs ?"} %>
           <% end %>
-          <% @photos.each do |photo| %>
+          <% @photos.reverse_each do |photo| %>
           <div class="card">
             <%= link_to photo do %>
             <img class="card-img-top" src="<%=  photo.file %>" alt="Card image cap">
             <% end %>
             <div class="card-body photo_content">
-              <h5 class="card-title"><%= photo.title %></h5>
+              <h5><%= link_to photo.title, photo, :class => "card-title" %></h5>
               <p class="card-text"><%= photo.content %></p>
             </div>
           </div>
