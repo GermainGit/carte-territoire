@@ -1,7 +1,11 @@
 <div class="row justify-content-center">
   <div class="col-lg-3">
       <p id="user_name"> <span id="green_underscore">_</span> <%= @user.prenom + " " + @user.nom %></p>
+      <% if(@user.bio) %>
+        <%= @user.bio %>
+      <% end %>
       <p id="welcome">bienvenue sur votre profil</p>
+
       <%= link_to 'Modifier votre profil', edit_user_registration_path, id: 'btn_edit_profil' %>
   </div>
 
@@ -26,8 +30,8 @@
                 <p class="card-text"><%= photo.content %></p>
                   <% if user_signed_in? && photo.user_id == current_user.id %>
                   <div class="btn_card">
-                    <%= link_to image_tag('edit.png', alt: 'Crayon', class: 'btn_card_edit'), photo, method: :delete %>
-                    <%= link_to image_tag('trash.png', alt: 'Poubelle', class: 'btn_card_trash'), edit_photo_path(photo) %>
+                    <%= link_to image_tag('trash.png', alt: 'Crayon', class: 'btn_card_edit'), photo, method: :delete %>
+                    <%= link_to image_tag('edit.png', alt: 'Poubelle', class: 'btn_card_trash'), edit_photo_path(photo) %>
                   </div>
                 <% end %>
               </div>

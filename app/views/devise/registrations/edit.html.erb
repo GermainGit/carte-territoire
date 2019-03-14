@@ -22,9 +22,14 @@
                                 required: true,
                                 autofocus: true,
                                 input_html: { autocomplete: "email", size: 40},
-                                placeholder: "Email", 
+                                placeholder: "Email",
                                 label: false %>
                   </div>
+                  <br>
+                    <div class="field_user">
+                      <%= f.input :bio, placeholder: "Quelques mots sur vous", size: 40, as: :text, label: false %>
+                    </div>
+
                   <br>
                     <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
                       <p><%= t(".currently_waiting_confirmation_for_email", email: resource.unconfirmed_email) %></p>
