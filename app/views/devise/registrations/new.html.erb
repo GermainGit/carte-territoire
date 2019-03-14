@@ -1,6 +1,8 @@
 <style> .navbar-expand-lg { display: none } </style>
 <style> .footer { display: none } </style>
 
+<% content_for :title, "La carte & le territoire - Créer mon profil" %>
+
 <div class="background_img">
 <%= image_tag("NoFACES.jpg", :alt => "background") %>
 </div>
@@ -10,22 +12,22 @@
   </div>
 
 <div class="full-page">
-  <div class="blockform">
-    <h2>tu veux contribuer ?</h2>
+  <div class="justify-content-center">
+    <h2>Tu veux contribuer ?</h2>
 
           <div class="form">
             <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
                     <%= render "devise/shared/error_messages", resource: resource %>
                      <div class="field_user">
-                      <%= f.text_field :prenom, placeholder: "Prénom", autofocus: true, autocomplete:"prenom", size: 40 %>
+                      <%= f.text_field :prenom, placeholder: "Prénom", autofocus: true, autocomplete:"prenom"%>
                     </div>
                     <br>
                     <div class="field_user">
-                      <%= f.text_field :nom, placeholder: "Nom",autocomplete: "nom", size: 40 %>
+                      <%= f.text_field :nom, placeholder: "Nom",autocomplete: "nom" %>
                     </div>
                     <br>
                     <div class="field_user">
-                      <%= f.email_field :email, placeholder: "Email",autocomplete: "email", size: 40 %>
+                      <%= f.email_field :email, placeholder: "Email",autocomplete: "email" %>
                     </div>
                     <br>
                     <div class="field_user">
@@ -40,11 +42,11 @@
                     <div class="field_user">
                       <% if @minimum_password_length %>
                       <% end %>
-                      <%= f.password_field :password, placeholder: "Mot de passe (6 caractère min)", autocomplete: "new-password", size: 40 %>
+                      <%= f.password_field :password, placeholder: "Mot de passe (6 caractère min)", autocomplete: "new-password" %>
                     </div>
                     <br>
                     <div class="field_user">
-                      <%= f.password_field :password_confirmation, placeholder: "Confirmer mot de passe",autocomplete: "new-password", size: 40 %>
+                      <%= f.password_field :password_confirmation, placeholder: "Confirmer mot de passe",autocomplete: "new-password" %>
                     </div>
 
 

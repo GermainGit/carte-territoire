@@ -1,16 +1,18 @@
 <style> .navbar-expand-lg { display: none } </style>
+<style> .footer {display: none} </style>
+
+<% content_for :title, "La carte & le territoire - Connexion" %>
 
 <div class="background_img">
 <%= image_tag("NoFACES.jpg", :alt => "background") %>
 </div>
 
   <div class="backnav">
-  <a href=""></a>
-  <%= link_to image_tag("left-arrow.png", alt: "retour"),photos_path, width: 64, height: 64 %>
+  <%= link_to image_tag("left-arrow.png", alt: "retour"),photos_path %>
   </div>
 
 <div class="full-page">
-  <div class="blockform">
+  <div class="justify-content-center">
       <h2>CONNEXION</h2>
 
           <div class="form">
@@ -19,7 +21,7 @@
                   <%= f.input :email,
                               required: false,
                               autofocus: true,
-                              input_html: { autocomplete: "email", size: 40 },
+                              input_html: { autocomplete: "email"},
                               placeholder: "Email",
                               label: false %>
                 </div>
@@ -27,7 +29,7 @@
                 <div class="field_user">
                   <%= f.input :password,
                               required: false,
-                              input_html: { autocomplete: "current-password", size: 40 },
+                              input_html: { autocomplete: "current-password"},
                               placeholder: "Mot de passe",
                               label: false %>
                 </div>
@@ -47,5 +49,6 @@
               <%= render "devise/shared/links" %>
             </div>
           </div>
+        </div>
 
 

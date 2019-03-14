@@ -1,6 +1,8 @@
 <style> .navbar-expand-lg { display: none } </style>
 <style> .footer { display: none } </style>
 
+<% content_for :title, "La carte & le territoire - Editer mon profil" %>
+
 <div class="background_img">
 <%= image_tag("NoFACES.jpg", :alt => "background") %>
 </div>
@@ -10,7 +12,7 @@
   </div>
 
 <div class="full-page">
-  <div class="blockform">
+  <div class="justify-content-center">
     <h2>Modifier mon profil</h2>
 
           <div class="form">
@@ -21,8 +23,16 @@
                     <%= f.input :email,
                                 required: true,
                                 autofocus: true,
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
                                 input_html: { autocomplete: "email", size: 40},
                                 placeholder: "Email",
+=======
+=======
+>>>>>>> Stashed changes
+                                input_html: { autocomplete: "email"},
+                                placeholder: "Email", 
+>>>>>>> Stashed changes
                                 label: false %>
                   </div>
                   <br>
@@ -37,7 +47,7 @@
                     <div class="field_user">
                     <%= f.input :password,
                                 required: false,
-                                input_html: { autocomplete: "new-password", size: 40},
+                                input_html: { autocomplete: "new-password"},
                                 placeholder: "Mot de passe*",
                                 label: false,
                                 size: 40 %>
@@ -47,7 +57,7 @@
                     <div class="field_user">
                     <%= f.input :password_confirmation,
                                 required: false,
-                                input_html: { autocomplete: "new-password", size: 40 },
+                                input_html: { autocomplete: "new-password"},
                                 placeholder: "Confimer mot de passe",
                                 label: false,
                                 size: 40 %>
@@ -56,7 +66,7 @@
                     <div class="field_user">
                     <%= f.input :current_password,
                                 required: true,
-                                input_html: { autocomplete: "current-password", size: 40},
+                                input_html: { autocomplete: "current-password"},
                                 placeholder: "Mot de passe actuel",
                                 label: false%>
                     </div>
