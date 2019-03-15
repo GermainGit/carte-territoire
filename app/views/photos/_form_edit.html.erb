@@ -1,0 +1,108 @@
+<%= form_with(model: photo, local: true) do |form| %>
+  <% if photo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(photo.errors.count, "error") %> prohibited this photo from being saved:</h2>
+
+      <ul>
+      <% photo.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+    <div class="row justify-content-center">
+      <div class="col-lg-6 form_photo">
+        <h1 id="edit_photo">votre photo :</h1>
+        <% if !@photo.file.blank? %>
+        <div class="edit_photo_box"><img src=" <%= @photo.file %> " alt="@photo.title"></div>
+        <% end %>
+        <div class="field_img">
+          <%= form.file_field :file, onchange: "validateFiles(this);", data: { max_file_size: 5.megabytes} %>
+          <%= form.hidden_field :file_cache %>
+          <br> Votre photo ne doit pas dépasser 5Mo
+
+        </div>
+
+        <div class="field_img">
+          <%= form.text_field :title, id: :photo_title, placeholder: "Titre", :required => true %>
+        </div>
+
+        <div class="field_img">
+          <%= form.text_area :content, id: :photo_content, placeholder: "J'écris mon récit...", :required => true %>
+        </div>
+
+        <div class="field_img">
+          <%= form.text_field :long, id: :photo_long, :required => true %>
+        </div>
+
+        <div class="field_img">
+          <%= form.text_field :lat, id: :photo_lat, :required => true %>
+        </div>
+
+        <div class="field_img date">
+          Photo prise le
+          <%= form.date_select :date, id: :photo_date, :required => true %>
+        </div>
+
+        <div class="actions">
+          <%= form.submit "Partagez-moi !", id: :btn_new %>
+        </div>
+
+      </div>
+
+      <div class="col-lg-6 map">
+        <div id="mapid" class="map_add">
+
+        </div>
+      </div>
+    </div>
+
+
+
+
+<% end %>
+<script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+   integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+   crossorigin=""></script>
+
+<script>
+
+  var map = new L.Map('mapid').setView([44.84561111, -0.58027778], 6);
+
+ L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}{r}.{ext}', {
+    attribution: '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors',
+    maxZoom: 18,
+    minZoom: 8,
+    ext: 'png'
+ }).addTo(map);
+ map.attributionControl.setPrefix('');
+
+var southWest = L.latLng(42.18155760646617, -1.90),
+northEast = L.latLng(47.59346179538875, 3.6);
+var bounds = L.latLngBounds(southWest, northEast);
+
+map.setMaxBounds(bounds);
+map.on('drag', function(){
+  map.panInsideBounds(bounds, { animate: false});
+});
+
+
+ var marker = {};
+
+ function addMarker(e){
+
+  if(marker != undefined){
+    map.removeLayer(marker);
+  }
+
+
+  marker = new L.marker(e.latlng).addTo(map);
+    document.getElementById('photo_long').value = e.latlng.lng;
+    document.getElementById('photo_lat').value = e.latlng.lat;
+
+}
+
+ map.on('click', addMarker);
+</script>
