@@ -6,7 +6,7 @@ class PhotosController < ApplicationController
 
   def index
     # @photos = Photo.all
-    @photos = Photo.order('created_at DESC').page(params[:page]).per(2)
+    @photos = Photo.order('created_at DESC').page(params[:page]).per(15)
   end
 
 
