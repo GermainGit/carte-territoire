@@ -9,7 +9,7 @@
   <div class="row">
 
     <div class="card-columns">
-<% @photos.order(:id).each do |photo| %>
+<% @photos.order(:id).reverse_each do |photo| %>
 
   <div class="card">
     <a href="photos/<%= photo.id %>">
@@ -19,7 +19,7 @@
       <h5><%= link_to photo.title.truncate(120, separator: ' '), photo, :class => "card-title" %></h5>
       <p class="card-text"><%= photo.content.truncate(255, separator: ' ') %></p>
       <% if(user_signed_in? && current_user.admin) %>
-        <%= link_to 'Modifier', photo %>
+        <%= link_to 'Modifier', edit_photo_path(photo) %>
         <%= link_to 'Supprimer', photo, method: :delete %>
       <% end %>
     </div>
