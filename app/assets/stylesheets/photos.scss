@@ -25,7 +25,15 @@ $desktop: 1248px;
 .field_img input::placeholder , .field_img textarea::placeholder{
   color: #bcbaba;
 }
-
+.edit_photo_box{
+max-width: 40%;
+margin:auto;
+}
+.edit_photo_box img{
+  display:block;
+  height:100%;
+  width:100%;
+}
 .actions{
   text-align: center;
 }

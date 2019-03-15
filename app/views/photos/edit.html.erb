@@ -6,3 +6,17 @@
 
 <%= link_to 'Afficher', @photo %> |
 <%= link_to 'Retour', photos_path %>
+
+<script>
+
+    var long = <%= @photo.long %>;
+    var lat = <%= @photo.lat %>;
+    var icon = L.icon({
+      iconUrl: '<%= @photo.file %>',
+      iconSize: [25, 25],
+    });
+    var markerLocation = new L.LatLng(lat, long);
+    var marker = new L.Marker(markerLocation, {icon: icon});
+    map.addLayer(marker);
+
+</script>
