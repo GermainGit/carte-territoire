@@ -7,6 +7,7 @@
 
 <div class="container feed">
   <div class="row">
+    <%= paginate @photos %>
     <div class="card-columns">
 <% @photos.reverse_each do |photo| %>
 
@@ -25,6 +26,7 @@
   </div>
     <% end %>
        </div>
+       <%= paginate @photos %>
   </div>
 </div>
 
@@ -64,8 +66,7 @@ map.on('drag', function(){
     var lat = <%= photo.lat %>;
     var icon = L.icon({
       iconUrl: '<%= photo.file %>',
-      iconSize: [45, 45],
-      iconRadius: 25
+      iconSize: [25, 25],
     });
     var markerLocation = new L.LatLng(lat, long);
     var marker = new L.Marker(markerLocation, {icon: icon});

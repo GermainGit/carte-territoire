@@ -300,3 +300,18 @@ a:hover{
     position: fixed;
   }
 }
+
+.first, .prev, .next, .last{
+  display: none;
+}
+
+  .feed span{
+  padding:4px;
+  font-weight:bold;
+  color:$color1!important;
+  a {
+    opacity: 0.4;
+    color:$color1!important;
+  }
+
+}
