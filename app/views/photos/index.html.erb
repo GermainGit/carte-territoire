@@ -7,7 +7,7 @@
 
 <div class="container feed">
   <div class="row">
-    <%= paginate @photos %>
+
     <div class="card-columns">
 <% @photos.reverse_each do |photo| %>
 
@@ -26,7 +26,7 @@
   </div>
     <% end %>
        </div>
-       <%= paginate @photos %>
+         <%= paginate @photos, theme: 'twitter-bootstrap-4', class: "navpagination" %>
   </div>
 </div>
 

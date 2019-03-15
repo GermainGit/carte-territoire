@@ -301,17 +301,22 @@ a:hover{
   }
 }
 
-.first, .prev, .next, .last{
-  display: none;
-}
-
-  .feed span{
-  padding:4px;
-  font-weight:bold;
+// .first, .prev, .next, .last{
+//   display: none;
+// }
+.page-link {
   color:$color1!important;
-  a {
-    opacity: 0.4;
-    color:$color1!important;
-  }
-
+}
+.page-item.active .page-link {
+    z-index: 1;
+    color: white!important;
+    background-color: $color1;
+    border:1px solid $color1;
+}
+.pagination{
+  justify-content: center;
+  width:100%;
+}
+nav{
+  width:100%;
 }

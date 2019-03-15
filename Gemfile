@@ -18,7 +18,7 @@ gem 'leaflet-rails'
 gem 'bootstrap'
 gem 'devise-i18n'
 gem 'kaminari'
-gem 'kaminari-bootstrap'
+gem 'bootstrap4-kaminari-views'
 
 gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
