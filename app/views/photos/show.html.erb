@@ -14,10 +14,10 @@
       <h1><%= @photo.title.truncate(60, separator: ' ') %></h1>
         <p class="date">Photo prise le : <%= @photo.date %></p>
         <p><%= @photo.content %></p>
-        <% if user_signed_in? && @photo.user == current_user %>
+        <% if user_signed_in? && @photo.user == current_user || current_user.admin %>
         <div class="btn">
           <%= link_to 'Modifier', edit_photo_path(@photo) %>
-          <% if current_user == @photo.user %>
+          <% if current_user == @photo.user || current_user.admin %>
             <%= link_to 'Supprimer', @photo, method: :delete, data: {confirm: 'Etes vous sur ?'} %>
           <% end %>
         </div>
