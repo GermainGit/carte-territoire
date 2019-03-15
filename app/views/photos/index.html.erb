@@ -16,7 +16,7 @@
     <img class="card-img-top" src="<%=  photo.file %>" alt="<%= photo.title %>">
     </a>
     <div class="card-body photo_content">
-      <h5><%= link_to photo.title, photo, :class => "card-title" %></h5>
+      <h5><%= link_to photo.title.truncate(120, separator: ' '), photo, :class => "card-title" %></h5>
       <p class="card-text"><%= photo.content.truncate(255, separator: ' ') %></p>
       <% if(user_signed_in? && current_user.admin) %>
         <%= link_to 'Modifier', photo %>

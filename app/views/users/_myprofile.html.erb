@@ -28,8 +28,8 @@
                 <img class="card-img-top" src="<%=  photo.file %>" alt="Card image cap">
               <% end %>
               <div class="card-body photo_content">
-                <h5><%= link_to photo.title, photo, :class => "card-title" %></h5>
-                <p class="card-text"><%= photo.content %></p>
+                <h5><%= link_to photo.title.truncate(60, separator: ' '), photo, :class => "card-title" %></h5>
+                <p class="card-text"><%= photo.content.truncate(255, separator: ' ') %></p>
                   <% if user_signed_in? && photo.user_id == current_user.id %>
                   <div class="btn_card">
                     <%= link_to image_tag('trash.png', alt: 'Crayon', class: 'btn_card_edit'), photo, method: :delete %>

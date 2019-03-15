@@ -20,8 +20,8 @@
             <img class="card-img-top" src="<%=  photo.file %>" alt="Card image cap">
             <% end %>
             <div class="card-body photo_content">
-              <h5><%= link_to photo.title, photo, :class => "card-title" %></h5>
-              <p class="card-text"><%= photo.content %></p>
+              <h5><%= link_to photo.title.truncate(60, separator: ' '), photo, :class => "card-title" %></h5>
+              <p class="card-text"><%= photo.content.truncate(255, separator: ' ') %></p>
             </div>
           </div>
           <% end %>

@@ -6,4 +6,6 @@ class Photo < ApplicationRecord
   validates :lat, presence: true
   belongs_to :user
   mount_uploader :file, FileUploader
+  # validates :file, :presence => true
+
 end

@@ -11,7 +11,7 @@
 
     </div>
     <div class="col-md-5 offset-md-1">
-      <h1><%= @photo.title %></h1>
+      <h1><%= @photo.title.truncate(60, separator: ' ') %></h1>
         <p class="date">Photo prise le : <%= @photo.date %></p>
         <p><%= @photo.content %></p>
         <% if user_signed_in? && @photo.user == current_user %>
