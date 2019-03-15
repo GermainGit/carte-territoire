@@ -288,6 +288,36 @@ a:hover{
   font-size: 12px;
   font-style: italic;
 }
+
+
+#btn_map{
+  position: absolute;
+  z-index: 9999;
+  top: 44%;
+  left: 37%;
+  color: #ffffff;
+  background-color: $color1;
+  padding: 3% 4%;
+  font-size: 1.5em;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+#bg_opacity{
+  height: 100%;
+  z-index: 9998;
+  background-color: rgba(0,0,0,0.7);
+  position: absolute;
+  width: 100%;
+  cursor: pointer;
+}
+
+.map{
+  position: relative;
+}
+
+
 /* 100% Image Width on Smaller Screens */
 @media only screen and (max-width: 700px){
   .modal-content {

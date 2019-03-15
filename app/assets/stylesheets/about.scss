@@ -13,12 +13,16 @@ body{
 
 .text_project{
   position: absolute;
-  width: 60%;
+  width: 70%;
   top: 20%;
   left: 10%;
   padding: 4%;
   background-color: #ffffff;
-  font-size: 1.2em;
+  font-size: 1em;
+}
+
+.text_about{
+  font-size: 1em;
 }
 
 .perimetre, .voyage, .carte_territoire{
@@ -49,14 +53,9 @@ body{
   align-items: center;
 }
 
-#voyage, #perimetre, #hall, #Livre{
+#voyage, #perimetre, #hall, #Livre, #carte_territoire{
   width: 15%;
   height: 15%;
-}
-
-#carte_territoire{
-  width: 30%;
-  margin-bottom: 5%;
 }
 
 .box h2{
@@ -69,4 +68,29 @@ body{
 .box p{
   font-family: 'Lato' sans-serif;
   text-align: center;
+}
+
+.title_project{
+  background-color: #1a1a1a;
+}
+
+.title_project h3{
+  text-align: center;
+  color: #ffffff;
+  padding: 2% 0;
+  font-size: 2em;
+}
+
+@media screen and (max-width: $tablet-wide){
+
+
+  .text_project{
+    top: 10%;
+    width: 80%;
+    font-size: 0.8em;
+  }
+
+  .text_about{
+    font-size: 0.8em;
+  }
 }

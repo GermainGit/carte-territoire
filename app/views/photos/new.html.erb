@@ -3,3 +3,24 @@
 <%= render 'form', photo: @photo %>
 
 <%= link_to image_tag('arrow.svg', alt: 'bouton retour', id: 'back_img'), photos_path, id: 'back' %>
+
+<script>
+
+  $("#btn_new").click(function(){
+    if(marker != undefined){
+      $("#btn_map").animate({"left": "-=20px"}, 100, "linear" );
+      $("#btn_map").animate({"left": "+=20px"}, 100, "linear" );
+    }
+  });
+
+  $("#btn_map").click(function(){
+    $("#btn_map").css({ "display": "none"});
+    $("#bg_opacity").css({ "display": "none"});
+  });
+
+  $("#bg_opacity").click(function(){
+    $("#btn_map").css({ "display": "none"});
+    $("#bg_opacity").css({ "display": "none"});
+  });
+
+</script>

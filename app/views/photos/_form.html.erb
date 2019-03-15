@@ -49,8 +49,11 @@
 
       </div>
 
-      <div class="col-lg-6">
-        <div id="mapid" class="map_add"></div>
+      <div class="col-lg-6 map">
+        <div id="bg_opacity"><p id="btn_map">Indiquez le lieu</p></div>
+        <div id="mapid" class="map_add">
+
+        </div>
       </div>
     </div>
 
@@ -96,6 +99,7 @@ map.on('drag', function(){
   marker = new L.marker(e.latlng).addTo(map);
     document.getElementById('photo_long').value = e.latlng.lng;
     document.getElementById('photo_lat').value = e.latlng.lat;
+
 }
 
  map.on('click', addMarker);
