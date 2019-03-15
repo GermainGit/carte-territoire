@@ -61,7 +61,7 @@ map.on('drag', function(){
 
 
 
-<% @photos.each do |photo| %>
+<% @dbphotos.each do |photo| %>
     var long = <%= photo.long %>;
     var lat = <%= photo.lat %>;
     var icon = L.icon({

@@ -5,7 +5,7 @@ class PhotosController < ApplicationController
   # GET /photos.json
 
   def index
-    # @photos = Photo.all
+    @dbphotos = Photo.all
     @photos = Photo.order('created_at DESC').page(params[:page]).per(15)
   end
 
