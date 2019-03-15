@@ -9,7 +9,7 @@
   <div class="row">
 
     <div class="card-columns">
-<% @photos.reverse_each do |photo| %>
+<% @photos.order(:id).each do |photo| %>
 
   <div class="card">
     <a href="photos/<%= photo.id %>">
@@ -61,7 +61,7 @@ map.on('drag', function(){
 
 
 
-<% @dbphotos.order(:id).each do |photo| %>
+<% @dbphotos.each do |photo| %>
     var long = <%= photo.long %>;
     var lat = <%= photo.lat %>;
     var icon = L.icon({
